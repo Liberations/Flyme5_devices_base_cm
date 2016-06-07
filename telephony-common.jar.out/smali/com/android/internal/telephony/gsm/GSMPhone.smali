@@ -3845,7 +3845,7 @@
     .line 1453
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getMzDataEnabled()Z
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getDataEnabled()Z
 
     move-result v0
 
@@ -3859,7 +3859,7 @@
     .line 1443
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getMzDataOnRoamingEnabled()Z
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getDataOnRoamingEnabled()Z
 
     move-result v0
 
@@ -7768,7 +7768,7 @@
     .line 1458
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setMzDataEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setDataEnabled(Z)V
 
     .line 1459
     return-void
@@ -7782,7 +7782,7 @@
     .line 1448
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setMzDataOnRoamingEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setDataOnRoamingEnabled(Z)V
 
     .line 1449
     return-void
@@ -8549,7 +8549,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->MzUpdate()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->update()V
 
     .line 1230
     return-void
