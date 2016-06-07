@@ -654,6 +654,7 @@
         }
     .end annotation
 .end method
+
 .method public abstract keyguardGoingAway(ZZ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

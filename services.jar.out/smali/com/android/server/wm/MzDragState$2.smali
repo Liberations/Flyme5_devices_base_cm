@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 246
     const-string v0, "meizu.intent.action.MEIZU_NFC_SHARE_ENABLED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
 
     const-string v1, "NfcShareEnabled"
@@ -65,7 +62,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/wm/MzDragState;->mMzStatusBarNfcEnabled:Z
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
 
     const-string v1, "NfcRecoverAnim"
@@ -76,7 +72,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/wm/MzDragState;->mRecoverAnimNfc:Z
 
-    .line 252
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
@@ -91,18 +86,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
 
     const/4 v1, 0x2
 
     iput v1, v0, Lcom/android/server/wm/MzDragState;->mAnimType:I
 
-    .line 257
     :goto_1
     return-void
 
-    .line 249
     :cond_1
     const-string v0, "meizu.intent.action.MEIZU_NFC_SHARE_STATE_CHANGED"
 
@@ -116,7 +108,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 250
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
 
     const-string v1, "NfcShareState"
@@ -129,7 +120,6 @@
 
     goto :goto_0
 
-    .line 255
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$2;->this$0:Lcom/android/server/wm/MzDragState;
 

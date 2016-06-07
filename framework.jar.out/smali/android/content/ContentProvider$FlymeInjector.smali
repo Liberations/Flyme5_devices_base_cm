@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1954
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,12 +35,10 @@
     .param p2, "callingPkg"    # Ljava/lang/String;
 
     .prologue
-    .line 1963
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v10
 
-    .line 1964
     .local v10, "uid":I
     invoke-virtual {p0}, Landroid/content/ContentProvider;->flymeGetFieldMyUid()I
 
@@ -53,20 +50,16 @@
 
     if-eqz v11, :cond_0
 
-    .line 1965
     const/4 v11, 0x0
 
-    .line 2019
     :goto_0
     return v11
 
-    .line 1968
     :cond_0
     sget-object v11, Landroid/content/ContentProvider$FlymeInjector;->mAccessControlManager:Lmeizu/security/AccessControlManager;
 
     if-nez v11, :cond_1
 
-    .line 1969
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v11
@@ -81,37 +74,30 @@
 
     sput-object v11, Landroid/content/ContentProvider$FlymeInjector;->mAccessControlManager:Lmeizu/security/AccessControlManager;
 
-    .line 1971
     :cond_1
     sget-object v11, Landroid/content/ContentProvider$FlymeInjector;->mAccessControlManager:Lmeizu/security/AccessControlManager;
 
     if-nez v11, :cond_2
 
-    .line 1972
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 1975
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1976
     .local v6, "name":Ljava/lang/String;
     if-nez v6, :cond_3
 
-    .line 1977
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 1979
     :cond_3
     const/4 v4, 0x0
 
-    .line 1981
     .local v4, "cpi":Landroid/content/pm/ProviderInfo;
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -130,11 +116,9 @@
 
     move-result-object v4
 
-    .line 1985
     :goto_1
     if-eqz v4, :cond_a
 
-    .line 1986
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v11
@@ -143,9 +127,9 @@
 
     move-result-object v11
 
-    const-string/jumbo v12, "ownerPackage"
+    const-string v12, "ownerPackage"
 
-    const-string/jumbo v13, "string"
+    const-string v13, "string"
 
     iget-object v14, v4, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
@@ -153,15 +137,12 @@
 
     move-result v9
 
-    .line 1987
     .local v9, "ownerPackageId":I
     const/4 v8, 0x0
 
-    .line 1988
     .local v8, "ownerPackage":Ljava/lang/String;
     if-lez v9, :cond_4
 
-    .line 1989
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v11
@@ -174,7 +155,6 @@
 
     move-result-object v8
 
-    .line 1991
     :cond_4
     sget-object v11, Landroid/content/ContentProvider$FlymeInjector;->mAccessControlManager:Lmeizu/security/AccessControlManager;
 
@@ -194,7 +174,6 @@
 
     if-eqz v11, :cond_a
 
-    .line 1992
     :cond_5
     if-eqz v8, :cond_6
 
@@ -206,12 +185,10 @@
 
     if-eqz v11, :cond_6
 
-    .line 1993
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 1996
     :cond_6
     :try_start_1
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
@@ -230,7 +207,6 @@
 
     move-result-object v1
 
-    .line 1997
     .local v1, "ai":Landroid/content/pm/ApplicationInfo;
     if-eqz v1, :cond_7
 
@@ -238,10 +214,9 @@
 
     if-eqz v11, :cond_7
 
-    .line 1998
     iget-object v11, v1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    const-string/jumbo v12, "needAccessData"
+    const-string v12, "needAccessData"
 
     const/4 v13, 0x1
 
@@ -251,22 +226,18 @@
 
     move-result v7
 
-    .line 1999
     .local v7, "needAccessData":Z
     if-nez v7, :cond_7
 
-    .line 2000
     const/4 v11, 0x0
 
     goto/16 :goto_0
 
-    .line 2003
     .end local v1    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v7    # "needAccessData":Z
     :catch_0
     move-exception v11
 
-    .line 2005
     :cond_7
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
@@ -286,11 +257,9 @@
 
     move-result v2
 
-    .line 2006
     .local v2, "believePackageId":I
     if-lez v2, :cond_9
 
-    .line 2007
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v11
@@ -303,11 +272,9 @@
 
     move-result-object v3
 
-    .line 2008
     .local v3, "believePackages":[Ljava/lang/String;
     if-eqz v3, :cond_9
 
-    .line 2009
     const/4 v5, 0x0
 
     .local v5, "i":I
@@ -316,7 +283,6 @@
 
     if-ge v5, v11, :cond_9
 
-    .line 2010
     aget-object v11, v3, v5
 
     move-object/from16 v0, p2
@@ -327,18 +293,15 @@
 
     if-eqz v11, :cond_8
 
-    .line 2011
     const/4 v11, 0x0
 
     goto/16 :goto_0
 
-    .line 2009
     :cond_8
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 2016
     .end local v3    # "believePackages":[Ljava/lang/String;
     .end local v5    # "i":I
     :cond_9
@@ -346,7 +309,6 @@
 
     goto/16 :goto_0
 
-    .line 2019
     .end local v2    # "believePackageId":I
     .end local v8    # "ownerPackage":Ljava/lang/String;
     .end local v9    # "ownerPackageId":I
@@ -355,7 +317,6 @@
 
     goto/16 :goto_0
 
-    .line 1982
     :catch_1
     move-exception v11
 

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 5058
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p1, "target"    # Landroid/content/pm/PackageParser$Activity;
 
     .prologue
-    .line 5061
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
 
     iget-object v1, p1, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -42,7 +40,6 @@
 
     iput-boolean v1, v0, Landroid/content/ActivityInfoExt;->needAccessControl:Z
 
-    .line 5062
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p1, "sa"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 5065
     iget-object v0, p0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
@@ -67,7 +63,6 @@
 
     iput-boolean v1, v0, Landroid/content/ActivityInfoExt;->needAccessControl:Z
 
-    .line 5066
     return-void
 .end method
 
@@ -76,14 +71,11 @@
     .param p0, "a"    # Landroid/content/pm/PackageParser$Activity;
 
     .prologue
-    .line 5069
     iget-object v0, p0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
-    .line 5070
     .local v0, "dst":Landroid/content/pm/ActivityInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Activity;->metaData:Landroid/os/Bundle;
 
-    .line 5071
     .local v1, "meta":Landroid/os/Bundle;
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
 
@@ -93,8 +85,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5072
-    const-string/jumbo v3, "needAccessControl"
+    const-string v3, "needAccessControl"
 
     const/4 v4, 0x1
 
@@ -102,18 +93,15 @@
 
     move-result v2
 
-    .line 5073
     .local v2, "metaNeedAccessConrol":Z
     if-nez v2, :cond_0
 
-    .line 5074
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->mFlymeActivityInfo:Landroid/content/ActivityInfoExt;
 
     const/4 v4, 0x0
 
     iput-boolean v4, v3, Landroid/content/ActivityInfoExt;->needAccessControl:Z
 
-    .line 5077
     .end local v2    # "metaNeedAccessConrol":Z
     :cond_0
     return-void
@@ -124,10 +112,8 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 5080
     const-string v0, "flyme"
 
-    .line 5081
     .local v0, "FLYME_PACKAGE":Ljava/lang/String;
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -137,7 +123,6 @@
 
     const/4 v1, 0x1
 
-    .line 5082
     :goto_0
     return v1
 

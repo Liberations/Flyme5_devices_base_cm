@@ -42,31 +42,22 @@
     .param p7, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1975
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1976
     iput-object p1, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mWho:Landroid/content/Context;
 
-    .line 1977
     iput-object p2, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mContextThread:Landroid/os/IBinder;
 
-    .line 1978
     iput-object p3, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mToken:Landroid/os/IBinder;
 
-    .line 1979
     iput-object p4, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mTarget:Landroid/app/Activity;
 
-    .line 1980
     iput-object p5, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mIntent:Landroid/content/Intent;
 
-    .line 1981
     iput p6, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mRequestCode:I
 
-    .line 1982
     iput-object p7, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mOptions:Landroid/os/Bundle;
 
-    .line 1983
     return-void
 .end method
 
@@ -82,20 +73,16 @@
     .param p8, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2005
     move-object/from16 v2, p3
 
     check-cast v2, Landroid/app/IApplicationThread;
 
-    .line 2006
     .local v2, "whoThread":Landroid/app/IApplicationThread;
     const/4 v12, 0x0
 
-    .line 2007
     .local v12, "flag":I
     const/4 v13, 0x1
 
-    .line 2008
     .local v13, "isRecommend":I
     const/4 v1, -0x1
 
@@ -121,14 +108,12 @@
 
     if-eqz v13, :cond_0
 
-    .line 2010
     new-instance v4, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.RECOMMEND"
 
     invoke-direct {v4, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2011
     .local v4, "itt":Landroid/content/Intent;
     const-string v1, "android.intent.extra.INTENT"
 
@@ -136,7 +121,6 @@
 
     invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 2013
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -175,54 +159,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2022
     .end local v4    # "itt":Landroid/content/Intent;
     :cond_0
     :goto_1
     return-void
 
-    .line 2013
     .restart local v4    # "itt":Landroid/content/Intent;
     :cond_1
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 2017
     :catch_0
     move-exception v1
 
     goto :goto_1
-.end method
-
-
-# virtual methods
-.method public clearData()V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 1992
-    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mWho:Landroid/content/Context;
-
-    .line 1993
-    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mContextThread:Landroid/os/IBinder;
-
-    .line 1994
-    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mToken:Landroid/os/IBinder;
-
-    .line 1995
-    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mTarget:Landroid/app/Activity;
-
-    .line 1996
-    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mIntent:Landroid/content/Intent;
-
-    .line 1997
-    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mOptions:Landroid/os/Bundle;
-
-    .line 1998
-    return-void
 .end method
 
 .method public start(I)V
@@ -230,7 +181,6 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 1986
     iget-object v2, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mWho:Landroid/content/Context;
 
     iget-object v3, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mContextThread:Landroid/os/IBinder;
@@ -251,9 +201,30 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/app/Instrumentation$FlymeRecommendActivity;->start(ILandroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    .line 1987
     invoke-virtual {p0}, Landroid/app/Instrumentation$FlymeRecommendActivity;->clearData()V
 
-    .line 1988
+    return-void
+.end method
+
+
+# virtual methods
+.method public clearData()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mWho:Landroid/content/Context;
+
+    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mContextThread:Landroid/os/IBinder;
+
+    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mToken:Landroid/os/IBinder;
+
+    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mTarget:Landroid/app/Activity;
+
+    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mIntent:Landroid/content/Intent;
+
+    iput-object v0, p0, Landroid/app/Instrumentation$FlymeRecommendActivity;->mOptions:Landroid/os/Bundle;
+
     return-void
 .end method

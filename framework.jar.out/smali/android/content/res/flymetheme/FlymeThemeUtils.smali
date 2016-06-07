@@ -91,21 +91,18 @@
     .locals 3
 
     .prologue
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Landroid/content/res/flymetheme/FlymeThemeUtils;->FLYME_ICON_PACKAGE_NAME_LIST:Ljava/util/ArrayList;
 
-    .line 25
     sget-object v0, Landroid/content/res/flymetheme/FlymeThemeUtils;->FLYME_ICON_PACKAGE_NAME_LIST:Ljava/util/ArrayList;
 
     const-string v1, "com.android.calendar"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 81
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -125,7 +122,6 @@
     .locals 0
 
     .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -136,7 +132,6 @@
     .param p0, "resPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const-string v0, "android"
 
     invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -145,14 +140,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
     const/4 v0, 0x1
 
-    .line 74
     :goto_0
     return v0
 
-    .line 69
     :cond_0
     const-string v0, "flyme"
 
@@ -162,14 +154,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 71
     :cond_1
-    const-string/jumbo v0, "mediatek"
+    const-string v0, "mediatek"
 
     invoke-static {p0, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -177,12 +167,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 72
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 74
     :cond_2
     const/4 v0, 0x0
 
@@ -194,10 +182,8 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 136
     const/4 v4, 0x0
 
-    .line 137
     .local v4, "result":Z
     if-eqz p0, :cond_1
 
@@ -209,15 +195,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 138
     const/4 v4, 0x1
 
-    .line 147
     :cond_0
     :goto_0
     return v4
 
-    .line 140
     :cond_1
     sget-object v0, Landroid/content/res/flymetheme/FlymeThemeUtils;->WHITE_LIST:[Ljava/lang/String;
 
@@ -233,7 +216,6 @@
 
     aget-object v3, v0, v1
 
-    .line 141
     .local v3, "name":Ljava/lang/String;
     invoke-static {v3, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -241,13 +223,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 142
     const/4 v4, 0x1
 
-    .line 143
     goto :goto_0
 
-    .line 140
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -260,7 +239,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 172
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -268,7 +246,6 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 173
     .local v0, "custom":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
     :try_end_0
@@ -278,21 +255,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 178
     :goto_0
     return v2
 
-    .line 176
     :cond_0
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 177
     :catch_0
     move-exception v1
 
-    .line 178
     .local v1, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -301,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 160
     const/4 v0, 0x1
 
     return v0
@@ -311,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/4 v0, 0x1
 
     return v0

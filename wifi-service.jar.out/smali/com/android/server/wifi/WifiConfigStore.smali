@@ -864,7 +864,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e002b
+    const v1, #android:integer@config_wifi_framework_associated_scan_interval#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -902,7 +902,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120021
+    const v1, #android:bool@config_wifi_only_link_same_credential_configurations#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -917,7 +917,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e002f
+    const v1, #android:integer@config_wifi_framework_associated_partial_scan_max_num_active_channels#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -932,7 +932,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0030
+    const v1, #android:integer@config_wifi_framework_associated_partial_scan_max_num_passive_channels#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -947,7 +947,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e002d
+    const v1, #android:integer@config_wifi_framework_associated_full_scan_max_interval#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -962,7 +962,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e002c
+    const v1, #android:integer@config_wifi_framework_associated_full_scan_backoff#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -977,7 +977,7 @@
 
     move-result-object v0
 
-    const v1, 0x112001c
+    const v1, #android:bool@config_wifi_enable_disconnection_debounce#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -992,7 +992,7 @@
 
     move-result-object v0
 
-    const v1, 0x112001d
+    const v1, #android:bool@config_wifi_enable_5GHz_preference#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1007,7 +1007,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0011
+    const v1, #android:integer@config_wifi_framework_5GHz_preference_boost_factor#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1022,7 +1022,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0015
+    const v1, #android:integer@config_wifi_framework_5GHz_preference_penalty_factor#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1037,7 +1037,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0014
+    const v1, #android:integer@config_wifi_framework_5GHz_preference_penalty_threshold#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1052,7 +1052,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0010
+    const v1, #android:integer@config_wifi_framework_5GHz_preference_boost_threshold#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1067,7 +1067,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0012
+    const v1, #android:integer@config_wifi_framework_current_association_hysteresis_high#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1082,7 +1082,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0013
+    const v1, #android:integer@config_wifi_framework_current_association_hysteresis_low#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1097,7 +1097,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0016
+    const v1, #android:integer@config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1112,7 +1112,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0017
+    const v1, #android:integer@config_wifi_framework_wifi_score_low_rssi_threshold_5GHz#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1127,7 +1127,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0018
+    const v1, #android:integer@config_wifi_framework_wifi_score_good_rssi_threshold_5GHz#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1142,7 +1142,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0019
+    const v1, #android:integer@config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1157,7 +1157,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e001a
+    const v1, #android:integer@config_wifi_framework_wifi_score_low_rssi_threshold_24GHz#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1172,7 +1172,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e001b
+    const v1, #android:integer@config_wifi_framework_wifi_score_good_rssi_threshold_24GHz#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1187,7 +1187,7 @@
 
     move-result-object v0
 
-    const v1, 0x112001e
+    const v1, #android:bool@config_wifi_framework_cellular_handover_enable_user_triggered_adjustment#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1202,7 +1202,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e001c
+    const v1, #android:integer@config_wifi_framework_wifi_score_bad_link_speed_24#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1217,7 +1217,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e001d
+    const v1, #android:integer@config_wifi_framework_wifi_score_bad_link_speed_5#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1232,7 +1232,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e001e
+    const v1, #android:integer@config_wifi_framework_wifi_score_good_link_speed_24#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1247,7 +1247,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e001f
+    const v1, #android:integer@config_wifi_framework_wifi_score_good_link_speed_5#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1262,7 +1262,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0032
+    const v1, #android:integer@config_wifi_framework_max_auth_errors_to_blacklist#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1277,7 +1277,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0031
+    const v1, #android:integer@config_wifi_framework_max_connection_errors_to_blacklist#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1292,7 +1292,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0033
+    const v1, #android:integer@config_wifi_framework_network_black_list_min_time_milli#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1307,7 +1307,7 @@
 
     move-result-object v0
 
-    const v1, 0x112001f
+    const v1, #android:bool@config_wifi_framework_enable_associated_autojoin_scan#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1322,7 +1322,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120020
+    const v1, #android:bool@config_wifi_framework_enable_associated_network_selection#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1337,7 +1337,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0034
+    const v1, #android:integer@config_wifi_framework_current_network_boost#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1352,7 +1352,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0035
+    const v1, #android:integer@config_wifi_framework_scan_result_rssi_level_patchup_value#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -14037,7 +14037,9 @@
     move-object/from16 v0, v20
 
     iget-object v2, v0, Landroid/net/wifi/WifiConfiguration;->scanResultCache:Ljava/util/HashMap;
-
+	
+    const/4 v2, 0x0
+	
     if-eqz v2, :cond_a
 
     move-object/from16 v0, v20

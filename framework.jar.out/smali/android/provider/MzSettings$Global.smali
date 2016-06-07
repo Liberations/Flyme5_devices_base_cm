@@ -35,8 +35,6 @@
 
 .field public static final HAPTIC_FEEDBACK_UI_DEVICE_HANDLE:Ljava/lang/String; = "haptic_feedback_ui_devicehandle"
 
-.field public static final IMMEDIATELY_ON_OR_OFF:Ljava/lang/String; = "immediately_on_or_off"
-
 .field public static final INCOMING_FLASH_REMINDER:Ljava/lang/String; = "incoming_flash_reminder"
 
 .field public static final MEIZU_ALI_ENABLE_TRANSFER:Ljava/lang/String; = "ali_enable_transfer"
@@ -67,20 +65,6 @@
 
 .field public static final PREFIX_DIALING_NUMBER:Ljava/lang/String; = "prefix_dialing_number"
 
-.field public static final SELF_CONFIG_TIME_END_HOUR:Ljava/lang/String; = "self_config_time_end_hour"
-
-.field public static final SELF_CONFIG_TIME_END_MINUTE:Ljava/lang/String; = "self_config_time_end_minute"
-
-.field public static final SELF_CONFIG_TIME_START_HOUR:Ljava/lang/String; = "self_config_time_start_hour"
-
-.field public static final SELF_CONFIG_TIME_START_MINUTE:Ljava/lang/String; = "self_config_time_start_minute"
-
-.field public static final SUNRISE_TIME:Ljava/lang/String; = "sunrise_time"
-
-.field public static final SUNSET_TIME:Ljava/lang/String; = "sunset_time"
-
-.field public static final TIME_CONFIG_TYPE:Ljava/lang/String; = "time_config_type"
-
 .field public static final VIBRATE_WHEN_MOCALL_CONNECTED:Ljava/lang/String; = "vibrate_when_mocall_connected"
 
 .field public static final WHITE_LIST_DISTURB_ENABLE:Ljava/lang/String; = "white_list_disturb_enable"
@@ -91,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 588
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .param p4, "contentLength"    # J
 
     .prologue
-    .line 12
     return-void
 .end method
 
@@ -37,6 +35,5 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 7
     return-void
 .end method

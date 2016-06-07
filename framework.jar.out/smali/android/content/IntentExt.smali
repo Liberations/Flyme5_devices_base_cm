@@ -40,6 +40,8 @@
 
 .field public static final MEIZU_FLAG_STOP_RECOMMEND:I = 0x800
 
+.field public static final MZ_ACTION_ACCOUNT_ACCOUNTCENTER:Ljava/lang/String; = "com.meizu.account.ACCOUNTCENTER"
+
 .field public static final MZ_ACTION_APP_DOWN_PROMPT:Ljava/lang/String; = "meizu.intent.action.APP_DOWNLOAD_PROMPT"
 
 .field public static final MZ_ACTION_DEVICE_CONNECTION_STATE_CHANGED:Ljava/lang/String; = "meizu.intent.action.DEVICE_CONNECTION_STATE_CHANGED"
@@ -146,7 +148,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -157,14 +158,12 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 298
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
-    .line 299
     return-void
 .end method
 
@@ -172,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 345
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
     return-object v0
@@ -182,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 337
     iget-object v0, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
     return-object v0
@@ -192,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget v0, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
     return v0
@@ -203,10 +199,8 @@
     .param p1, "label"    # Ljava/lang/String;
 
     .prologue
-    .line 322
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageLabel:Ljava/lang/String;
 
-    .line 323
     return-void
 .end method
 
@@ -215,10 +209,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 314
     iput-object p1, p0, Landroid/content/IntentExt;->mAccessPackageName:Ljava/lang/String;
 
-    .line 315
     return-void
 .end method
 
@@ -227,10 +219,8 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 306
     iput p1, p0, Landroid/content/IntentExt;->mMeizuFlags:I
 
-    .line 307
     return-void
 .end method
 

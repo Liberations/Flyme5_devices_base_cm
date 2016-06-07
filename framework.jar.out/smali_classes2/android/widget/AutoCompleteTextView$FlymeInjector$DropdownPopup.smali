@@ -31,10 +31,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 1414
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 1415
     return-void
 .end method
 
@@ -45,10 +43,8 @@
     .param p1, "padding"    # I
 
     .prologue
-    .line 1429
     iput p1, p0, Landroid/widget/AutoCompleteTextView$FlymeInjector$DropdownPopup;->mDropDownPaddingEnd:I
 
-    .line 1430
     return-void
 .end method
 
@@ -57,10 +53,8 @@
     .param p1, "padding"    # I
 
     .prologue
-    .line 1425
     iput p1, p0, Landroid/widget/AutoCompleteTextView$FlymeInjector$DropdownPopup;->mDropDownPaddingStart:I
 
-    .line 1426
     return-void
 .end method
 
@@ -69,10 +63,8 @@
     .param p1, "padding"    # I
 
     .prologue
-    .line 1433
     iput p1, p0, Landroid/widget/AutoCompleteTextView$FlymeInjector$DropdownPopup;->mDropDownPaddingTop:I
 
-    .line 1434
     return-void
 .end method
 
@@ -82,7 +74,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1419
     invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView$FlymeInjector$DropdownPopup;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
@@ -91,7 +82,6 @@
 
     const/4 v0, 0x1
 
-    .line 1420
     .local v0, "buildDropDown":Z
     :goto_0
     iget v2, p0, Landroid/widget/AutoCompleteTextView$FlymeInjector$DropdownPopup;->mDropDownPaddingStart:I
@@ -102,16 +92,13 @@
 
     invoke-virtual {p0, v2, v3, v4, v1}, Landroid/widget/AutoCompleteTextView$FlymeInjector$DropdownPopup;->setDropDownListViewPadding(IIII)V
 
-    .line 1421
     invoke-super {p0}, Landroid/widget/ListPopupWindow;->show()V
 
-    .line 1422
     return-void
 
     .end local v0    # "buildDropDown":Z
     :cond_0
     move v0, v1
 
-    .line 1419
     goto :goto_0
 .end method

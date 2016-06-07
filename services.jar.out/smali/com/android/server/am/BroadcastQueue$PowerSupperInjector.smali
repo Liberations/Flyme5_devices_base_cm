@@ -51,112 +51,96 @@
     .locals 2
 
     .prologue
-    .line 1357
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperBlackSet:Ljava/util/Set;
 
-    .line 1358
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
-    .line 1366
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperBlackSet:Ljava/util/Set;
 
     const-string v1, "com.meizu.media.music"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1367
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperBlackSet:Ljava/util/Set;
 
     const-string v1, "com.meizu.media.video"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1368
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.launcher3"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1369
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.dialer"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1370
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.phone"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1371
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.mms"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1372
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.meizu.powersave"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1373
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.meizu.power"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1374
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.providers.media"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1375
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.meizu.safe"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1376
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.alarmclock"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1377
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "com.android.settings"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1378
     sget-object v0, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     const-string v1, "android"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1379
     return-void
 .end method
 
@@ -164,7 +148,6 @@
     .locals 0
 
     .prologue
-    .line 1356
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -174,28 +157,23 @@
     .locals 7
 
     .prologue
-    .line 1418
     :try_start_0
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    .line 1419
     .local v0, "context":Landroid/content/Context;
     if-nez v0, :cond_1
 
     const-string v4, ""
 
-    .line 1431
     :cond_0
     :goto_0
     return-object v4
 
-    .line 1420
     :cond_1
     const-string v4, ""
 
-    .line 1421
     .local v4, "pkg":Ljava/lang/String;
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -207,7 +185,6 @@
 
     move-result-object v1
 
-    .line 1423
     .local v1, "currentInputMethodId":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -217,14 +194,12 @@
 
     if-lez v5, :cond_0
 
-    .line 1424
     const-string v5, "/"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1425
     .local v3, "methodId":[Ljava/lang/String;
     if-eqz v3, :cond_0
 
@@ -232,7 +207,6 @@
 
     if-lez v5, :cond_0
 
-    .line 1426
     const/4 v5, 0x0
 
     aget-object v4, v3, v5
@@ -241,14 +215,12 @@
 
     goto :goto_0
 
-    .line 1430
     .end local v1    # "currentInputMethodId":Ljava/lang/String;
     .end local v3    # "methodId":[Ljava/lang/String;
     .end local v4    # "pkg":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 1431
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, ""
 
@@ -262,16 +234,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1382
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    .line 1383
     .local v0, "context":Landroid/content/Context;
     const/4 v1, 0x0
 
-    .line 1386
     .local v1, "powerMode":I
     :try_start_0
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -290,7 +259,6 @@
 
     move-result v1
 
-    .line 1392
     :goto_0
     const/4 v3, 0x3
 
@@ -302,14 +270,11 @@
 
     if-nez v3, :cond_0
 
-    .line 1393
     const/4 v2, 0x1
 
-    .line 1395
     :cond_0
     return v2
 
-    .line 1389
     :catch_0
     move-exception v3
 
@@ -323,23 +288,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1437
     :try_start_0
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    .line 1438
     .local v0, "context":Landroid/content/Context;
     if-nez v0, :cond_1
 
-    .line 1447
     .end local v0    # "context":Landroid/content/Context;
     :cond_0
     :goto_0
     return v3
 
-    .line 1439
     .restart local v0    # "context":Landroid/content/Context;
     :cond_1
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -352,7 +313,6 @@
 
     move-result-object v2
 
-    .line 1440
     .local v2, "info":Landroid/content/pm/ApplicationInfo;
     if-eqz v2, :cond_0
 
@@ -370,19 +330,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 1442
     :cond_2
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 1446
     .end local v0    # "context":Landroid/content/Context;
     .end local v2    # "info":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v1
 
-    .line 1447
     .local v1, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -392,7 +349,6 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1409
     invoke-static {}, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->getCurrentInputMethod()Ljava/lang/String;
 
     move-result-object v0
@@ -403,10 +359,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1410
     const/4 v0, 0x1
 
-    .line 1412
     :goto_0
     return v0
 
@@ -425,19 +379,16 @@
 
     const/4 v0, 0x0
 
-    .line 1400
     if-eqz p0, :cond_0
 
     const-string v2, ""
 
     if-ne p0, v2, :cond_1
 
-    .line 1405
     :cond_0
     :goto_0
     return v0
 
-    .line 1401
     :cond_1
     sget-object v2, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperBlackSet:Ljava/util/Set;
 
@@ -447,7 +398,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1402
     sget-object v2, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->appSupperSystemSet:Ljava/util/Set;
 
     invoke-interface {v2, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -460,7 +410,6 @@
 
     goto :goto_0
 
-    .line 1403
     :cond_2
     invoke-static {p0}, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->isFlagSystem(Ljava/lang/String;)Z
 
@@ -472,7 +421,6 @@
 
     goto :goto_0
 
-    .line 1404
     :cond_3
     invoke-static {p0}, Lcom/android/server/am/BroadcastQueue$PowerSupperInjector;->isImportantUserApp(Ljava/lang/String;)Z
 

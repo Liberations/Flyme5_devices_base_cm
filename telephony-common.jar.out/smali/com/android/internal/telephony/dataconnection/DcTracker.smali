@@ -263,7 +263,7 @@
 
     move-result-object v4
 
-    const v5, 0x11200bb
+    const v5, #android:bool@config_fetch_apn_from_omh_card#t
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1657,7 +1657,7 @@
 
     move-result-object v7
 
-    const v8, 0x1120082
+    const v8, #android:bool@config_dontPreferApn#t
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
     :try_end_0
@@ -4996,7 +4996,7 @@
 
     move-result-object v3
 
-    const v4, 0x1070039
+    const v4, #android:array@config_onlySingleDcAllowed#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -6205,7 +6205,7 @@
 
     move-result-object v0
 
-    const v1, 0x112009a
+    const v1, #android:bool@config_auto_attach_data_on_creation#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -7737,7 +7737,7 @@
 
     move-result-object v8
 
-    const v9, 0x11200ae
+    const v9, #android:bool@config_enable_mms_with_mobile_data_off#t
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -8178,8 +8178,6 @@
     goto :goto_0
 .end method
 
-
-# virtual methods
 .method public cleanUpAllConnections(Ljava/lang/String;)V
     .locals 1
     .param p1, "cause"    # Ljava/lang/String;
@@ -10879,7 +10877,7 @@
 
     move-result-object v7
 
-    const v8, 0x1070017
+    const v8, #android:array@networkAttributes#t
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -11544,7 +11542,7 @@
 
     move-result-object v15
 
-    const v16, 0x112005f
+    const v16, #android:bool@config_user_notification_of_restrictied_mobile_access#t
 
     invoke-virtual/range {v15 .. v16}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -12284,7 +12282,7 @@
 
     move-result-object v9
 
-    const v10, 0x11200ae
+    const v10, #android:bool@config_enable_mms_with_mobile_data_off#t
 
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -14593,7 +14591,7 @@
 
     move-result-object v2
 
-    const v3, 0x1120083
+    const v3, #android:bool@config_restartRadioAfterProvisioning#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -16717,4 +16715,149 @@
 
     .line 3262
     return-void
+.end method
+
+
+# virtual methods
+.method public MzUpdate()V
+    .locals 2
+
+    .prologue
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "update sub = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneBase;->getSubId()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->onMzUpdateIcc()V
+
+    invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->getMzDataEnabled()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mUserDataEnabled:Z
+
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    instance-of v0, v0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    check-cast v0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->updateCurrentCarrierInProvider()Z
+
+    invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->supplyMessenger()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    instance-of v0, v0, Lcom/android/internal/telephony/gsm/GSMPhone;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
+
+    check-cast v0, Lcom/android/internal/telephony/gsm/GSMPhone;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/GSMPhone;->updateCurrentCarrierInProvider()Z
+
+    invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->supplyMessenger()V
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "Phone object is not MultiSim. This should not hit!!!!"
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method protected onMzUpdateIcc()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const/4 v2, 0x1
+
+    invoke-direct {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->getUiccRecords(I)Lcom/android/internal/telephony/uicc/IccRecords;
+
+    move-result-object v0
+
+    .local v0, "newIccRecords":Lcom/android/internal/telephony/uicc/IccRecords;
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/internal/telephony/uicc/IccRecords;
+
+    .local v1, "r":Lcom/android/internal/telephony/uicc/IccRecords;
+    if-eq v1, v0, :cond_0
+
+    if-eqz v1, :cond_2
+
+    const-string v2, "Removing stale icc objects."
+
+    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Lcom/android/internal/telephony/uicc/IccRecords;->unregisterForRecordsLoaded(Landroid/os/Handler;)V
+
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    :cond_2
+    if-eqz v0, :cond_0
+
+    const-string v2, "New records found"
+
+    invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    const v2, 0x42002
+
+    invoke-virtual {v0, p0, v2, v3}, Lcom/android/internal/telephony/uicc/IccRecords;->registerForRecordsLoaded(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    goto :goto_0
 .end method

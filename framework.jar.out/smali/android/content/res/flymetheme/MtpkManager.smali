@@ -20,38 +20,32 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     new-instance v0, Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-direct {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipIcon:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
-    .line 17
     new-instance v0, Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-direct {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipPackage:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
-    .line 18
     new-instance v0, Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-direct {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipFramework:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
-    .line 19
     new-instance v0, Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-direct {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipFlyme:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
-    .line 20
     return-void
 .end method
 
@@ -61,25 +55,20 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipIcon:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-virtual {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;->clean()V
 
-    .line 52
     iget-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipPackage:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-virtual {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;->clean()V
 
-    .line 53
     iget-object v0, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipFramework:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
     invoke-virtual {v0}, Landroid/content/res/flymetheme/FlymeThemeZipFile;->clean()V
 
-    .line 54
     invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeHelper;->cleanConfigHelper()V
 
-    .line 55
     return-void
 .end method
 
@@ -89,10 +78,8 @@
     .param p2, "value"    # Landroid/util/TypedValue;
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
-    .line 40
     .local v0, "iStream":Ljava/io/InputStream;
     iget-object v1, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipFlyme:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
@@ -102,7 +89,6 @@
 
     move-result-object v0
 
-    .line 41
     return-object v0
 .end method
 
@@ -112,10 +98,8 @@
     .param p2, "value"    # Landroid/util/TypedValue;
 
     .prologue
-    .line 33
     const/4 v0, 0x0
 
-    .line 34
     .local v0, "iStream":Ljava/io/InputStream;
     iget-object v1, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipFramework:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
@@ -125,7 +109,6 @@
 
     move-result-object v0
 
-    .line 35
     return-object v0
 .end method
 
@@ -135,10 +118,8 @@
     .param p2, "value"    # Landroid/util/TypedValue;
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
-    .line 46
     .local v0, "iStream":Ljava/io/InputStream;
     iget-object v1, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipIcon:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
@@ -148,7 +129,6 @@
 
     move-result-object v0
 
-    .line 47
     return-object v0
 .end method
 
@@ -159,10 +139,8 @@
     .param p3, "value"    # Landroid/util/TypedValue;
 
     .prologue
-    .line 27
     const/4 v0, 0x0
 
-    .line 28
     .local v0, "iStream":Ljava/io/InputStream;
     iget-object v1, p0, Landroid/content/res/flymetheme/MtpkManager;->mZipPackage:Landroid/content/res/flymetheme/FlymeThemeZipFile;
 
@@ -170,7 +148,6 @@
 
     move-result-object v0
 
-    .line 29
     return-object v0
 .end method
 
@@ -179,9 +156,7 @@
     .param p1, "sysManager"    # Landroid/content/res/flymetheme/MtpkManager;
 
     .prologue
-    .line 23
     iput-object p1, p0, Landroid/content/res/flymetheme/MtpkManager;->mSystemZipThemeManager:Landroid/content/res/flymetheme/MtpkManager;
 
-    .line 24
     return-void
 .end method

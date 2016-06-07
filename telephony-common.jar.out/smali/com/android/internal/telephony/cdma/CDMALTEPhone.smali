@@ -1670,13 +1670,11 @@
     .locals 1
 
     .prologue
-    .line 411
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->update()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->MzUpdate()V
 
-    .line 412
     return-void
 .end method

@@ -3787,6 +3787,8 @@
     iput-object v2, p0, Landroid/content/res/Configuration;->themeConfig:Landroid/content/res/ThemeConfig;
     invoke-static/range {p0 .. p0}, Landroid/content/res/Configuration$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Configuration;)V
 
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Configuration$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 

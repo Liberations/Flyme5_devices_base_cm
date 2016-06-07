@@ -1605,85 +1605,63 @@
 
     check-cast v0, Lcom/android/internal/telephony/CallManager$CallManagerHandler;
 
-    .line 669
     .local v0, "handler":Lcom/android/internal/telephony/CallManager$CallManagerHandler;
     if-eqz v0, :cond_1
 
-    .line 670
     const-string v1, "CallManager"
 
     const-string v2, "Could not find Phone handler for unregistration"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
     :cond_0
     :goto_0
     return-void
 
-    .line 673
     :cond_1
     iget-object v1, p0, Lcom/android/internal/telephony/CallManager;->mHandlerMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 676
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForPreciseCallStateChanged(Landroid/os/Handler;)V
 
-    .line 677
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForDisconnect(Landroid/os/Handler;)V
 
-    .line 678
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForNewRingingConnection(Landroid/os/Handler;)V
 
-    .line 679
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForUnknownConnection(Landroid/os/Handler;)V
 
-    .line 680
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForIncomingRing(Landroid/os/Handler;)V
 
-    .line 681
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForRingbackTone(Landroid/os/Handler;)V
 
-    .line 682
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForInCallVoicePrivacyOn(Landroid/os/Handler;)V
 
-    .line 683
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForInCallVoicePrivacyOff(Landroid/os/Handler;)V
 
-    .line 684
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForDisplayInfo(Landroid/os/Handler;)V
 
-    .line 685
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForSignalInfo(Landroid/os/Handler;)V
 
-    .line 686
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForResendIncallMute(Landroid/os/Handler;)V
 
-    .line 687
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForMmiInitiate(Landroid/os/Handler;)V
 
-    .line 688
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForMmiComplete(Landroid/os/Handler;)V
 
-    .line 689
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForSuppServiceFailed(Landroid/os/Handler;)V
 
-    .line 690
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForServiceStateChanged(Landroid/os/Handler;)V
 
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForTtyModeReceived(Landroid/os/Handler;)V
-    .line 695
     invoke-interface {p1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
     move-result v1
 
     if-ne v1, v2, :cond_2
 
-    .line 696
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForSuppServiceNotification(Landroid/os/Handler;)V
 
-    .line 700
     :cond_2
     invoke-interface {p1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
@@ -5848,6 +5826,7 @@
 
     goto :goto_0
 .end method
+
 .method public registerForTtyModeReceived(Landroid/os/Handler;ILjava/lang/Object;)V
     .locals 1
     .param p1, "h"    # Landroid/os/Handler;

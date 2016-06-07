@@ -1,0 +1,68 @@
+.method private setNonMarketAppsAllowed(Z)V
+    .locals 4
+    .param p1, "enabled"    # Z
+
+    .prologue
+    .line 253
+    invoke-virtual {p0}, Lcom/meizu/settings/security/SecuritySettings;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    const-string v2, "user"
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/UserManager;
+
+    .line 254
+    .local v0, "um":Landroid/os/UserManager;
+    const-string v1, "no_install_unknown_sources"
+
+    invoke-virtual {v0, v1}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 260
+    :goto_0
+    return-void
+
+    .line 258
+    :cond_0
+    invoke-virtual {p0}, Lcom/meizu/settings/security/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "install_non_market_apps"
+
+    if-eqz p1, :cond_1
+
+    const/4 v1, 0x1
+
+    :goto_1
+    invoke-static {v2, v3, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    const-string v2, "persist.sys.root_access"
+
+    if-eqz p1, :cond_2
+
+    const-string v1, "3"
+
+    :goto_2
+    invoke-static {v2, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    const-string v1, "0"
+
+    goto :goto_2
+.end method

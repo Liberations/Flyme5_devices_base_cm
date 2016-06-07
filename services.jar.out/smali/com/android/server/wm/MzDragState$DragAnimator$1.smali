@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 415
     iput-object p1, p0, Lcom/android/server/wm/MzDragState$DragAnimator$1;->this$1:Lcom/android/server/wm/MzDragState$DragAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 417
     sub-float/2addr p1, v1
 
-    .line 418
     mul-float v0, p1, p1
 
     mul-float/2addr v0, p1

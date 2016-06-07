@@ -12,8 +12,6 @@
 
 .field public static final FINGERPRINT_SERVICE:Ljava/lang/String; = "fingerprint_manager"
 
-.field public static final FLYME_HIPS_SERVICE:Ljava/lang/String; = "hips_service"
-
 .field public static final FLYME_PACKAGE_MANAGER_SERVICE:Ljava/lang/String; = "flyme_packagemanager"
 
 .field public static final FLYME_PERF_SERVICE:Ljava/lang/String; = "flyme_perf"
@@ -44,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

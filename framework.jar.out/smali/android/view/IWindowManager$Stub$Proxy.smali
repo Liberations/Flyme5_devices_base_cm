@@ -6410,6 +6410,7 @@
 
     throw v3
 .end method
+
 .method public keyguardGoingAway(ZZ)V
     .locals 1
     .param p1, "disableWindowAnimations"    # Z

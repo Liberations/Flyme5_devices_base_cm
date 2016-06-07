@@ -120,6 +120,8 @@
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;->mKeyguardWallpaperInfoFile:Ljava/io/File;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;->initFlymeLockWallpaperFile()V
 
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperObserver;->initFlymeLockWallpaperFile()V
+
     .line 141
     return-void
 .end method

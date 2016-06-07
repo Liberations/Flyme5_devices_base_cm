@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 253
     iput-object p1, p0, Landroid/text/util/UrlSpanHelper$4;->val$widget:Landroid/view/View;
 
     iput-object p2, p0, Landroid/text/util/UrlSpanHelper$4;->val$url:Ljava/lang/String;
@@ -50,22 +49,18 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 255
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$4;->val$widget:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 257
     .local v0, "context":Landroid/content/Context;
     packed-switch p2, :pswitch_data_0
 
-    .line 285
     :goto_0
     return-void
 
-    .line 259
     :pswitch_0
     new-instance v1, Landroid/content/Intent;
 
@@ -79,21 +74,19 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 260
     .local v1, "intent":Landroid/content/Intent;
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 263
     .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_1
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.SENDTO"
 
-    const-string/jumbo v3, "smsto"
+    const-string v3, "smsto"
 
     iget-object v4, p0, Landroid/text/util/UrlSpanHelper$4;->val$value:Ljava/lang/CharSequence;
 
@@ -109,14 +102,12 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 265
     .restart local v1    # "intent":Landroid/content/Intent;
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 268
     .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_2
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$4;->val$value:Ljava/lang/CharSequence;
@@ -128,7 +119,6 @@
 
     goto :goto_0
 
-    .line 271
     :pswitch_3
     new-instance v1, Landroid/content/Intent;
 
@@ -138,21 +128,18 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 272
     .restart local v1    # "intent":Landroid/content/Intent;
-    const-string/jumbo v2, "phone"
+    const-string v2, "phone"
 
     iget-object v3, p0, Landroid/text/util/UrlSpanHelper$4;->val$value:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 273
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 276
     .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_4
     new-instance v1, Landroid/content/Intent;
@@ -161,33 +148,28 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 277
     .restart local v1    # "intent":Landroid/content/Intent;
-    const-string/jumbo v2, "vnd.android.cursor.item/contact"
+    const-string v2, "vnd.android.cursor.item/contact"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 278
-    const-string/jumbo v2, "phone"
+    const-string v2, "phone"
 
     iget-object v3, p0, Landroid/text/util/UrlSpanHelper$4;->val$value:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    .line 279
     const-string v2, "com.android.contacts.extra.SHOW_CREATE_NEW_CONTACT_BUTTON"
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 280
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 257
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

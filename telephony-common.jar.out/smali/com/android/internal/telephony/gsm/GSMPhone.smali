@@ -2497,7 +2497,7 @@
 
     move-result-object v5
 
-    const v6, 0x1120090
+    const v6, #android:bool@useImsAlwaysForEmergencyCall#t
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3845,7 +3845,7 @@
     .line 1453
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getDataEnabled()Z
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getMzDataEnabled()Z
 
     move-result v0
 
@@ -3859,7 +3859,7 @@
     .line 1443
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getDataOnRoamingEnabled()Z
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->getMzDataOnRoamingEnabled()Z
 
     move-result v0
 
@@ -4594,7 +4594,7 @@
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040004
+    const v3, #android:string@defaultVoiceMailAlphaTag#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -4858,7 +4858,7 @@
 
     move-result-object v7
 
-    const v8, 0x1070047
+    const v8, #android:array@config_default_vm_number#t
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -7765,12 +7765,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1458
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setDataEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setMzDataEnabled(Z)V
 
-    .line 1459
     return-void
 .end method
 
@@ -7779,12 +7777,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1448
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setDataOnRoamingEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->setMzDataOnRoamingEnabled(Z)V
 
-    .line 1449
     return-void
 .end method
 
@@ -8544,14 +8540,12 @@
     .locals 1
 
     .prologue
-    .line 1229
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->update()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->MzUpdate()V
 
-    .line 1230
     return-void
 .end method
 

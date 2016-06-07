@@ -5612,10 +5612,6 @@
 
     iput-object v0, p1, Landroid/app/Notification;->snoozeIntent:Landroid/app/PendingIntent;
 
-    iget-object v0, p0, Landroid/app/Notification$Builder;->mFlymeReplyIntent:Landroid/app/PendingIntent;
-
-    iput-object v0, p1, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
-
     iget-object v0, p1, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
     iget-object v1, p0, Landroid/app/Notification$Builder;->mFlymeNotificationBuilder:Landroid/app/NotificationBuilderExt;
@@ -5971,10 +5967,6 @@
     iget-object v0, p1, Landroid/app/Notification;->snoozeIntent:Landroid/app/PendingIntent;
 
     iput-object v0, p0, Landroid/app/Notification$Builder;->mFlymeSnoozeIntent:Landroid/app/PendingIntent;
-
-    iget-object v0, p1, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
-
-    iput-object v0, p0, Landroid/app/Notification$Builder;->mFlymeReplyIntent:Landroid/app/PendingIntent;
 
     return-void
 .end method

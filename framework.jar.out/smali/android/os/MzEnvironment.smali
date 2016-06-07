@@ -20,22 +20,18 @@
     .locals 1
 
     .prologue
-    .line 35
     const-string v0, "AutoInstallAPK"
 
     sput-object v0, Landroid/os/MzEnvironment;->DIRECTORY_AUTOINSTALLAPK:Ljava/lang/String;
 
-    .line 37
     const-string v0, ".@meizu_protbox@"
 
     sput-object v0, Landroid/os/MzEnvironment;->DIRECTORY_SAFE_BOX:Ljava/lang/String;
 
-    .line 38
     const-string v0, ".@meizu_protbox@/Video"
 
     sput-object v0, Landroid/os/MzEnvironment;->DIRECTORY_SAFE_BOX_VIDEO:Ljava/lang/String;
 
-    .line 39
     const-string v0, ".@meizu_protbox@/Photo"
 
     sput-object v0, Landroid/os/MzEnvironment;->DIRECTORY_SAFE_BOX_PHOTO:Ljava/lang/String;
@@ -47,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
