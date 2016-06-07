@@ -405,9 +405,9 @@
 
     iget-object v0, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->mFadeInSet:Landroid/animation/AnimatorSet;
 
-    new-instance v1, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$7;
+    new-instance v1, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$8;
 
-    invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$7;-><init>(Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$8;-><init>(Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -437,9 +437,9 @@
 
     iget-object v0, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->mFadeOutSet:Landroid/animation/AnimatorSet;
 
-    new-instance v1, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$8;
+    new-instance v1, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$9;
 
-    invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$8;-><init>(Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$9;-><init>(Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -690,8 +690,6 @@
     return-void
 .end method
 
-
-# virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 5
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
@@ -1019,12 +1017,12 @@
 .end method
 
 .method protected onStart()V
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x1
-
     const/high16 v2, 0x3f800000    # 1.0f
+
+    const/4 v3, 0x1
 
     invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
@@ -1069,10 +1067,372 @@
     :goto_0
     iput v0, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->oldConfig:I
 
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$600()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/android/internal/policy/impl/EnableAccessibilityController;->canEnableAccessibilityViaGesture(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    new-instance v2, Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$600()Landroid/content/Context;
+
+    move-result-object v3
+
+    new-instance v4, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$7;
+
+    invoke-direct {v4, p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$7;-><init>(Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;)V
+
+    invoke-direct {v2, v3, v4}, Lcom/android/internal/policy/impl/EnableAccessibilityController;-><init>(Landroid/content/Context;Ljava/lang/Runnable;)V
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1002(Lcom/android/internal/policy/impl/MzGlobalActions;Lcom/android/internal/policy/impl/EnableAccessibilityController;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    const/4 v1, 0x0
+
+    invoke-super {p0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
+
+    :goto_1
     return-void
 
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->showPortrit()V
 
     goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    const/4 v2, 0x0
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v1, v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1002(Lcom/android/internal/policy/impl/MzGlobalActions;Lcom/android/internal/policy/impl/EnableAccessibilityController;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    invoke-super {p0, v3}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 14
+    .param p1, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    const/4 v13, 0x1
+
+    const/4 v12, 0x0
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1000(Lcom/android/internal/policy/impl/MzGlobalActions;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v8
+
+    .local v8, "action":I
+    if-nez v8, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v9
+
+    .local v9, "decor":Landroid/view/View;
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v2
+
+    float-to-int v10, v2
+
+    .local v10, "eventX":I
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v2
+
+    float-to-int v11, v2
+
+    .local v11, "eventY":I
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mWindowTouchSlop:I
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1100(Lcom/android/internal/policy/impl/MzGlobalActions;)I
+
+    move-result v2
+
+    neg-int v2, v2
+
+    if-lt v10, v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mWindowTouchSlop:I
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1100(Lcom/android/internal/policy/impl/MzGlobalActions;)I
+
+    move-result v2
+
+    neg-int v2, v2
+
+    if-lt v11, v2, :cond_0
+
+    invoke-virtual {v9}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mWindowTouchSlop:I
+    invoke-static {v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1100(Lcom/android/internal/policy/impl/MzGlobalActions;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    if-ge v10, v2, :cond_0
+
+    invoke-virtual {v9}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mWindowTouchSlop:I
+    invoke-static {v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1100(Lcom/android/internal/policy/impl/MzGlobalActions;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    if-lt v11, v2, :cond_1
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v2, v13}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1202(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    .end local v9    # "decor":Landroid/view/View;
+    .end local v10    # "eventX":I
+    .end local v11    # "eventY":I
+    :cond_1
+    :try_start_0
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mIntercepted:Z
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1300(Lcom/android/internal/policy/impl/MzGlobalActions;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1000(Lcom/android/internal/policy/impl/MzGlobalActions;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Lcom/android/internal/policy/impl/EnableAccessibilityController;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v3
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mIntercepted:Z
+    invoke-static {v2, v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1302(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mIntercepted:Z
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1300(Lcom/android/internal/policy/impl/MzGlobalActions;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    .local v0, "now":J
+    const/4 v4, 0x3
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-wide v2, v0
+
+    invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+
+    move-result-object p1
+
+    const/16 v2, 0x1002
+
+    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->setSource(I)V
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    const/4 v3, 0x1
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v2, v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1202(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .end local v0    # "now":J
+    :cond_2
+    if-ne v8, v13, :cond_4
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1200(Lcom/android/internal/policy/impl/MzGlobalActions;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->cancel()V
+
+    :cond_3
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v2, v12}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1202(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mIntercepted:Z
+    invoke-static {v2, v12}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1302(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    .end local v8    # "action":I
+    :cond_4
+    invoke-super {p0, p1}, Landroid/app/Dialog;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v2
+
+    :cond_5
+    :goto_0
+    return v2
+
+    .restart local v8    # "action":I
+    :cond_6
+    :try_start_1
+    iget-object v2, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1000(Lcom/android/internal/policy/impl/MzGlobalActions;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Lcom/android/internal/policy/impl/EnableAccessibilityController;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-result v2
+
+    if-ne v8, v13, :cond_5
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1200(Lcom/android/internal/policy/impl/MzGlobalActions;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->cancel()V
+
+    :cond_7
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v3, v12}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1202(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mIntercepted:Z
+    invoke-static {v3, v12}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1302(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    if-ne v8, v13, :cond_9
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v3}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1200(Lcom/android/internal/policy/impl/MzGlobalActions;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->cancel()V
+
+    :cond_8
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mCancelOnUp:Z
+    invoke-static {v3, v12}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1202(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    iget-object v3, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # setter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mIntercepted:Z
+    invoke-static {v3, v12}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1302(Lcom/android/internal/policy/impl/MzGlobalActions;Z)Z
+
+    :cond_9
+    throw v2
+.end method
+
+.method protected onStop()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v0}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1000(Lcom/android/internal/policy/impl/MzGlobalActions;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog;->this$0:Lcom/android/internal/policy/impl/MzGlobalActions;
+
+    # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mEnableAccessibilityController:Lcom/android/internal/policy/impl/EnableAccessibilityController;
+    invoke-static {v0}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$1000(Lcom/android/internal/policy/impl/MzGlobalActions;)Lcom/android/internal/policy/impl/EnableAccessibilityController;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/internal/policy/impl/EnableAccessibilityController;->onDestroy()V
+
+    :cond_0
+    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
+
+    return-void
 .end method

@@ -474,10 +474,12 @@
     .end annotation
 
     .prologue
+    .line 1263
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/app/WallpaperManager;->clear(Z)V
 
+    .line 1264
     return-void
 .end method
 

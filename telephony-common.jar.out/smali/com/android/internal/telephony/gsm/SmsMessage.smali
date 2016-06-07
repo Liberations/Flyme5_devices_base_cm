@@ -90,7 +90,7 @@
 
     .line 914
     .local v3, "r":Landroid/content/res/Resources;
-    const v5, #android:bool@config_sms_force_7bit_encoding#t
+    const v5, 0x11200a0
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1572,6 +1572,17 @@
     return v2
 .end method
 
+.method private mzSetDestinationAddress()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mRecipientAddress:Lcom/android/internal/telephony/gsm/GsmSmsAddress;
+
+    iput-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->destinationAddress:Lcom/android/internal/telephony/SmsAddress;
+
+    return-void
+.end method
+
 .method public static newFromCDS(Ljava/lang/String;)Lcom/android/internal/telephony/gsm/SmsMessage;
     .locals 4
     .param p0, "line"    # Ljava/lang/String;
@@ -2414,7 +2425,7 @@
 
     .line 1262
     .local v7, "r":Landroid/content/res/Resources;
-    const v9, #android:bool@config_sms_decode_gsm_8bit_data#t
+    const v9, 0x1120099
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2919,7 +2930,7 @@
 
     .line 1426
     .restart local v7    # "r":Landroid/content/res/Resources;
-    const v9, #android:bool@config_sms_decode_gsm_8bit_data#t
+    const v9, 0x1120099
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3468,15 +3479,4 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method private mzSetDestinationAddress()V
-    .locals 1
-
-    .prologue
-    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->mRecipientAddress:Lcom/android/internal/telephony/gsm/GsmSmsAddress;
-
-    iput-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->destinationAddress:Lcom/android/internal/telephony/SmsAddress;
-
-    return-void
 .end method

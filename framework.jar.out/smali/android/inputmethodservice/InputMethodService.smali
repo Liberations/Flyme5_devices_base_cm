@@ -3172,24 +3172,30 @@
     return v1
 
     :cond_flyme_0
+
+    .line 1806
     invoke-direct {p0, v3}, Landroid/inputmethodservice/InputMethodService;->handleBack(Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 1807
     invoke-virtual {p2}, Landroid/view/KeyEvent;->startTracking()V
 
     move v0, v2
 
+    .line 1832
     :goto_0
     return v0
 
     :cond_0
     move v0, v3
 
+    .line 1810
     goto :goto_0
 
+    .line 1812
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -3387,14 +3393,18 @@
     return v0
 
     :cond_flyme_0
+
+    .line 1875
     invoke-direct {p0, v0}, Landroid/inputmethodservice/InputMethodService;->handleBack(Z)Z
 
     move-result v0
 
+    .line 1886
     :cond_0
     :goto_0
     return v0
 
+    .line 1877
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 

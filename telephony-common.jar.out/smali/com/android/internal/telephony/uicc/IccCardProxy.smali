@@ -1683,7 +1683,7 @@
 
     move-result-object v6
 
-    const v7, #android:bool@config_lte_capable#t
+    const v7, 0x11200a2
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3915,6 +3915,18 @@
     throw v1
 .end method
 
+.method public registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    invoke-virtual/range {p0 .. p3}, Lcom/android/internal/telephony/uicc/IccCardProxy;->registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    return-void
+.end method
+
 .method public registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
     .locals 6
     .param p1, "h"    # Landroid/os/Handler;
@@ -4664,6 +4676,16 @@
     throw v0
 .end method
 
+.method public unregisterForNetworkLocked(Landroid/os/Handler;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+
+    .prologue
+    invoke-virtual/range {p0 .. p1}, Lcom/android/internal/telephony/uicc/IccCardProxy;->unregisterForPersoLocked(Landroid/os/Handler;)V
+
+    return-void
+.end method
+
 .method public unregisterForPersoLocked(Landroid/os/Handler;)V
     .locals 2
     .param p1, "h"    # Landroid/os/Handler;
@@ -4695,26 +4717,4 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
-.end method
-
-.method public registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
-    .locals 0
-    .param p1, "h"    # Landroid/os/Handler;
-    .param p2, "what"    # I
-    .param p3, "obj"    # Ljava/lang/Object;
-
-    .prologue
-    invoke-virtual/range {p0 .. p3}, Lcom/android/internal/telephony/uicc/IccCardProxy;->registerForPersoLocked(Landroid/os/Handler;ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public unregisterForNetworkLocked(Landroid/os/Handler;)V
-    .locals 0
-    .param p1, "h"    # Landroid/os/Handler;
-
-    .prologue
-    invoke-virtual/range {p0 .. p1}, Lcom/android/internal/telephony/uicc/IccCardProxy;->unregisterForPersoLocked(Landroid/os/Handler;)V
-
-    return-void
 .end method

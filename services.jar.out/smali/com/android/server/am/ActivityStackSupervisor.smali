@@ -11663,6 +11663,7 @@
 
     goto :goto_b
 
+    .line 1516
     .end local v27    # "e":Landroid/os/RemoteException;
     :cond_1a
     move-object/from16 v7, p0
@@ -11676,6 +11677,7 @@
     invoke-static {v7, v8, v9, v10}, Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;->interceptForAccessControl(Lcom/android/server/am/ActivityStackSupervisor;Landroid/content/Intent;Landroid/content/pm/ActivityInfo;I)Landroid/content/pm/ActivityInfo;
 
     move-result-object p4
+
     new-instance v7, Lcom/android/server/am/ActivityRecord;
 
     move-object/from16 v0, p0

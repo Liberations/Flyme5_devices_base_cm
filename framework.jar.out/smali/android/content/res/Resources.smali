@@ -5805,6 +5805,7 @@
     return-object v0
 
     :cond_flyme_0
+
     if-eqz v6, :cond_4
 
     move-object/from16 v0, p0

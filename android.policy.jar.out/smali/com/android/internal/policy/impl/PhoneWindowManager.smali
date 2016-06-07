@@ -11314,20 +11314,17 @@
     return-object v0
 
     :cond_flyme_0
+
     if-eqz p1, :cond_0
 
-    .line 2883
     const/4 v0, 0x0
 
-    .line 2887
     :goto_0
     return-object v0
 
-    .line 2884
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 2885
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     const v1, #android:anim@lock_screen_wallpaper_exit_noop#t
@@ -15836,7 +15833,9 @@
     .end local v8    # "loader":Ldalvik/system/DexClassLoader;
     :cond_3
     :goto_2
+
     invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector;->initFlymeExtraFields(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/content/Context;)V
+
     return-void
 
     .line 1585

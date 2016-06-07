@@ -10089,32 +10089,38 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
+    .line 1812
     if-nez p1, :cond_0
 
     sget-object p1, Lcom/android/server/LocationManagerService;->DEFAULT_LOCATION_REQUEST:Landroid/location/LocationRequest;
 
+    .line 1813
     :cond_0
     invoke-direct/range {p0 .. p0}, Lcom/android/server/LocationManagerService;->getCallerAllowedResolutionLevel()I
 
     move-result v15
 
+    .line 1814
     .local v15, "allowedResolutionLevel":I
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/android/server/LocationManagerService;->checkResolutionLevelIsSufficientForGeofenceUse(I)V
 
+    .line 1815
     move-object/from16 v0, p0
 
     move-object/from16 v1, p3
 
     invoke-direct {v0, v1}, Lcom/android/server/LocationManagerService;->checkPendingIntent(Landroid/app/PendingIntent;)V
 
+    .line 1816
     move-object/from16 v0, p0
 
     move-object/from16 v1, p4
 
     invoke-direct {v0, v1}, Lcom/android/server/LocationManagerService;->checkPackageName(Ljava/lang/String;)V
 
+    .line 1817
     invoke-virtual/range {p1 .. p1}, Landroid/location/LocationRequest;->getProvider()Ljava/lang/String;
 
     move-result-object v2
@@ -10143,6 +10149,7 @@
     return-void
 
     :cond_flyme_0
+
     sget-boolean v2, Lcom/android/server/LocationManagerService;->D:Z
 
     if-eqz v2, :cond_1

@@ -34,6 +34,10 @@
 
     iput-object v0, p1, Landroid/app/Notification;->snoozeIntent:Landroid/app/PendingIntent;
 
+    iget-object v0, p0, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
+
+    iput-object v0, p1, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
+
     iget-object v0, p1, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
     iget-object v1, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
@@ -171,6 +175,23 @@
     iput-object v0, p0, Landroid/app/Notification;->snoozeIntent:Landroid/app/PendingIntent;
 
     :cond_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/PendingIntent;
+
+    iput-object v0, p0, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
+
+    :cond_1
     iget-object v0, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -191,7 +212,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-object v1, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
@@ -205,12 +226,12 @@
 
     iput-object v0, v1, Landroid/app/NotificationExt;->notificationBitmapIcon:Landroid/graphics/Bitmap;
 
-    :cond_1
+    :cond_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v1, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
@@ -224,12 +245,12 @@
 
     iput-object v0, v1, Landroid/app/NotificationExt;->subTitle:Ljava/lang/CharSequence;
 
-    :cond_2
+    :cond_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object v1, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
@@ -243,7 +264,7 @@
 
     iput-object v0, v1, Landroid/app/NotificationExt;->iconIntent:Landroid/app/PendingIntent;
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
@@ -365,6 +386,17 @@
     invoke-virtual {v0, p1, v1}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
     :goto_0
+    iget-object v0, p0, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Landroid/app/Notification;->replyIntent:Landroid/app/PendingIntent;
+
+    invoke-virtual {v0, p1, v1}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
+
+    :goto_1
     iget-object v0, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
     iget v0, v0, Landroid/app/NotificationExt;->internalApp:I
@@ -381,7 +413,7 @@
 
     iget-object v0, v0, Landroid/app/NotificationExt;->notificationBitmapIcon:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -391,12 +423,12 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
-    :goto_1
+    :goto_2
     iget-object v0, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
     iget-object v0, v0, Landroid/app/NotificationExt;->subTitle:Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -406,12 +438,12 @@
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    :goto_2
+    :goto_3
     iget-object v0, p0, Landroid/app/Notification;->mFlymeNotification:Landroid/app/NotificationExt;
 
     iget-object v0, v0, Landroid/app/NotificationExt;->iconIntent:Landroid/app/PendingIntent;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -421,7 +453,7 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    :goto_3
+    :goto_4
     return-void
 
     :cond_0
@@ -443,4 +475,9 @@
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_3
+
+    :cond_4
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_4
 .end method

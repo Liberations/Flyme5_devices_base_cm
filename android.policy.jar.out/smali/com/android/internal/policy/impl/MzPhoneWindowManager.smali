@@ -32,6 +32,10 @@
 # instance fields
 .field private final Back_GESTURE_KEY_CLICK_TIMEOUT:I
 
+.field private final FINGERKEY_HOMEKEY_TIMEOUT:J
+
+.field private final FINGERKEY_LONGPRESS_HOMEKEY_TIMEOUT:J
+
 .field private final MSG_SEND_BACK_KEY:I
 
 .field private final PLAY_TOUCH_HOME_AUDIO:I
@@ -53,6 +57,10 @@
 .field private mHandler:Landroid/os/Handler;
 
 .field private mHomeKeyDown:Z
+
+.field private mHomeKeyDownTime:J
+
+.field private mHomeKeyUpTime:J
 
 .field private final mInterceptHeadsethook:Ljava/lang/Runnable;
 
@@ -82,10 +90,12 @@
 .end method
 
 .method public constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
-    .locals 2
+    .locals 4
     .param p1, "pwm"    # Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     .prologue
+    const-wide/16 v2, 0x0
+
     const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -125,6 +135,18 @@
     iput v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->Back_GESTURE_KEY_CLICK_TIMEOUT:I
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mVloumeKeyConsumed:Z
+
+    iput-wide v2, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyUpTime:J
+
+    iput-wide v2, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyDownTime:J
+
+    const-wide/16 v0, 0x12c
+
+    iput-wide v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->FINGERKEY_HOMEKEY_TIMEOUT:J
+
+    const-wide/16 v0, 0x3e8
+
+    iput-wide v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->FINGERKEY_LONGPRESS_HOMEKEY_TIMEOUT:J
 
     new-instance v0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$1;
 
@@ -1688,4 +1710,71 @@
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->isTouchValid:Z
 
     return-void
+.end method
+
+.method public SetHomeDownTime(J)V
+    .locals 1
+    .param p1, "time"    # J
+
+    .prologue
+    iput-wide p1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyDownTime:J
+
+    return-void
+.end method
+
+.method public SetHomeUpTime(J)V
+    .locals 1
+    .param p1, "time"    # J
+
+    .prologue
+    iput-wide p1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyUpTime:J
+
+    return-void
+.end method
+
+.method public isFingerKeyTime(J)Z
+    .locals 7
+    .param p1, "time"    # J
+
+    .prologue
+    const-wide/16 v4, 0x0
+
+    iget-wide v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyUpTime:J
+
+    sub-long v0, p1, v0
+
+    const-wide/16 v2, 0x12c
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    iget-wide v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyDownTime:J
+
+    sub-long v0, p1, v0
+
+    const-wide/16 v2, 0x3e8
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_1
+
+    :cond_0
+    iput-wide v4, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyUpTime:J
+
+    iput-wide v4, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyDownTime:J
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    iput-wide v4, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyUpTime:J
+
+    iput-wide v4, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mHomeKeyDownTime:J
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
