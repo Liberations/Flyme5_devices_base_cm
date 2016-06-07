@@ -186,6 +186,7 @@
 
 .field protected final mSuppServiceNotifyRegistrants:Landroid/os/RegistrantList;
 
+.field protected final mTtyModeReceivedRegistrants:Landroid/os/RegistrantList;
 .field protected final mUnknownConnectionRegistrants:Landroid/os/RegistrantList;
 
 
@@ -403,7 +404,12 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/CallManager;->mActiveSubChangeRegistrants:Landroid/os/RegistrantList;
 
-    .line 197
+    new-instance v0, Landroid/os/RegistrantList;
+
+    invoke-direct {v0}, Landroid/os/RegistrantList;-><init>()V
+
+    iput-object v0, p0, Lcom/android/internal/telephony/CallManager;->mTtyModeReceivedRegistrants:Landroid/os/RegistrantList;
+
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1570,6 +1576,10 @@
     .line 662
     invoke-interface {p1, v0, v6, v2}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceFailed(Landroid/os/Handler;ILjava/lang/Object;)V
 
+    const/16 v1, 0x7a
+
+    invoke-interface {p1, v0, v1, v2}, Lcom/android/internal/telephony/Phone;->registerForTtyModeReceived(Landroid/os/Handler;ILjava/lang/Object;)V
+
     goto/16 :goto_0
 .end method
 
@@ -1662,6 +1672,7 @@
     .line 690
     invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForServiceStateChanged(Landroid/os/Handler;)V
 
+    invoke-interface {p1, v0}, Lcom/android/internal/telephony/Phone;->unregisterForTtyModeReceived(Landroid/os/Handler;)V
     .line 695
     invoke-interface {p1}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
@@ -5836,4 +5847,29 @@
     iput-object v1, p0, Lcom/android/internal/telephony/CallManager;->mDefaultPhone:Lcom/android/internal/telephony/Phone;
 
     goto :goto_0
+.end method
+.method public registerForTtyModeReceived(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 1
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/CallManager;->mTtyModeReceivedRegistrants:Landroid/os/RegistrantList;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/os/RegistrantList;->addUnique(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public unregisterForTtyModeReceived(Landroid/os/Handler;)V
+    .locals 1
+    .param p1, "h"    # Landroid/os/Handler;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/CallManager;->mTtyModeReceivedRegistrants:Landroid/os/RegistrantList;
+
+    invoke-virtual {v0, p1}, Landroid/os/RegistrantList;->remove(Landroid/os/Handler;)V
+
+    return-void
 .end method
