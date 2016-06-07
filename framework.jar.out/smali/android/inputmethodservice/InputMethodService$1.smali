@@ -79,22 +79,22 @@
 
     iput v3, v1, Landroid/graphics/Rect;->top:I
 
-    .line 325
     iget-object v1, p1, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->touchableRegion:Landroid/graphics/Region;
 
     invoke-virtual {v1}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 326
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;->setTouchableInsets(I)V
 
-    .line 334
     .end local v0    # "decor":Landroid/view/View;
     :goto_0
+    iget-object v1, p0, Landroid/inputmethodservice/InputMethodService$1;->this$0:Landroid/inputmethodservice/InputMethodService;
+
+    invoke-static {v1}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->updateCoverHeightIfNeeded(Landroid/inputmethodservice/InputMethodService;)V
+
     return-void
 
-    .line 328
     :cond_0
     iget-object v1, p0, Landroid/inputmethodservice/InputMethodService$1;->this$0:Landroid/inputmethodservice/InputMethodService;
 

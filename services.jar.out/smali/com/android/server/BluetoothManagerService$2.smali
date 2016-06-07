@@ -98,13 +98,16 @@
     # invokes: Lcom/android/server/BluetoothManagerService;->storeNameAndAddress(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v2, v1, v3}, Lcom/android/server/BluetoothManagerService;->access$100(Lcom/android/server/BluetoothManagerService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 230
     .end local v1    # "newName":Ljava/lang/String;
     :cond_0
     :goto_0
+
+    iget-object v2, p0, Lcom/android/server/BluetoothManagerService$2;->this$0:Lcom/android/server/BluetoothManagerService;
+
+    invoke-virtual {v2, p2}, Lcom/android/server/BluetoothManagerService;->flymeProcessMeizuDeviceNamaChange(Landroid/content/Intent;)V
+
     return-void
 
-    .line 195
     :cond_1
     const-string v2, "android.intent.action.AIRPLANE_MODE"
 

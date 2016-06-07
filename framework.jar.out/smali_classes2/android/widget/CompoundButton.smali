@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x10100a0
+    const v2, #android:attr@state_checked#t
 
     aput v2, v0, v1
 
@@ -867,24 +867,19 @@
     .locals 2
 
     .prologue
-    .line 118
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->toggle()V
 
-    .line 120
     invoke-super {p0}, Landroid/widget/Button;->performClick()Z
 
     move-result v0
 
-    .line 121
     .local v0, "handled":Z
     if-nez v0, :cond_0
 
-    .line 124
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Landroid/widget/CompoundButton;->playSoundEffect(I)V
+    #invoke-virtual {p0, v1}, Landroid/widget/CompoundButton;->playSoundEffect(I)V
 
-    .line 127
     :cond_0
     return v0
 .end method

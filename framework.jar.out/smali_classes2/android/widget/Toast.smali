@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/widget/Toast$FlymeInjector;,
         Landroid/widget/Toast$TN;
     }
 .end annotation
@@ -59,7 +60,7 @@
 
     move-result-object v1
 
-    const v2, 0x1050010
+    const v2, #android:dimen@toast_y_offset#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -74,7 +75,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e0082
+    const v2, #android:integer@config_toastDefaultGravity#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -174,7 +175,7 @@
 
     .line 264
     .local v0, "inflate":Landroid/view/LayoutInflater;
-    const v4, 0x10900e5
+    const v4, #android:layout@transient_notification#t
 
     const/4 v5, 0x0
 
@@ -184,7 +185,7 @@
 
     .line 265
     .local v3, "v":Landroid/view/View;
-    const v4, 0x102000b
+    const v4, #android:id@message#t
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -440,7 +441,7 @@
     :cond_0
     iget-object v1, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
 
-    const v2, 0x102000b
+    const v2, #android:id@message#t
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -513,17 +514,24 @@
 
     move-result-object v0
 
-    .line 119
     .local v0, "pkg":Ljava/lang/String;
     iget-object v2, p0, Landroid/widget/Toast;->mTN:Landroid/widget/Toast$TN;
 
-    .line 120
     .local v2, "tn":Landroid/widget/Toast$TN;
     iget-object v3, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
 
     iput-object v3, v2, Landroid/widget/Toast$TN;->mNextView:Landroid/view/View;
 
-    .line 123
+    invoke-static/range {p0 .. p0}, Landroid/widget/Toast$FlymeInjector;->checkSameMsg(Landroid/widget/Toast;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     :try_start_0
     iget v3, p0, Landroid/widget/Toast;->mDuration:I
 
@@ -540,4 +548,16 @@
     move-exception v3
 
     goto :goto_0
+.end method
+
+.method public setType(I)V
+    .locals 1
+    .param p1, "type"    # I
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/Toast;->mTN:Landroid/widget/Toast$TN;
+
+    iput p1, v0, Landroid/widget/Toast$TN;->mFlymeToastType:I
+
+    return-void
 .end method

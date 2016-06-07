@@ -169,6 +169,10 @@
 
 
 # instance fields
+.field private mFlymeShadowTouchPoint:Landroid/graphics/Point;
+
+.field private mFlymeStatusBarNfcShareEnabled:Z
+
 .field mAccessibilityFocusedHost:Landroid/view/View;
 
 .field mAccessibilityFocusedVirtualView:Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -1002,7 +1006,7 @@
 
     move-result-object v0
 
-    const v1, 0x112008b
+    const v1, #android:bool@config_windowIsRound#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3565,7 +3569,7 @@
 
     move-result-object v2
 
-    const v3, 0x1160029
+    const v3, #android:^attr-private@accessibilityFocusedDrawable#t
 
     const/4 v4, 0x1
 
@@ -4335,45 +4339,38 @@
 
     if-eqz v4, :cond_0
 
-    .line 5144
     iget v3, p1, Landroid/view/DragEvent;->mAction:I
 
-    .line 5146
     .local v3, "what":I
     const/4 v4, 0x6
 
     if-ne v3, v4, :cond_1
 
-    .line 5151
     iget-object v4, p0, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
 
     invoke-virtual {v4, p1}, Landroid/view/View;->dispatchDragEvent(Landroid/view/DragEvent;)Z
 
-    .line 5215
     .end local v3    # "what":I
     :cond_0
     :goto_0
+    invoke-direct/range {p0 .. p1}, Landroid/view/ViewRootImpl;->flymeHandleDragEvent(Landroid/view/DragEvent;)V
+
     invoke-virtual {p1}, Landroid/view/DragEvent;->recycle()V
 
-    .line 5216
     return-void
 
-    .line 5155
     .restart local v3    # "what":I
     :cond_1
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_9
 
-    .line 5156
     iput-object v7, p0, Landroid/view/ViewRootImpl;->mCurrentDragView:Landroid/view/View;
 
-    .line 5157
     iget-object v4, p1, Landroid/view/DragEvent;->mClipDescription:Landroid/content/ClipDescription;
 
     iput-object v4, p0, Landroid/view/ViewRootImpl;->mDragDescription:Landroid/content/ClipDescription;
 
-    .line 5163
     :goto_1
     const/4 v4, 0x2
 
@@ -4992,7 +4989,7 @@
 
     .line 1139
     .local v4, "packageMetrics":Landroid/util/DisplayMetrics;
-    const v6, 0x1050009
+    const v6, #android:dimen@config_prefDialogWidth#t
 
     iget-object v7, p0, Landroid/view/ViewRootImpl;->mTmpValue:Landroid/util/TypedValue;
 
@@ -16851,4 +16848,113 @@
 
     .line 6108
     goto :goto_1
+.end method
+
+.method private flymeHandleDragEvent(Landroid/view/DragEvent;)V
+    .locals 2
+    .param p1, "event"    # Landroid/view/DragEvent;
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mAdded:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/DragEvent;->getAction()I
+
+    move-result v0
+
+    const/16 v1, 0x64
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewRootImpl;->setLocalDragState(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public mzGetMeizuFlags()I
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
+
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->meizuFlags:I
+
+    return v0
+.end method
+
+.method public mzGetShadowTouchPoint()Landroid/graphics/Point;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mFlymeShadowTouchPoint:Landroid/graphics/Point;
+
+    return-object v0
+.end method
+
+.method public mzGetStatusBarNfcShareEnabled()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mFlymeStatusBarNfcShareEnabled:Z
+
+    return v0
+.end method
+
+.method public mzSetDragTouchState(Landroid/graphics/Point;)V
+    .locals 0
+    .param p1, "shadowTouchPoint"    # Landroid/graphics/Point;
+
+    .prologue
+    iput-object p1, p0, Landroid/view/ViewRootImpl;->mFlymeShadowTouchPoint:Landroid/graphics/Point;
+
+    return-void
+.end method
+
+.method public mzSetStatusBarNfcShareEnabled(Z)V
+    .locals 0
+    .param p1, "enabled"    # Z
+
+    .prologue
+    iput-boolean p1, p0, Landroid/view/ViewRootImpl;->mFlymeStatusBarNfcShareEnabled:Z
+
+    return-void
+.end method
+
+.method public processEventForMoveWinIfNeed(Landroid/view/InputEvent;)V
+    .locals 1
+    .param p1, "event"    # Landroid/view/InputEvent;
+
+    .prologue
+    instance-of v0, p1, Landroid/view/MotionEvent;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/view/MotionEvent;
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lmeizu/view/MoveWinManager;->getInstance(Landroid/content/Context;)Lmeizu/view/MoveWinManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lmeizu/view/MoveWinManager;->processInputEvent(Landroid/view/InputEvent;)V
+
+    :cond_0
+    return-void
 .end method

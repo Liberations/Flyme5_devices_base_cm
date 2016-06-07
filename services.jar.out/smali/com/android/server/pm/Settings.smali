@@ -18552,17 +18552,14 @@
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
 
-    .line 3503
     :cond_2
     const/4 v0, 0x0
 
     invoke-virtual {v8, v0, p5}, Lcom/android/server/pm/PackageSetting;->setNotLaunched(ZI)V
 
-    .line 3505
     :cond_3
     const/4 v0, 0x1
 
-    .line 3507
     :goto_0
     return v0
 
@@ -18610,7 +18607,7 @@
 
     .line 1954
     :cond_2
-    const v4, 0x1070056
+    const v4, #android:array@config_region_locked_packages#t
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -18624,14 +18621,12 @@
 
     if-nez v4, :cond_0
 
-    .line 1962
-    const v4, 0x1070057
+    const v4, #android:array@config_restrict_to_region_locked_devices#t
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1964
     invoke-static {v0, p2}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
@@ -23188,5 +23183,43 @@
     .end local v2    # "id":J
     .end local v4    # "len$":I
     :cond_0
+    return-void
+.end method
+
+.method private flymeSendPackageFirstLaunchBroadcast(Ljava/lang/String;I)V
+    .locals 7
+    .param p1, "packageName"    # Ljava/lang/String;
+    .param p2, "userId"    # I
+
+    .prologue
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/android/server/pm/PackageSetting;
+
+    .local v6, "pkgSetting":Lcom/android/server/pm/PackageSetting;
+    const-string v0, "meizu.intent.action.PACKAGE_FIRST_LAUNCH"
+
+    iget-object v1, v6, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    new-array v5, v3, [I
+
+    const/4 v3, 0x0
+
+    aput p2, v5, v3
+
+    move-object v3, v2
+
+    move-object v4, v2
+
+    invoke-static/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
+
     return-void
 .end method

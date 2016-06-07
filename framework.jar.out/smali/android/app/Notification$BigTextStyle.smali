@@ -158,7 +158,7 @@
     .locals 5
 
     .prologue
-    const v4, 0x1020337
+    const v4, #android:id@big_text#t
 
     .line 3945
     iget-object v2, p0, Landroid/app/Notification$BigTextStyle;->mBuilder:Landroid/app/Notification$Builder;
@@ -222,29 +222,27 @@
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
 
-    .line 3955
-    const v2, 0x1020015
+    const v2, #android:id@text2#t
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 3957
     invoke-virtual {p0, v0}, Landroid/app/Notification$BigTextStyle;->applyTopPadding(Landroid/widget/RemoteViews;)V
 
-    .line 3959
     iget-object v2, p0, Landroid/app/Notification$BigTextStyle;->mBuilder:Landroid/app/Notification$Builder;
 
     # invokes: Landroid/app/Notification$Builder;->shrinkLine3Text(Landroid/widget/RemoteViews;)V
     invoke-static {v2, v0}, Landroid/app/Notification$Builder;->access$1800(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)V
 
-    .line 3961
     iget-object v2, p0, Landroid/app/Notification$BigTextStyle;->mBuilder:Landroid/app/Notification$Builder;
 
-    const v3, 0x1020338
+    const v3, #android:id@profile_badge_large_template#t
 
     # invokes: Landroid/app/Notification$Builder;->addProfileBadge(Landroid/widget/RemoteViews;I)Z
     invoke-static {v2, v0, v3}, Landroid/app/Notification$Builder;->access$1500(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;I)Z
+
+    invoke-virtual {p0, v0}, Landroid/app/Notification$BigTextStyle;->makeBigContentViewFlyme(Landroid/widget/RemoteViews;)V
 
     .line 3963
     return-object v0
@@ -357,4 +355,36 @@
 
     .line 3911
     return-object p0
+.end method
+
+.method public makeBigContentViewFlyme(Landroid/widget/RemoteViews;)V
+    .locals 3
+    .param p1, "contentView"    # Landroid/widget/RemoteViews;
+
+    .prologue
+    sget v0, Lcom/flyme/internal/R$id;->big_text:I
+
+    iget-object v1, p0, Landroid/app/Notification$BigTextStyle;->mBuilder:Landroid/app/Notification$Builder;
+
+    iget-object v2, p0, Landroid/app/Notification$BigTextStyle;->mBigText:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1, v2}, Landroid/app/Notification$Builder;->flymeInvokeMethodProcessLegacyText(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+
+    sget v0, Lcom/flyme/internal/R$id;->big_text:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    sget v0, Lcom/flyme/internal/R$id;->text2:I
+
+    const/16 v1, 0x8
+
+    invoke-virtual {p1, v0, v1}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    return-void
 .end method

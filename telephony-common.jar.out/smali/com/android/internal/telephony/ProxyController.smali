@@ -410,3 +410,31 @@
     .line 111
     return-void
 .end method
+
+.method public getRadioAccessFamily(I)I
+    .locals 1
+    .param p1, "phoneId"    # I
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
+
+    array-length v0, v0
+
+    if-lt p1, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/telephony/ProxyController;->mProxyPhones:[Lcom/android/internal/telephony/PhoneProxy;
+
+    aget-object v0, v0, p1
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneProxy;->getRadioAccessFamily()I
+
+    move-result v0
+
+    goto :goto_0
+.end method

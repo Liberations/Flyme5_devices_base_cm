@@ -63,6 +63,7 @@
     </attr>
     <attr name="configChanges">
         <flag name="locale" value="0x00000004" />
+        <flag name="fontChange" value="0x00008000" />
         <flag name="fontScale" value="0x40000000" />
         <flag name="keyboard" value="0x00000010" />
         <flag name="keyboardHidden" value="0x00000020" />

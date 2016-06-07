@@ -529,6 +529,8 @@
     .restart local v3    # "uid":I
     if-eqz v3, :cond_1
 
+    goto/16 :goto_flyme_0
+
     const/16 v4, 0x3e8
 
     if-ne v3, v4, :cond_2
@@ -555,6 +557,7 @@
 
     .line 107
     :cond_2
+    :goto_flyme_0
     const-wide/16 v6, 0x10
 
     :try_start_1
@@ -1005,7 +1008,7 @@
 
     .line 81
     .local v0, "initialApp":Landroid/app/Application;
-    const v2, 0x1040115
+    const v2, #android:string@config_alternateWebViewPackageName#t
 
     invoke-virtual {v0, v2}, Landroid/app/Application;->getString(I)Ljava/lang/String;
 
@@ -1026,7 +1029,7 @@
 
     .restart local v1    # "pkg":Ljava/lang/String;
     :cond_0
-    const v2, 0x1040114
+    const v2, #android:string@config_webViewPackageName#t
 
     invoke-virtual {v0, v2}, Landroid/app/Application;->getString(I)Ljava/lang/String;
 

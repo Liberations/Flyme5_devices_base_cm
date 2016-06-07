@@ -985,3 +985,6 @@
 
 .method public abstract updateServiceLocation()V
 .end method
+
+.method public abstract getRadioAccessFamily()I
+.end method
