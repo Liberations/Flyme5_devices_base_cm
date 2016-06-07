@@ -18553,6 +18553,7 @@
     invoke-static/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService;->sendPackageBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/IIntentReceiver;[I)V
 
     :cond_2
+    invoke-direct {p0, p1, p5}, Lcom/android/server/pm/Settings;->flymeSendPackageFirstLaunchBroadcast(Ljava/lang/String;I)V
     const/4 v0, 0x0
 
     invoke-virtual {v8, v0, p5}, Lcom/android/server/pm/PackageSetting;->setNotLaunched(ZI)V

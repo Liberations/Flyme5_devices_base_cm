@@ -775,6 +775,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
+    invoke-static {}, Landroid/app/ContextImpl;->registeFlymeManager()V
     return-void
 .end method
 
@@ -1060,6 +1061,13 @@
 
     move-result-object v22
 
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p3
+
+    move-object/from16 v2, v22
+
+    invoke-direct {v0, v1, v2}, Landroid/app/ContextImpl;->setFlymeThemeResource(Landroid/app/LoadedApk;Landroid/content/res/Resources;)V
     :cond_4
     :goto_0
     move-object/from16 v0, v22

@@ -5995,6 +5995,10 @@
 
     goto/16 :goto_1
 
+    :cond_flyme_0
+    invoke-static/range {v14 .. v14}, Landroid/content/pm/PackageParser$FlymeInjector;->parseAccessMetaFromResource(Landroid/content/pm/PackageParser$Activity;)V
+
+    goto/16 :goto_flyme_0
     :cond_2c
     const-string v2, "PackageParser"
 

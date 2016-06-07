@@ -3917,7 +3917,7 @@
 
     if-eq v6, v7, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/BluetoothManagerService;->checkIfCallerIsForegroundUser()Z
+    invoke-direct {p0}, Lcom/android/server/BluetoothManagerService;->hook_checkIfCallerIsForegroundUser()Z
 
     move-result v6
 

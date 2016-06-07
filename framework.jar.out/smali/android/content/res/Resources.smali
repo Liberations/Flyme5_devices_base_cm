@@ -5794,6 +5794,17 @@
     goto :goto_0
 
     :cond_1
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v8, v9}, Landroid/content/res/Resources$FlymeInjector;->getBoostCachedDrawable(Landroid/content/res/Resources;J)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-object v0
+
+    :cond_flyme_0
     if-eqz v6, :cond_4
 
     move-object/from16 v0, p0

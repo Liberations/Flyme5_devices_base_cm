@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/SystemServer$FlymeInjector;,
         Lcom/android/server/SystemServer$AdbPortObserver;
     }
 .end annotation
@@ -1750,7 +1751,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v77, Lcom/android/server/InputMethodManagerService;
+    new-instance v77, Lcom/android/server/MzInputMethodManagerService;
 
     move-object/from16 v0, v77
 
@@ -2102,6 +2103,7 @@
     const-string v4, "network_management"
 
     invoke-static {v4, v7}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addNetworkManagementServiceFlyme(Lcom/android/server/SystemServer;)V
     :try_end_16
     .catch Ljava/lang/Throwable; {:try_start_16 .. :try_end_16} :catch_c
 
@@ -2358,6 +2360,7 @@
     .end local v47    # "connectivity":Lcom/android/server/ConnectivityService;
     .restart local v46    # "connectivity":Lcom/android/server/ConnectivityService;
     :goto_14
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addSambaService(Lcom/android/server/SystemServer;)V
     :try_start_21
     const-string v4, "SystemServer"
 
@@ -3064,6 +3067,7 @@
     invoke-virtual {v4, v5}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     :cond_1d
+    goto/16 :goto_flyme_0
     if-nez v64, :cond_1e
 
     if-nez v58, :cond_1e
@@ -3151,6 +3155,7 @@
     .end local v74    # "gestureService":Lcom/android/server/gesture/GestureService;
     .restart local v73    # "gestureService":Lcom/android/server/gesture/GestureService;
     :cond_1f
+    :goto_flyme_0
     :goto_28
     move-object/from16 v0, p0
 
@@ -3246,11 +3251,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v112, Lcom/android/server/ThemeService;
+    #new-instance v112, Lcom/android/server/ThemeService;
 
-    move-object/from16 v0, v112
+    #move-object/from16 v0, v112
 
-    invoke-direct {v0, v3}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
+    #invoke-direct {v0, v3}, Lcom/android/server/ThemeService;-><init>(Landroid/content/Context;)V
+
+    const/16 v112, 0x0
+
     :try_end_3d
     .catch Ljava/lang/Throwable; {:try_start_3d .. :try_end_3d} :catch_26
 
@@ -3261,7 +3269,7 @@
 
     move-object/from16 v0, v112
 
-    invoke-static {v4, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+    #invoke-static {v4, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_3e
     .catch Ljava/lang/Throwable; {:try_start_3e .. :try_end_3e} :catch_39
 
@@ -3673,6 +3681,13 @@
     check-cast v92, Lcom/android/server/MmsServiceBroker;
 
     .restart local v92    # "mmsService":Lcom/android/server/MmsServiceBroker;
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, v125
+
+    move-object/from16 v5, v119
+
+    invoke-static {v0, v4, v5}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
     move-object/from16 v36, v71
 
     .local v36, "arr$":[Ljava/lang/String;

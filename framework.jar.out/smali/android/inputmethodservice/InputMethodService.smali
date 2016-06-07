@@ -3159,6 +3159,19 @@
 
     if-ne v4, v5, :cond_1
 
+    invoke-static/range {p0 .. p0}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->isImeInterceptBackKey(Landroid/inputmethodservice/InputMethodService;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_flyme_0
+
+    invoke-static/range {p0 .. p0}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->handleBack(Landroid/inputmethodservice/InputMethodService;)Z
+
+    move-result v1
+
+    return v1
+
+    :cond_flyme_0
     invoke-direct {p0, v3}, Landroid/inputmethodservice/InputMethodService;->handleBack(Z)Z
 
     move-result v0
@@ -3363,6 +3376,17 @@
 
     if-nez v2, :cond_1
 
+    invoke-static/range {p0 .. p0}, Landroid/inputmethodservice/InputMethodService$FlymeInjector;->isImeInterceptBackKey(Landroid/inputmethodservice/InputMethodService;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_flyme_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_flyme_0
     .line 1875
     invoke-direct {p0, v0}, Landroid/inputmethodservice/InputMethodService;->handleBack(Z)Z
 

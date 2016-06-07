@@ -35993,6 +35993,13 @@
     .line 3346
     .end local v10    # "displayInfo":Landroid/view/DisplayInfo;
     :cond_1e
+    move-object/from16 v0, p0
+
+    move/from16 v1, p7
+
+    move-object/from16 v2, v30
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/wm/WindowManagerService$FlymeInjector;->adjustInputWindow(Lcom/android/server/wm/WindowManagerService;ILcom/android/server/wm/WindowState;)V
     move-object/from16 v0, v30
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;

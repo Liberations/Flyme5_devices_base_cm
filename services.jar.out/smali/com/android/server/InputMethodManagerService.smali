@@ -9362,6 +9362,8 @@
 
     iput-boolean v12, v0, Lcom/android/server/InputMethodManagerService;->mNotificationShown:Z
 
+    :cond_flyme_0
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/InputMethodManagerService;->showFlymeImeSwitcherNotificationIfNeeded()V
     :cond_4
     move-object/from16 v0, p0
 
