@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">‏‮ROM‬‏ ‏‮Extra‬‏ ‏‮Settings‬‏</string>
+    <string name="error">‏‮Error‬‏</string>
+    <string name="reboot_needed">‏‮Reboot‬‏ ‏‮Needed‬‏</string>
+    <string name="ok">‏‮OK‬‏</string>
+    <string name="yes">‏‮Yes‬‏</string>
+    <string name="no">‏‮No‬‏</string>
+    <string name="newinstall_subject">‏‮Installed‬‏ ‏‮Successfully‬‏</string>
+    <string name="newinstall_welcome">"‏‮Congratulations!‬‏ ‏‮You‬‏ ‏‮have‬‏ ‏‮just‬‏ ‏‮installed‬‏ ‏‮TS‬‏ ‏‮CM12.1‬‏ ‏‮for‬‏ ‏‮your‬‏ ‏‮Xiaomi‬‏ ‏‮mi4c
+Take‬‏ ‏‮a‬‏ ‏‮look‬‏ ‏‮at‬‏ ‏‮ROM‬‏ ‏‮Extra‬‏ ‏‮Settings‬‏ ‏‮for‬‏ ‏‮fine‬‏ ‏‮tuning‬‏ ‏‮your‬‏ ‏‮experience.
+Want‬‏ ‏‮to‬‏ ‏‮keep‬‏ ‏‮your‬‏ ‏‮for‬‏ ‏‮phone‬‏ ‏‮up‬‏ ‏‮to‬‏ ‏‮date‬‏ ‏‮in‬‏ ‏‮future‬‏ ‏‮also?‬‏ ‏‮Please‬‏ ‏‮donate‬‏ ‏‮few‬‏ ‏‮bucks‬‏ ‏‮for‬‏ ‏‮server‬‏ ‏‮costs.
+Enjoy!‬‏"</string>
+    <string name="update_subject">‏‮Upgraded‬‏ ‏‮Successfully‬‏</string>
+    <string name="update_welcome">"‏‮Congratulations!‬‏ ‏‮You‬‏ ‏‮have‬‏ ‏‮just‬‏ ‏‮updated‬‏ ‏‮your‬‏ ‏‮TS‬‏ ‏‮CM12.1
+Want‬‏ ‏‮to‬‏ ‏‮keep‬‏ ‏‮your‬‏ ‏‮for‬‏ ‏‮phone‬‏ ‏‮up‬‏ ‏‮to‬‏ ‏‮date‬‏ ‏‮in‬‏ ‏‮future‬‏ ‏‮also?‬‏ ‏‮Please‬‏ ‏‮donate‬‏ ‏‮few‬‏ ‏‮bucks‬‏ ‏‮for‬‏ ‏‮server‬‏ ‏‮costs.
+Enjoy!‬‏"</string>
+    <string name="reboot_reason_captive">‏‮When‬‏ ‏‮changing‬‏ ‏‮internet‬‏ ‏‮detection‬‏ ‏‮mode,‬‏ ‏‮system‬‏ ‏‮reboot‬‏ ‏‮is‬‏ ‏‮required.‬‏ ‏‮Reboot‬‏ ‏‮now?‬‏</string>
+    <string name="pref_title_enable_etap">‏‮Edge‬‏ ‏‮double‬‏ ‏‮tap‬‏</string>
+    <string name="pref_summary_enable_etap">"‏‮Double‬‏ ‏‮tap‬‏ ‏‮to‬‏ ‏‮phone's‬‏ ‏‮edge‬‏ ‏‮causes‬‏ ‏‮back‬‏"</string>
+    <string name="pref_title_enable_crec">‏‮Auto‬‏ ‏‮close‬‏ ‏‮running‬‏ ‏‮apps‬‏</string>
+    <string name="pref_summary_enable_crec">‏‮Automatically‬‏ ‏‮close‬‏ ‏‮running‬‏ ‏‮apps‬‏ ‏‮when‬‏ ‏‮display‬‏ ‏‮goes‬‏ ‏‮off‬‏</string>
+    <string name="pref_title_enable_capt">‏‮Internet‬‏ ‏‮detection‬‏</string>
+    <string name="pref_summary_enable_capt">‏‮Enable‬‏ ‏‮google‬‏ ‏‮captive‬‏ ‏‮portal‬‏ ‏‮detection‬‏</string>
+    <string name="pref_header_general">‏‮General‬‏</string>
+    <string name="pref_header_extra">‏‮Extra‬‏ ‏‮Settings‬‏</string>
+    <string name="pref_title_donate">‏‮Paypal‬‏ ‏‮donate‬‏</string>
+    <string name="pref_summary_donate">‏‮Want‬‏ ‏‮to‬‏ ‏‮keep‬‏ ‏‮your‬‏ ‏‮device‬‏ ‏‮up‬‏ ‏‮to‬‏ ‏‮date?‬‏ ‏‮Please‬‏ ‏‮donate‬‏ ‏‮few‬‏ ‏‮bucks‬‏ ‏‮fpr‬‏ ‏‮server‬‏ ‏‮costs,‬‏ ‏‮THANK‬‏ ‏‮YOU!‬‏</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">边缘触控</string>
+    <string name="error">出错啦</string>
+    <string name="reboot_needed">需要重启</string>
+    <string name="ok">完美</string>
+    <string name="yes">是的</string>
+    <string name="no">不</string>
+    <string name="newinstall_subject">安装成功</string>
+    <string name="reboot_reason_captive">需要重启，是否重启呢？</string>
+    <string name="pref_title_enable_etap">边缘触控</string>
+    <string name="pref_summary_enable_etap">双击边缘返回</string>
+    <string name="pref_title_enable_crec">自动杀死后台APP</string>
+    <string name="pref_summary_enable_crec">屏幕熄灭时关闭所有后台有助于省电</string>
+    <string name="pref_title_enable_capt">感叹号杀手</string>
+    <string name="pref_summary_enable_capt">去除感叹号</string>
+    <string name="pref_header_general">通用</string>
+    <string name="pref_header_extra">边缘触控</string>
+  
+</resources>
