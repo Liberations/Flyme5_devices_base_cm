@@ -8179,8 +8179,7 @@
 .end method
 
 
-
-
+# virtual methods
 .method public cleanUpAllConnections(Ljava/lang/String;)V
     .locals 1
     .param p1, "cause"    # Ljava/lang/String;
@@ -14775,8 +14774,6 @@
     goto :goto_1
 .end method
 
-
-
 .method protected onRadioAvailable()V
     .locals 4
 
@@ -16645,6 +16642,8 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
+
+    const-string v2, "mobile_data"
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
