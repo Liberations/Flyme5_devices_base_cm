@@ -41,14 +41,14 @@ vendor_modify_images := boot
 # The default value is app or pri-app which not need to configure.
 # You can configure the directory name which relative to the vendor/system directory.
 #-----------------------------------------------------------------------------
-vendor_remove_dirs := usr/srec vendor/pittpatt 
+#vendor_remove_dirs := 
 
 ##############################################################################
 # The value decides the file which you want to remove in the vendor directory for the ota package.
 # The default value is nothing.
 # You can configure the file name which relative to the vendor/system directory.
 #-----------------------------------------------------------------------------
-vendor_remove_files := lib/libchrome.2214.89.so
+#vendor_remove_files := 
 
 ##############################################################################
 # The value decides the vendor apk which you want to save in the vendor directory for the ota package.
@@ -102,7 +102,7 @@ board_saved_files := lib/libwebviewchromium.so lib64/libwebviewchromium.so bin/b
 board_remove_apps := LogReport TimeService NfcNci Bluetooth KeyChain HTMLViewer UserDictionaryProvider \
                      BackupRestoreConfirmation FusedLocation PrintSpooler SharedStorageBackup \
                      ExternalStorageProvider InputDevices ProxyHandler Shell DefaultContainerService \
-                     Music
+                     Music Camera
 
 
 ##############################################################################
