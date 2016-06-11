@@ -4345,7 +4345,7 @@
 
     move-result v7
 
-    const/4 v7, 0x0
+ 
     if-nez v7, :cond_2
 
     .line 903
