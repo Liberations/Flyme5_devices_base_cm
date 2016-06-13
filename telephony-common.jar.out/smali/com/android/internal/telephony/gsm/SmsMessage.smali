@@ -90,7 +90,7 @@
 
     .line 914
     .local v3, "r":Landroid/content/res/Resources;
-    const v5, 0x11200a0
+    const v5, #android:bool@config_sms_force_7bit_encoding#t
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2425,7 +2425,7 @@
 
     .line 1262
     .local v7, "r":Landroid/content/res/Resources;
-    const v9, 0x1120099
+    const v9, #android:bool@config_sms_decode_gsm_8bit_data#t
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2930,7 +2930,7 @@
 
     .line 1426
     .restart local v7    # "r":Landroid/content/res/Resources;
-    const v9, 0x1120099
+    const v9, #android:bool@config_sms_decode_gsm_8bit_data#t
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 

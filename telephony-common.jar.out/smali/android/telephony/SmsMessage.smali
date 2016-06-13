@@ -546,7 +546,7 @@
 
     .line 407
     .local v4, "r":Landroid/content/res/Resources;
-    const v9, 0x11200a0
+    const v9, #android:bool@config_sms_force_7bit_encoding#t
 
     invoke-virtual {v4, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1221,7 +1221,7 @@
     .local v2, "r":Landroid/content/res/Resources;
     if-eqz v2, :cond_1
 
-    const v4, 0x1070045
+    const v4, #android:array@no_ems_support_sim_operators#t
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

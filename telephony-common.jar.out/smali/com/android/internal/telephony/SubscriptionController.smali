@@ -1158,7 +1158,7 @@
 
     move-result-object v1
 
-    const v19, 0x108043d
+    const v19, #android:drawable@ic_sim_card_multi_24px_clr#t
 
     move/from16 v0, v19
 
@@ -1518,7 +1518,7 @@
 
     move-result-object v4
 
-    const v5, 0x107000a
+    const v5, #android:array@sim_colors#t
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -5701,7 +5701,7 @@
 
     move-result-object v2
 
-    const v3, 0x112005e
+    const v3, #android:bool@config_voice_capable#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -7535,7 +7535,7 @@
 
     iget-object v3, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
 
-    const v4, 0x104000e
+    const v4, #android:string@unknownName#t
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -8255,7 +8255,7 @@
 
     move-result-object v2
 
-    const v3, 0x11200a9
+    const v3, #android:bool@config_spn_display_control#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -8276,7 +8276,7 @@
 
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionController;->mContext:Landroid/content/Context;
 
-    const v3, 0x10406de
+    const v3, #android:string@kg_text_message_separator#t
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

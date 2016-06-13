@@ -72,6 +72,8 @@
 
 .field public static final IS_TD_PLATFORM:Ljava/lang/Boolean;
 
+.field public static final IS_U10:Ljava/lang/Boolean;
+
 .field public static final IS_U15:Ljava/lang/Boolean;
 
 .field public static final IS_WCDMA_PLATFORM:Ljava/lang/Boolean;
@@ -134,7 +136,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_f
 
     move v0, v1
 
@@ -309,7 +311,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     :cond_0
     move v0, v1
@@ -361,7 +363,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     const-string v0, "ro.arch"
 
@@ -375,7 +377,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     :cond_1
     move v0, v1
@@ -427,7 +429,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_12
 
     :cond_2
     move v0, v1
@@ -479,7 +481,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
     :cond_3
     move v0, v1
@@ -535,7 +537,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_14
 
     :cond_4
     move v0, v1
@@ -587,7 +589,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     :cond_5
     move v0, v1
@@ -625,7 +627,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_16
 
     :cond_6
     move v0, v1
@@ -663,7 +665,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
     :cond_7
     move v0, v1
@@ -701,7 +703,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_18
 
     :cond_8
     move v0, v1
@@ -739,7 +741,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
     :cond_9
     move v0, v1
@@ -799,7 +801,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1a
 
     :cond_a
     move v0, v1
@@ -851,7 +853,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_1b
 
     :cond_b
     move v0, v1
@@ -883,11 +885,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1b
+    if-eqz v0, :cond_1c
 
     :cond_c
+    move v0, v1
+
     :goto_d
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -965,6 +969,30 @@
 
     sput-object v0, Landroid/os/BuildExt;->IS_A02:Ljava/lang/Boolean;
 
+    const-string v0, "u10"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->checkProductModel(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    const-string v0, "1055"
+
+    invoke-static {v0}, Landroid/os/BuildExt;->checkProductModel(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    :cond_d
+    :goto_e
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/os/BuildExt;->IS_U10:Ljava/lang/Boolean;
+
     const-string v0, "ro.meizu.product.model"
 
     invoke-static {v0}, Landroid/os/BuildExt;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1021,9 +1049,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
-    :cond_d
+    :cond_e
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -1066,75 +1094,80 @@
 
     return-void
 
-    :cond_e
+    :cond_f
     move v0, v2
 
     goto/16 :goto_0
 
-    :cond_f
+    :cond_10
     move v0, v2
 
     goto/16 :goto_1
 
-    :cond_10
+    :cond_11
     move v0, v2
 
     goto/16 :goto_2
 
-    :cond_11
+    :cond_12
     move v0, v2
 
     goto/16 :goto_3
 
-    :cond_12
+    :cond_13
     move v0, v2
 
     goto/16 :goto_4
 
-    :cond_13
+    :cond_14
     move v0, v2
 
     goto/16 :goto_5
 
-    :cond_14
+    :cond_15
     move v0, v2
 
     goto/16 :goto_6
 
-    :cond_15
+    :cond_16
     move v0, v2
 
     goto/16 :goto_7
 
-    :cond_16
+    :cond_17
     move v0, v2
 
     goto/16 :goto_8
 
-    :cond_17
+    :cond_18
     move v0, v2
 
     goto/16 :goto_9
 
-    :cond_18
+    :cond_19
     move v0, v2
 
     goto/16 :goto_a
 
-    :cond_19
+    :cond_1a
     move v0, v2
 
     goto/16 :goto_b
 
-    :cond_1a
+    :cond_1b
     move v0, v2
 
     goto/16 :goto_c
 
-    :cond_1b
-    move v1, v2
+    :cond_1c
+    move v0, v2
 
     goto/16 :goto_d
+
+    :cond_1d
+    move v1, v2
+
+    goto/16 :goto_e
 .end method
 
 .method public constructor <init>()V
@@ -1220,6 +1253,18 @@
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .local v1, "file":Ljava/io/File;
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const-string v5, "unknown"
+
+    :goto_0
+    return-object v5
+
+    :cond_0
     const/4 v2, 0x0
 
     .local v2, "reader":Ljava/io/BufferedReader;
@@ -1244,24 +1289,15 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v5
 
-    move-object v2, v3
+    goto :goto_0
 
-    .end local v3    # "reader":Ljava/io/BufferedReader;
-    .end local v4    # "tempString":Ljava/lang/String;
-    .restart local v2    # "reader":Ljava/io/BufferedReader;
-    :goto_0
-    return-object v5
-
-    .end local v2    # "reader":Ljava/io/BufferedReader;
-    .restart local v3    # "reader":Ljava/io/BufferedReader;
-    .restart local v4    # "tempString":Ljava/lang/String;
-    :cond_0
+    :cond_1
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
