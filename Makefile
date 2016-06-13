@@ -115,7 +115,7 @@ board_remove_apps := LogReport TimeService NfcNci Bluetooth KeyChain HTMLViewer 
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := TeleService SystemUI FlymeLauncher 
+board_modify_apps := TeleService 
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -137,8 +137,8 @@ board_modify_apps := TeleService SystemUI FlymeLauncher
 # The property decide whether hide the soft mainkeys.
 # If 1, hide the soft mainkeys. If 0, display the soft mainkeys.
 # You should configure the property according to your device.
-override_property += \
-    qemu.hw.mainkeys=0
+#override_property += \
+ #   qemu.hw.mainkeys=0
 
 
 # The value of the property ro.flyme.romer will be contained in the ota package name.
