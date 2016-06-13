@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="@string/pref_header_extra" android:key="pref_header_extra_settings">
-        <CheckBoxPreference android:title="@string/pref_title_enable_etap" android:key="etap_en_b" android:summary="@string/pref_summary_enable_etap" android:defaultValue="true" />
-        <CheckBoxPreference android:title="@string/pref_title_enable_crec" android:key="crec_en_b" android:summary="@string/pref_summary_enable_crec" android:defaultValue="true" />
-      </PreferenceCategory>
-</PreferenceScreen>
