@@ -3,7 +3,7 @@ FLyme5_devices_xiaomi_libra
 
 6.13R change log for Flyme5.
 =====================================
-Basic   | Spec Sheet
+Basic   | repair 
 -------:|:-------------------------
 系统    | 同步：Flyme最新代码
 系统    | 优化：提升系统稳定性
@@ -15,7 +15,7 @@ Basic   | Spec Sheet
 
 6.6R change log for Flyme5.
 =====================================
-Basic   | Spec Sheet
+Basic   | repair 
 -------:|:-------------------------
 信息    | 修复 短信中心号码错误的问题
 信息    | 修复：某些清空下短信报错的问题
