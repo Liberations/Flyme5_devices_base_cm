@@ -1,0 +1,22 @@
+.method public isShowingAndNotOccluded()Z
+    .locals 1
+
+    .prologue
+    .line 85
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setOccluded(Z)I
+    .locals 1
+    .param p1, "isOccluded"    # Z
+
+    .prologue
+    invoke-virtual {p0, p1}, Lcom/android/systemui/keyguard/KeyguardService$1;->setOccluded(Z)V
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+

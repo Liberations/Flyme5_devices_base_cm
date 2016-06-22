@@ -115,7 +115,7 @@ board_remove_apps := LogReport TimeService NfcNci Bluetooth KeyChain HTMLViewer 
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := TeleService 
+board_modify_apps := TeleService  SystemUI
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -149,7 +149,7 @@ board_modify_apps := TeleService
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
     ro.flyme.romer=Liberation \
-    ro.product.model_romer=Mi-4c_Liberation\
+    ro.product.model_romer=Mi-4c_Liberation 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
 # The default value is nothing.
