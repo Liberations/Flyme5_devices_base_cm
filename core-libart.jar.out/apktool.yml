@@ -1,0 +1,15 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: core-libart.jar
+compressionType: false
+doNotCompress: null
+isFrameworkApk: false
+packageInfo: null
+sdkInfo: null
+sharedLibrary: false
+unknownFiles:
+  org/apache/harmony/dalvik/ddmc/README.txt: '8'
+  java/util/logging/logging.properties: '8'
+  java/security/security.properties: '8'
+usesFramework: null
+version: 2.1.1-04d478-SNAPSHOT
+versionInfo: null

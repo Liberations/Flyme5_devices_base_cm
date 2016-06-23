@@ -7,7 +7,7 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-BASE := 4x
+#BASE := base_cm
 
 
 ##############################################################################
@@ -77,7 +77,7 @@ vendor_saved_apps := Bluetooth  KeyChain HTMLViewer UserDictionaryProvider Backu
 # You need to decode android.policy.jar to the project directory (use apktool d android.policy.jar) first,
 # and then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := android.policy com.qti.dpmframework framework services telephony-common wifi-service 
+vendor_modify_jars := android.policy com.qti.dpmframework framework services telephony-common wifi-service core-libart
 
 ##############################################################################
 # The value decides which board system directory you want to save.
@@ -115,7 +115,7 @@ board_remove_apps := LogReport TimeService NfcNci Bluetooth KeyChain HTMLViewer 
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := TeleService  SystemUI
+board_modify_apps := TeleService  SystemUI Telecom 
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
