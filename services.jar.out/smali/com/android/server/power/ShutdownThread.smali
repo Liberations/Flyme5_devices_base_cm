@@ -936,35 +936,14 @@
 .end method
 
 .method private static getUiContext(Landroid/content/Context;)Landroid/content/Context;
-    .locals 2
+    .locals 1
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    const/4 v0, 0x0
-
-    .local v0, "uiContext":Landroid/content/Context;
-    if-eqz p0, :cond_0
-
-    invoke-static {p0}, Landroid/content/pm/ThemeUtils;->createUiContext(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, #android:style@Theme.DeviceDefault.Light.DarkActionBar#t
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->setTheme(I)V
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    .end local v0    # "uiContext":Landroid/content/Context;
-    :goto_0
-    return-object v0
-
-    .restart local v0    # "uiContext":Landroid/content/Context;
-    :cond_1
     move-object v0, p0
 
-    goto :goto_0
+    return-object v0
+
 .end method
 
 .method private static isAdvancedRebootPossible(Landroid/content/Context;)Z
