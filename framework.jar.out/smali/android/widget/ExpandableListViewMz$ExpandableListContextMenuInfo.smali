@@ -33,13 +33,18 @@
     .param p4, "id"    # J
 
     .prologue
+    .line 1658
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1659
     iput-object p1, p0, Landroid/widget/ExpandableListViewMz$ExpandableListContextMenuInfo;->targetView:Landroid/view/View;
 
+    .line 1660
     iput-wide p2, p0, Landroid/widget/ExpandableListViewMz$ExpandableListContextMenuInfo;->packedPosition:J
 
+    .line 1661
     iput-wide p4, p0, Landroid/widget/ExpandableListViewMz$ExpandableListContextMenuInfo;->id:J
 
+    .line 1662
     return-void
 .end method

@@ -1590,7 +1590,7 @@
 
     move-result-object v19
 
-    const v21, #android:bool@config_global_phone_enabled#t
+    const v21, 0x11200a4
 
     move-object/from16 v0, v19
 
@@ -2315,8 +2315,6 @@
 
     move-result-object v4
 
-    const-string v4, "mobile_data"
-
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v3
@@ -2390,9 +2388,8 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
-   const-string v4, "data_roaming"
-    
-invoke-static {v3, v4, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    invoke-static {v3, v4, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v3
 

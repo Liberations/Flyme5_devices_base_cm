@@ -38,6 +38,7 @@
     .locals 0
 
     .prologue
+    .line 21
     iput-object p1, p0, Lcom/android/server/pm/UpdatePermissionsReceiver$1;->this$0:Lcom/android/server/pm/UpdatePermissionsReceiver;
 
     iput-object p2, p0, Lcom/android/server/pm/UpdatePermissionsReceiver$1;->val$i:Landroid/content/Intent;
@@ -56,6 +57,7 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
+    .line 21
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -73,6 +75,7 @@
     .prologue
     const/4 v8, 0x0
 
+    .line 23
     iget-object v5, p0, Lcom/android/server/pm/UpdatePermissionsReceiver$1;->val$i:Landroid/content/Intent;
 
     const-string v6, "package_name"
@@ -81,6 +84,7 @@
 
     move-result-object v3
 
+    .line 24
     .local v3, "list":[Ljava/lang/String;
     if-eqz v3, :cond_0
 
@@ -88,12 +92,15 @@
 
     if-nez v5, :cond_1
 
+    .line 33
     :cond_0
     return-object v8
 
+    .line 27
     :cond_1
     if-eqz v3, :cond_0
 
+    .line 28
     move-object v0, v3
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -108,6 +115,7 @@
 
     aget-object v4, v0, v1
 
+    .line 29
     .local v4, "pkg":Ljava/lang/String;
     const-string v5, "UpdatePermissionsReceiver"
 
@@ -131,10 +139,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 30
     iget-object v5, p0, Lcom/android/server/pm/UpdatePermissionsReceiver$1;->val$fpms:Landroid/content/pm/FlymePackageManager;
 
     invoke-virtual {v5, v4}, Landroid/content/pm/FlymePackageManager;->updatePermissions(Ljava/lang/String;)V
 
+    .line 28
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

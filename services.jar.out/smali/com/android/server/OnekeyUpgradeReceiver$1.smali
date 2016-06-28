@@ -26,6 +26,7 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
+    .line 35
     iput-object p1, p0, Lcom/android/server/OnekeyUpgradeReceiver$1;->this$0:Lcom/android/server/OnekeyUpgradeReceiver;
 
     iput-object p3, p0, Lcom/android/server/OnekeyUpgradeReceiver$1;->val$context:Landroid/content/Context;
@@ -41,6 +42,7 @@
     .locals 3
 
     .prologue
+    .line 39
     :try_start_0
     iget-object v0, p0, Lcom/android/server/OnekeyUpgradeReceiver$1;->val$context:Landroid/content/Context;
 
@@ -54,9 +56,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 42
     :goto_0
     return-void
 
+    .line 40
     :catch_0
     move-exception v0
 

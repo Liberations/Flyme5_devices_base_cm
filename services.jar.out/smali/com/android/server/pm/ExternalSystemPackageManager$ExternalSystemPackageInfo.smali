@@ -27,10 +27,13 @@
     .param p2, "sig"    # Ljava/lang/String;
 
     .prologue
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 21
     iput-object p1, p0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;->mPackageName:Ljava/lang/String;
 
+    .line 22
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/content/pm/Signature;
@@ -45,5 +48,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;->mSignatures:[Landroid/content/pm/Signature;
 
+    .line 25
     return-void
 .end method

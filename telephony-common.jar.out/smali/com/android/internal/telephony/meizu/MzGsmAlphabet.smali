@@ -26,6 +26,7 @@
 
     const/4 v3, 0x0
 
+    .line 127
     const/16 v0, 0xe
 
     new-array v0, v0, [Ljava/lang/String;
@@ -106,6 +107,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/meizu/MzGsmAlphabet;->sLanguageTables:[Ljava/lang/String;
 
+    .line 320
     const/16 v0, 0xe
 
     new-array v0, v0, [Ljava/lang/String;
@@ -193,6 +195,7 @@
     .locals 0
 
     .prologue
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -207,14 +210,18 @@
     .param p4, "force"    # Z
 
     .prologue
+    .line 57
     const/4 v5, 0x0
 
+    .line 58
     .local v5, "isMbcs":Z
     const/4 v2, 0x0
 
+    .line 59
     .local v2, "charset":Ljava/nio/charset/Charset;
     const/4 v7, 0x0
 
+    .line 61
     .local v7, "mbcsBuffer":Ljava/nio/ByteBuffer;
     invoke-static/range {p3 .. p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -238,18 +245,22 @@
 
     if-eqz v12, :cond_0
 
+    .line 64
     const/4 v5, 0x1
 
+    .line 65
     invoke-static/range {p3 .. p3}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v2
 
+    .line 66
     const/4 v12, 0x2
 
     invoke-static {v12}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
+    .line 70
     :cond_0
     sget-object v12, Lcom/android/internal/telephony/meizu/MzGsmAlphabet;->sLanguageTables:[Ljava/lang/String;
 
@@ -257,6 +268,7 @@
 
     aget-object v6, v12, v13
 
+    .line 71
     .local v6, "languageTableToChar":Ljava/lang/String;
     sget-object v12, Lcom/android/internal/telephony/meizu/MzGsmAlphabet;->sLanguageShiftTables:[Ljava/lang/String;
 
@@ -264,6 +276,7 @@
 
     aget-object v11, v12, v13
 
+    .line 73
     .local v11, "shiftTableToChar":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -271,9 +284,11 @@
 
     invoke-direct {v9, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 74
     .local v9, "ret":Ljava/lang/StringBuilder;
     const/4 v8, 0x0
 
+    .line 75
     .local v8, "prevWasEscape":Z
     move v3, p1
 
@@ -287,10 +302,12 @@
 
     if-ge v4, v12, :cond_2
 
+    .line 78
     aget-byte v12, p0, v4
 
     and-int/lit16 v1, v12, 0xff
 
+    .line 80
     .local v1, "c":I
     if-eqz p4, :cond_1
 
@@ -298,12 +315,14 @@
 
     if-lt v1, v12, :cond_1
 
+    .line 81
     const/16 v12, 0x20
 
     invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move v3, v4
 
+    .line 75
     .end local v4    # "i":I
     .restart local v3    # "i":I
     :goto_1
@@ -315,11 +334,13 @@
     .restart local v4    # "i":I
     goto :goto_0
 
+    .line 85
     :cond_1
     const/16 v12, 0xff
 
     if-ne v1, v12, :cond_3
 
+    .line 120
     .end local v1    # "c":I
     :cond_2
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -328,18 +349,22 @@
 
     return-object v12
 
+    .line 87
     .restart local v1    # "c":I
     :cond_3
     const/16 v12, 0x1b
 
     if-ne v1, v12, :cond_5
 
+    .line 88
     if-eqz v8, :cond_4
 
+    .line 92
     const/16 v12, 0x20
 
     invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 93
     const/4 v8, 0x0
 
     move v3, v4
@@ -348,6 +373,7 @@
     .restart local v3    # "i":I
     goto :goto_1
 
+    .line 95
     .end local v3    # "i":I
     .restart local v4    # "i":I
     :cond_4
@@ -359,20 +385,24 @@
     .restart local v3    # "i":I
     goto :goto_1
 
+    .line 98
     .end local v3    # "i":I
     .restart local v4    # "i":I
     :cond_5
     if-eqz v8, :cond_7
 
+    .line 99
     invoke-virtual {v11, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
 
+    .line 100
     .local v10, "shiftChar":C
     const/16 v12, 0x20
 
     if-ne v10, v12, :cond_6
 
+    .line 102
     invoke-virtual {v6, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v12
@@ -382,6 +412,7 @@
     :goto_2
     move v3, v4
 
+    .line 117
     .end local v4    # "i":I
     .end local v10    # "shiftChar":C
     .restart local v3    # "i":I
@@ -390,6 +421,7 @@
 
     goto :goto_1
 
+    .line 104
     .end local v3    # "i":I
     .restart local v4    # "i":I
     .restart local v10    # "shiftChar":C
@@ -398,6 +430,7 @@
 
     goto :goto_2
 
+    .line 107
     .end local v10    # "shiftChar":C
     :cond_7
     if-eqz v5, :cond_8
@@ -412,6 +445,7 @@
 
     if-lt v12, v13, :cond_9
 
+    .line 108
     :cond_8
     invoke-virtual {v6, v1}, Ljava/lang/String;->charAt(I)C
 
@@ -425,11 +459,13 @@
     .restart local v3    # "i":I
     goto :goto_3
 
+    .line 111
     .end local v3    # "i":I
     .restart local v4    # "i":I
     :cond_9
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
+    .line 112
     add-int/lit8 v3, v4, 0x1
 
     .end local v4    # "i":I
@@ -438,8 +474,10 @@
 
     invoke-virtual {v7, p0, v4, v12}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 113
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
+    .line 114
     invoke-virtual {v2, v7}, Ljava/nio/charset/Charset;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
 
     move-result-object v12
@@ -460,15 +498,18 @@
     .prologue
     const/4 v3, 0x0
 
+    .line 40
     invoke-static {p0, v3, v3, v3}, Lcom/android/internal/telephony/GsmAlphabet;->countGsmSeptetsUsingTables(Ljava/lang/CharSequence;ZII)I
 
     move-result v1
 
+    .line 42
     .local v1, "septets":I
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_0
 
+    .line 43
     const-string v2, "MzGsmAlphabet"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -497,14 +538,18 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 44
     const/4 v0, 0x0
 
+    .line 52
     :goto_0
     return-object v0
 
+    .line 48
     :cond_0
     new-array v0, v1, [B
 
+    .line 50
     .local v0, "ret":[B
     array-length v2, v0
 

@@ -1,0 +1,37 @@
+
+on early-init
+    mount debugfs debugfs /sys/kernel/debug
+
+on init 
+    symlink /data/media/0 /sdcard
+	symlink /sbin /system/bin
+    
+on boot
+    write /sys/class/leds/lcd-backlight/brightness 200
+    setprop recovery.perf.mode 0
+
+on post-fs
+    mkdir /firmware 0771 system system
+    wait /dev/block/bootdevice/by-name/modem
+#    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=777,fmask=777
+	mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower dmask=0555 fmask=0555 gid=1000
+
+    
+	write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    # Always start adbd on userdebug and eng builds
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
+    
+on property:service.adb.root=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1
+
+on property:recovery.perf.mode=1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
+
+on property:recovery.perf.mode=0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+
+service qseecomd /sbin/qseecomd
+

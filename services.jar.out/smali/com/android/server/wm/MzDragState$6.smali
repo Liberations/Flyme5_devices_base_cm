@@ -26,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 512
     iput-object p1, p0, Lcom/android/server/wm/MzDragState$6;->this$0:Lcom/android/server/wm/MzDragState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,6 +40,7 @@
     .locals 2
 
     .prologue
+    .line 515
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$6;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget-object v0, v0, Lcom/android/server/wm/MzDragState;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -47,6 +49,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 516
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$6;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget-object v0, v0, Lcom/android/server/wm/MzDragState;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -55,6 +58,7 @@
 
     invoke-virtual {v0}, Lcom/android/server/wm/DragState;->reset()V
 
+    .line 517
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$6;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget-object v0, v0, Lcom/android/server/wm/MzDragState;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -63,6 +67,7 @@
 
     iput-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mDragState:Lcom/android/server/wm/DragState;
 
+    .line 519
     :cond_0
     return-void
 .end method

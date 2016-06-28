@@ -515,9 +515,6 @@
 .method public abstract getPreferredNetworkType(Landroid/os/Message;)V
 .end method
 
-.method public abstract getRadioAccessFamily()I
-.end method
-
 .method public abstract getRingingCall()Lcom/android/internal/telephony/Call;
 .end method
 

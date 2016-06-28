@@ -5297,7 +5297,7 @@
 
     move-object/from16 v1, p1
 
-    move/from16 v2, p4
+    move/from16 v2, p5
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->savePasswordLength(Ljava/lang/String;I)V
 
@@ -5383,7 +5383,7 @@
 
     invoke-virtual/range {v13 .. v22}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
 
-    goto :goto_flyme_0
+    goto :goto_7
 
     .line 921
     :cond_d
@@ -5449,7 +5449,7 @@
 
     invoke-virtual/range {v13 .. v22}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
 
-    goto :goto_7
+    goto :goto_flyme_0
 
     .line 943
     .restart local v29    # "passwordHistory":Ljava/lang/String;
@@ -7014,7 +7014,6 @@
     .line 1651
     return-void
 .end method
-
 
 .method private savePasswordLength(Ljava/lang/String;I)V
     .locals 6

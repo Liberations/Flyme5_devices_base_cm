@@ -39,6 +39,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 14
     const-string v0, "FlymeFontsHelper"
 
     const/4 v1, 0x3
@@ -49,12 +50,16 @@
 
     sput-boolean v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->DEBUG:Z
 
+    .line 18
     sput-object v2, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;
 
+    .line 20
     sput-object v2, Landroid/content/res/flymetheme/FlymeFontsHelper;->sWhiteList:Ljava/util/List;
 
+    .line 22
     sput-object v2, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
 
+    .line 24
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->mCreated:Z
@@ -66,6 +71,7 @@
     .locals 0
 
     .prologue
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,14 +83,18 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 73
     sput-object v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;
 
+    .line 74
     sput-object v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
 
+    .line 75
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->mCreated:Z
 
+    .line 76
     return-void
 .end method
 
@@ -92,6 +102,7 @@
     .locals 5
 
     .prologue
+    .line 28
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -99,6 +110,7 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 29
     .local v0, "checkFontPathMount":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -106,20 +118,24 @@
 
     if-nez v3, :cond_1
 
+    .line 30
     sget-boolean v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
+    .line 31
     const-string v3, "FlymeFontsHelper"
 
     const-string v4, "The font path is not mount,create next time!"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 53
     :cond_0
     :goto_0
     return-void
 
+    .line 35
     :cond_1
     new-instance v1, Ljava/io/File;
 
@@ -127,6 +143,7 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 36
     .local v1, "customFontFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -134,16 +151,19 @@
 
     if-eqz v3, :cond_2
 
+    .line 37
     const-string v3, "data/data/com.meizu.customizecenter/font/flymeFont.ttf"
 
     sput-object v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;
 
+    .line 38
     invoke-static {v1}, Landroid/graphics/Typeface;->createFromFile(Ljava/io/File;)Landroid/graphics/Typeface;
 
     move-result-object v3
 
     sput-object v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
 
+    .line 49
     :goto_1
     const/4 v3, 0x1
 
@@ -153,10 +173,12 @@
 
     goto :goto_0
 
+    .line 50
     .end local v1    # "customFontFile":Ljava/io/File;
     :catch_0
     move-exception v2
 
+    .line 51
     .local v2, "e":Ljava/lang/Exception;
     const-string v3, "FlymeFontsHelper"
 
@@ -168,6 +190,7 @@
 
     goto :goto_0
 
+    .line 40
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "customFontFile":Ljava/io/File;
     :cond_2
@@ -179,6 +202,7 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 41
     .restart local v1    # "customFontFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -186,10 +210,12 @@
 
     if-eqz v3, :cond_3
 
+    .line 42
     const-string v3, "data/data/com.meizu.customizecenter/font/flymeFont.otf"
 
     sput-object v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;
 
+    .line 43
     invoke-static {v1}, Landroid/graphics/Typeface;->createFromFile(Ljava/io/File;)Landroid/graphics/Typeface;
 
     move-result-object v3
@@ -198,11 +224,13 @@
 
     goto :goto_1
 
+    .line 45
     :cond_3
     const/4 v3, 0x0
 
     sput-object v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;
 
+    .line 46
     const/4 v3, 0x0
 
     sput-object v3, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
@@ -216,6 +244,7 @@
     .locals 1
 
     .prologue
+    .line 83
     sget-object v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->curTypefacePath:Ljava/lang/String;
 
     return-object v0
@@ -225,6 +254,7 @@
     .locals 1
 
     .prologue
+    .line 66
     sget-boolean v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->mCreated:Z
 
     if-nez v0, :cond_0
@@ -233,8 +263,10 @@
 
     if-nez v0, :cond_0
 
+    .line 67
     invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->generateNewTypeface()V
 
+    .line 69
     :cond_0
     sget-object v0, Landroid/content/res/flymetheme/FlymeFontsHelper;->sFlymeDefaultTypeface:Landroid/graphics/Typeface;
 
@@ -245,6 +277,7 @@
     .locals 1
 
     .prologue
+    .line 79
     invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->getflymeTypeface()Landroid/graphics/Typeface;
 
     move-result-object v0
@@ -267,6 +300,7 @@
     .param p0, "curTypeface"    # Landroid/graphics/Typeface;
 
     .prologue
+    .line 56
     if-eqz p0, :cond_0
 
     sget-object v0, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
@@ -295,9 +329,11 @@
 
     if-eqz v0, :cond_1
 
+    .line 59
     :cond_0
     const/4 v0, 0x1
 
+    .line 61
     :goto_0
     return v0
 

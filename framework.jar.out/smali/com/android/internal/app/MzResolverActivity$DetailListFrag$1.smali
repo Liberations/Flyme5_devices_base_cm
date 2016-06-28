@@ -26,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 1680
     iput-object p1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$DetailListFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .param p1, "position"    # I
 
     .prologue
+    .line 1684
     const/4 v1, 0x2
 
     new-array v0, v1, [I
@@ -66,6 +68,7 @@
 
     aput v2, v0, v1
 
+    .line 1687
     .local v0, "padding":[I
     return-object v0
 .end method

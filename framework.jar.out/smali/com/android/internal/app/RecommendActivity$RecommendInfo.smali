@@ -31,6 +31,7 @@
     .locals 0
 
     .prologue
+    .line 282
     iput-object p1, p0, Lcom/android/internal/app/RecommendActivity$RecommendInfo;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

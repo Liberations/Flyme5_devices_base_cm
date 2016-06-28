@@ -27,10 +27,13 @@
     .param p1, "view"    # Landroid/widget/AbsListView;
 
     .prologue
+    .line 8475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8476
     iput-object p1, p0, Landroid/widget/AbsListView$FlymeInjector$FlymeDelayRunnable;->view:Landroid/widget/AbsListView;
 
+    .line 8477
     return-void
 .end method
 
@@ -40,15 +43,18 @@
     .locals 2
 
     .prologue
+    .line 8481
     iget-object v0, p0, Landroid/widget/AbsListView$FlymeInjector$FlymeDelayRunnable;->view:Landroid/widget/AbsListView;
 
     invoke-virtual {v0}, Landroid/widget/AbsListView;->startMultiChoice()Z
 
+    .line 8482
     iget-object v0, p0, Landroid/widget/AbsListView$FlymeInjector$FlymeDelayRunnable;->view:Landroid/widget/AbsListView;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/widget/AbsListView;->mMultiChoiceDelayRunnable:Ljava/lang/Runnable;
 
+    .line 8483
     return-void
 .end method

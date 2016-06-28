@@ -25,10 +25,12 @@
     .locals 1
 
     .prologue
+    .line 503
     const-string v0, ""
 
     sput-object v0, Landroid/widget/Toast$FlymeInjector;->mText:Ljava/lang/CharSequence;
 
+    .line 504
     const-string v0, ""
 
     sput-object v0, Landroid/widget/Toast$FlymeInjector;->mPkgName:Ljava/lang/String;
@@ -40,6 +42,7 @@
     .locals 0
 
     .prologue
+    .line 500
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,12 +55,14 @@
     .prologue
     const/4 v4, 0x0
 
+    .line 509
     iget-object v5, p0, Landroid/widget/Toast;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 511
     .local v2, "pkg":Ljava/lang/String;
     :try_start_0
     iget-object v5, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
@@ -70,11 +75,13 @@
 
     check-cast v3, Landroid/widget/TextView;
 
+    .line 512
     .local v3, "tv":Landroid/widget/TextView;
     invoke-virtual {v3}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
+    .line 513
     .local v1, "msg":Ljava/lang/CharSequence;
     sget-object v5, Landroid/widget/Toast$FlymeInjector;->mPkgName:Ljava/lang/String;
 
@@ -94,27 +101,32 @@
 
     const/4 v4, 0x1
 
+    .line 518
     .end local v1    # "msg":Ljava/lang/CharSequence;
     .end local v3    # "tv":Landroid/widget/TextView;
     :goto_0
     return v4
 
+    .line 514
     .restart local v1    # "msg":Ljava/lang/CharSequence;
     .restart local v3    # "tv":Landroid/widget/TextView;
     :cond_0
     sput-object v2, Landroid/widget/Toast$FlymeInjector;->mPkgName:Ljava/lang/String;
 
+    .line 515
     sput-object v1, Landroid/widget/Toast$FlymeInjector;->mText:Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 517
     .end local v1    # "msg":Ljava/lang/CharSequence;
     .end local v3    # "tv":Landroid/widget/TextView;
     :catch_0
     move-exception v0
 
+    .line 518
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -123,13 +135,16 @@
     .locals 1
 
     .prologue
+    .line 525
     const-string v0, ""
 
     sput-object v0, Landroid/widget/Toast$FlymeInjector;->mPkgName:Ljava/lang/String;
 
+    .line 526
     const-string v0, ""
 
     sput-object v0, Landroid/widget/Toast$FlymeInjector;->mText:Ljava/lang/CharSequence;
 
+    .line 528
     return-void
 .end method

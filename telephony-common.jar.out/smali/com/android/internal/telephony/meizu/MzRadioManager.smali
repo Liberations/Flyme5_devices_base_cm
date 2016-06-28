@@ -79,10 +79,13 @@
 
     const/4 v4, 0x0
 
+    .line 69
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 41
     iput-boolean v4, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
+    .line 51
     const/4 v5, 0x4
 
     new-array v5, v5, [Ljava/lang/String;
@@ -109,12 +112,14 @@
 
     iput-object v5, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->PROPERTY_ICCID_SIM:[Ljava/lang/String;
 
+    .line 343
     new-instance v5, Lcom/android/internal/telephony/meizu/MzRadioManager$1;
 
     invoke-direct {v5, p0}, Lcom/android/internal/telephony/meizu/MzRadioManager$1;-><init>(Lcom/android/internal/telephony/meizu/MzRadioManager;)V
 
     iput-object v5, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 70
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -125,6 +130,7 @@
 
     move-result v0
 
+    .line 71
     .local v0, "airplaneMode":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -146,16 +152,20 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 72
     iput-object p1, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mContext:Landroid/content/Context;
 
+    .line 73
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->convertPhoneCountIntoBitmap(I)I
 
     move-result v5
 
     iput v5, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mBitmapForPhoneCount:I
 
+    .line 75
     iput p2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mPhoneCount:I
 
+    .line 76
     if-nez v0, :cond_0
 
     move v3, v4
@@ -163,6 +173,7 @@
     :cond_0
     iput-boolean v3, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
+    .line 77
     iget-object v3, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mContext:Landroid/content/Context;
 
     const-string v5, "RADIO_STATUS"
@@ -173,41 +184,49 @@
 
     sput-object v3, Lcom/android/internal/telephony/meizu/MzRadioManager;->mIccidPreference:Landroid/content/SharedPreferences;
 
+    .line 78
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 79
     .local v1, "filter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 80
     iget-object v3, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v4, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 81
     new-array v3, p2, [I
 
     iput-object v3, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
+    .line 82
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_0
     if-ge v2, p2, :cond_1
 
+    .line 83
     iget-object v3, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     const/4 v4, -0x1
 
     aput v4, v3, v2
 
+    .line 82
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 86
     :cond_1
     return-void
 .end method
@@ -217,6 +236,7 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
+    .line 32
     invoke-static {p0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
     return-void
@@ -228,6 +248,7 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
+    .line 32
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/meizu/MzRadioManager;->onReceiveSimStateChangedIntent(Landroid/content/Intent;)V
 
     return-void
@@ -237,17 +258,21 @@
     .locals 4
 
     .prologue
+    .line 431
     const/4 v1, 0x1
 
+    .line 432
     .local v1, "isCTACase":Z
     const-string v2, "Check For CTA case!"
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 433
     iget-boolean v2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
     if-nez v2, :cond_2
 
+    .line 434
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -256,6 +281,7 @@
 
     if-ge v0, v2, :cond_3
 
+    .line 435
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,6 +316,7 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 436
     iget-object v2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     aget v2, v2, v0
@@ -306,23 +333,29 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 437
     :cond_0
     const/4 v1, 0x0
 
+    .line 434
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 441
     .end local v0    # "i":I
     :cond_2
     const/4 v1, 0x0
 
+    .line 444
     :cond_3
     if-nez v1, :cond_4
 
+    .line 445
     invoke-direct {p0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->turnOffCTARadioIfNecessary()V
 
+    .line 447
     :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -344,6 +377,7 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 448
     return v1
 .end method
 
@@ -352,8 +386,10 @@
     .param p1, "phoneCount"    # I
 
     .prologue
+    .line 324
     const/4 v1, 0x0
 
+    .line 325
     .local v1, "ret":I
     const/4 v0, 0x0
 
@@ -361,16 +397,19 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
+    .line 326
     const/4 v2, 0x1
 
     shl-int/2addr v2, v0
 
     add-int/2addr v1, v2
 
+    .line 325
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 328
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -402,6 +441,7 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 329
     return v1
 .end method
 
@@ -409,8 +449,10 @@
     .locals 4
 
     .prologue
+    .line 465
     const/4 v0, 0x0
 
+    .line 466
     .local v0, "result":I
     const-string v2, "persist.radio.simswitch"
 
@@ -428,18 +470,22 @@
 
     move-result v1
 
+    .line 468
     .local v1, "switchStatus":I
     add-int/lit8 v0, v1, -0x1
 
+    .line 469
     if-ltz v0, :cond_0
 
     iget v2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mPhoneCount:I
 
     if-lt v0, v2, :cond_1
 
+    .line 470
     :cond_0
     const/4 v0, 0x0
 
+    .line 472
     .end local v0    # "result":I
     :cond_1
     return v0
@@ -449,6 +495,7 @@
     .locals 1
 
     .prologue
+    .line 101
     sget-object v0, Lcom/android/internal/telephony/meizu/MzRadioManager;->sRadioManager:Lcom/android/internal/telephony/meizu/MzRadioManager;
 
     return-object v0
@@ -459,6 +506,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
+    .line 462
     iget-object v0, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     aget v0, v0, p1
@@ -472,21 +520,25 @@
     .param p1, "phoneCount"    # I
 
     .prologue
+    .line 89
     const-class v1, Lcom/android/internal/telephony/meizu/MzRadioManager;
 
     monitor-enter v1
 
+    .line 90
     :try_start_0
     sget-object v0, Lcom/android/internal/telephony/meizu/MzRadioManager;->sRadioManager:Lcom/android/internal/telephony/meizu/MzRadioManager;
 
     if-nez v0, :cond_0
 
+    .line 91
     new-instance v0, Lcom/android/internal/telephony/meizu/MzRadioManager;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/telephony/meizu/MzRadioManager;-><init>(Landroid/content/Context;I)V
 
     sput-object v0, Lcom/android/internal/telephony/meizu/MzRadioManager;->sRadioManager:Lcom/android/internal/telephony/meizu/MzRadioManager;
 
+    .line 93
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/meizu/MzRadioManager;->sRadioManager:Lcom/android/internal/telephony/meizu/MzRadioManager;
 
@@ -494,6 +546,7 @@
 
     return-object v0
 
+    .line 94
     :catchall_0
     move-exception v0
 
@@ -509,13 +562,16 @@
     .param p1, "phoneId"    # I
 
     .prologue
+    .line 194
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/meizu/MzRadioManager;->readIccIdUsingPhoneId(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 195
     .local v0, "iccId":Ljava/lang/String;
     const/4 v1, 0x0
 
+    .line 196
     .local v1, "ret":Z
     if-eqz v0, :cond_0
 
@@ -527,6 +583,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 197
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -548,11 +605,14 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 198
     const/4 v1, 0x0
 
+    .line 203
     :goto_0
     return v1
 
+    .line 200
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -584,6 +644,7 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 201
     const/4 v1, 0x1
 
     goto :goto_0
@@ -593,6 +654,7 @@
     .locals 2
 
     .prologue
+    .line 186
     const-string v0, "ro.mtk_bsp_package"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -607,8 +669,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 187
     const/4 v0, 0x0
 
+    .line 189
     :goto_0
     return v0
 
@@ -623,6 +687,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
+    .line 400
     if-ltz p1, :cond_0
 
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -635,9 +700,11 @@
 
     if-lt p1, v0, :cond_1
 
+    .line 401
     :cond_0
     const/4 v0, 0x0
 
+    .line 403
     :goto_0
     return v0
 
@@ -652,6 +719,7 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
+    .line 477
     const-string v0, "FWK-MzRadioManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -674,6 +742,7 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 478
     return-void
 .end method
 
@@ -686,12 +755,14 @@
 
     const/4 v6, 0x0
 
+    .line 356
     const-string v4, "ss"
 
     invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 359
     .local v3, "simStatus":Ljava/lang/String;
     const-string v4, "phone"
 
@@ -701,6 +772,7 @@
 
     move-result v2
 
+    .line 361
     .local v2, "phoneId":I
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->isValidPhoneId(I)Z
 
@@ -708,6 +780,7 @@
 
     if-nez v4, :cond_1
 
+    .line 362
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -734,10 +807,12 @@
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 398
     :cond_0
     :goto_0
     return-void
 
+    .line 366
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -783,8 +858,10 @@
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 367
     const/4 v0, 0x1
 
+    .line 369
     .local v0, "desiredRadioPower":Z
     const-string v4, "READY"
 
@@ -810,11 +887,13 @@
 
     if-eqz v4, :cond_4
 
+    .line 372
     :cond_2
     iget-object v4, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     aput v7, v4, v2
 
+    .line 373
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -849,10 +928,12 @@
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 376
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->readIccIdUsingPhoneId(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 377
     .local v1, "iccid":Ljava/lang/String;
     const-string v4, "N/A"
 
@@ -862,6 +943,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 378
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -890,13 +972,16 @@
 
     goto/16 :goto_0
 
+    .line 382
     :cond_3
     const/4 v0, 0x1
 
+    .line 383
     iget-boolean v4, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
     if-nez v4, :cond_0
 
+    .line 384
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -927,10 +1012,12 @@
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 385
     invoke-virtual {p0, v0, v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->setRadioPower(ZI)V
 
     goto/16 :goto_0
 
+    .line 389
     .end local v1    # "iccid":Ljava/lang/String;
     :cond_4
     const-string v4, "ABSENT"
@@ -941,10 +1028,12 @@
 
     if-eqz v4, :cond_0
 
+    .line 390
     iget-object v4, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     aput v6, v4, v2
 
+    .line 391
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -979,12 +1068,15 @@
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 392
     const/4 v0, 0x0
 
+    .line 393
     iget-boolean v4, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
     if-nez v4, :cond_0
 
+    .line 394
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1015,6 +1107,7 @@
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 395
     invoke-virtual {p0, v0, v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->setRadioPower(ZI)V
 
     goto/16 :goto_0
@@ -1026,8 +1119,10 @@
     .param p2, "iccid"    # Ljava/lang/String;
 
     .prologue
+    .line 173
     if-eqz p2, :cond_0
 
+    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1048,10 +1143,12 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 175
     const/4 v0, 0x0
 
     invoke-interface {p1, p2, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
+    .line 177
     :cond_0
     return-void
 .end method
@@ -1061,6 +1158,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
+    .line 207
     iget-object v1, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->PROPERTY_ICCID_SIM:[Ljava/lang/String;
 
     aget-object v1, v1, p1
@@ -1069,6 +1167,7 @@
 
     move-result-object v0
 
+    .line 208
     .local v0, "ret":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1100,6 +1199,7 @@
 
     invoke-static {v1}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 209
     return-object v0
 .end method
 
@@ -1109,16 +1209,19 @@
     .param p2, "iccid"    # Ljava/lang/String;
 
     .prologue
+    .line 163
     const-string v1, "refresh iccid preference"
 
     invoke-static {v1}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 164
     sget-object v1, Lcom/android/internal/telephony/meizu/MzRadioManager;->mIccidPreference:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
+    .line 165
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     if-nez p1, :cond_0
 
@@ -1130,13 +1233,17 @@
 
     if-nez v1, :cond_0
 
+    .line 166
     invoke-direct {p0, v0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->putIccIdToPreference(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;)V
 
+    .line 170
     :goto_0
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    .line 171
     return-void
 
+    .line 168
     :cond_0
     invoke-direct {p0, v0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->removeIccIdFromPreference(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;)V
 
@@ -1151,6 +1258,7 @@
     .prologue
     const/4 v5, 0x1
 
+    .line 306
     iget-object v2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1165,21 +1273,26 @@
 
     move-result v1
 
+    .line 308
     .local v1, "simMode":I
     move v0, v1
 
+    .line 310
     .local v0, "oldMode":I
     if-nez p1, :cond_1
 
+    .line 311
     shl-int v2, v5, p2
 
     xor-int/lit8 v2, v2, -0x1
 
     and-int/2addr v1, v2
 
+    .line 316
     :goto_0
     if-eq v1, v0, :cond_0
 
+    .line 317
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1210,6 +1323,7 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 318
     iget-object v2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1220,9 +1334,11 @@
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
+    .line 321
     :cond_0
     return-void
 
+    .line 313
     :cond_1
     shl-int v2, v5, p2
 
@@ -1237,8 +1353,10 @@
     .param p2, "iccid"    # Ljava/lang/String;
 
     .prologue
+    .line 179
     if-eqz p2, :cond_0
 
+    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1259,8 +1377,10 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 181
     invoke-interface {p1, p2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
+    .line 183
     :cond_0
     return-void
 .end method
@@ -1270,10 +1390,12 @@
     .param p1, "phoneId"    # I
 
     .prologue
+    .line 407
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/meizu/MzRadioManager;->readIccIdUsingPhoneId(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 408
     .local v0, "iccId":Ljava/lang/String;
     const-string v1, "N/A"
 
@@ -1283,15 +1405,18 @@
 
     if-eqz v1, :cond_0
 
+    .line 409
     iget-object v1, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     const/4 v2, 0x0
 
     aput v2, v1, p1
 
+    .line 413
     :goto_0
     return-void
 
+    .line 411
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
@@ -1307,29 +1432,38 @@
     .param p1, "simStatus"    # I
 
     .prologue
+    .line 415
     const/4 v0, 0x0
 
+    .line 416
     .local v0, "result":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
+    .line 427
     :goto_0
     return-object v0
 
+    .line 418
     :pswitch_0
     const-string v0, "SIM HAVE NOT INITIALIZED"
 
+    .line 419
     goto :goto_0
 
+    .line 421
     :pswitch_1
     const-string v0, "SIM DETECTED"
 
+    .line 422
     goto :goto_0
 
+    .line 424
     :pswitch_2
     const-string v0, "NO SIM DETECTED"
 
     goto :goto_0
 
+    .line 416
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_0
@@ -1342,6 +1476,7 @@
     .locals 3
 
     .prologue
+    .line 454
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1350,12 +1485,14 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 455
     iget-object v1, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mSimInsertedStatus:[I
 
     aget v1, v1, v0
 
     if-nez v1, :cond_0
 
+    .line 456
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1382,6 +1519,7 @@
 
     invoke-static {v1}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 457
     invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhone(I)Lcom/android/internal/telephony/Phone;
 
     move-result-object v1
@@ -1390,11 +1528,13 @@
 
     invoke-interface {v1, v2}, Lcom/android/internal/telephony/Phone;->setRadioPower(Z)V
 
+    .line 454
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 460
     :cond_1
     return-void
 .end method
@@ -1407,15 +1547,19 @@
     .param p2, "phoneId"    # I
 
     .prologue
+    .line 238
     invoke-virtual {p0, p1, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->setRadioPower(ZI)V
 
+    .line 239
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->readIccIdUsingPhoneId(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 240
     .local v0, "iccId":Ljava/lang/String;
     invoke-direct {p0, p1, v0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->refreshIccIdPreference(ZLjava/lang/String;)V
 
+    .line 241
     return-void
 .end method
 
@@ -1424,10 +1568,12 @@
     .param p1, "enabled"    # Z
 
     .prologue
+    .line 219
     iget-boolean v2, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
     if-ne p1, v2, :cond_1
 
+    .line 220
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1466,12 +1612,15 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 230
     :cond_0
     return-void
 
+    .line 223
     :cond_1
     iput-boolean p1, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
+    .line 224
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1492,14 +1641,17 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 225
     const-string v2, "Airplane mode changed: turn on/off all radio"
 
     invoke-static {v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 226
     if-eqz p1, :cond_2
 
     const/4 v1, 0x0
 
+    .line 227
     .local v1, "radioPower":Z
     :goto_0
     const/4 v0, 0x0
@@ -1510,12 +1662,15 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 228
     invoke-virtual {p0, v1, v0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->setRadioPower(ZI)V
 
+    .line 227
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
+    .line 226
     .end local v0    # "i":I
     .end local v1    # "radioPower":Z
     :cond_2
@@ -1531,6 +1686,7 @@
     .prologue
     const/4 v4, 0x1
 
+    .line 127
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1551,18 +1707,22 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 128
     const/4 v5, -0x1
 
     if-ne p1, v5, :cond_1
 
+    .line 129
     const-string v4, "Invalid mode, MSIM_MODE intent has no extra value"
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 161
     :cond_0
     :goto_0
     return-void
 
+    .line 132
     :cond_1
     invoke-static {}, Lcom/android/internal/telephony/meizu/MzRadioManager;->isMSimModeSupport()Z
 
@@ -1574,6 +1734,7 @@
 
     if-ne v5, v4, :cond_3
 
+    .line 133
     :cond_2
     const-string v4, "Airplane mode on or MSIM Mode option is closed, do nothing!"
 
@@ -1581,12 +1742,15 @@
 
     goto :goto_0
 
+    .line 137
     :cond_3
     const/4 v2, 0x0
 
+    .line 138
     .local v2, "phoneId":I
     const/4 v0, 0x1
 
+    .line 139
     .local v0, "iccIdReady":Z
     const/4 v2, 0x0
 
@@ -1595,25 +1759,31 @@
 
     if-ge v2, v5, :cond_4
 
+    .line 140
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->isIccIdReady(I)Z
 
     move-result v5
 
     if-nez v5, :cond_5
 
+    .line 141
     const/4 v0, 0x0
 
+    .line 145
     :cond_4
     if-nez v0, :cond_6
 
+    .line 146
     const-string v4, "msim mode read iccid not ready, wait for 200ms"
 
     invoke-static {v4}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 148
     new-instance v1, Lcom/android/internal/telephony/meizu/MzRadioManager$MSimModeChangeRunnable;
 
     invoke-direct {v1, p0, p1}, Lcom/android/internal/telephony/meizu/MzRadioManager$MSimModeChangeRunnable;-><init>(Lcom/android/internal/telephony/meizu/MzRadioManager;I)V
 
+    .line 150
     .local v1, "notifyMSimModeChangeRunnable":Lcom/android/internal/telephony/meizu/MzRadioManager$MSimModeChangeRunnable;
     const-wide/16 v4, 0xc8
 
@@ -1621,12 +1791,14 @@
 
     goto :goto_0
 
+    .line 139
     .end local v1    # "notifyMSimModeChangeRunnable":Lcom/android/internal/telephony/meizu/MzRadioManager$MSimModeChangeRunnable;
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
+    .line 154
     :cond_6
     const/4 v2, 0x0
 
@@ -1635,6 +1807,7 @@
 
     if-ge v2, v5, :cond_0
 
+    .line 155
     shl-int v5, v4, v2
 
     and-int/2addr v5, p1
@@ -1643,6 +1816,7 @@
 
     const/4 v3, 0x0
 
+    .line 156
     .local v3, "singlePhonePower":Z
     :goto_3
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->readIccIdUsingPhoneId(I)Ljava/lang/String;
@@ -1651,6 +1825,7 @@
 
     invoke-direct {p0, v3, v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->refreshIccIdPreference(ZLjava/lang/String;)V
 
+    .line 157
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1681,12 +1856,14 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 158
     invoke-static {v2}, Lcom/android/internal/telephony/PhoneFactory;->getPhone(I)Lcom/android/internal/telephony/Phone;
 
     move-result-object v5
 
     invoke-interface {v5, v3}, Lcom/android/internal/telephony/Phone;->setRadioPower(Z)V
 
+    .line 154
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
@@ -1695,6 +1872,7 @@
     :cond_7
     move v3, v4
 
+    .line 155
     goto :goto_3
 .end method
 
@@ -1708,6 +1886,7 @@
 
     const/4 v7, 0x1
 
+    .line 247
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1738,6 +1917,7 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 250
     iget-object v5, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1750,6 +1930,7 @@
 
     move-result v0
 
+    .line 251
     .local v0, "airplaneMode":I
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1771,6 +1952,7 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 252
     if-nez v0, :cond_0
 
     move v5, v6
@@ -1778,22 +1960,27 @@
     :goto_0
     iput-boolean v5, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
+    .line 253
     iget-boolean v5, p0, Lcom/android/internal/telephony/meizu/MzRadioManager;->mAirplaneMode:Z
 
     if-ne v5, v7, :cond_1
 
+    .line 254
     const-string v5, "Set Radio Power under airplane mode, ignore"
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 299
     :goto_1
     return-void
 
     :cond_0
     move v5, v7
 
+    .line 252
     goto :goto_0
 
+    .line 263
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->isIccIdReady(I)Z
 
@@ -1801,14 +1988,17 @@
 
     if-nez v5, :cond_2
 
+    .line 264
     const-string v5, "RILD initialize not completed, wait for 200ms"
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 265
     new-instance v4, Lcom/android/internal/telephony/meizu/MzRadioManager$RadioPowerRunnable;
 
     invoke-direct {v4, p0, p1, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager$RadioPowerRunnable;-><init>(Lcom/android/internal/telephony/meizu/MzRadioManager;ZI)V
 
+    .line 266
     .local v4, "setRadioPowerRunnable":Lcom/android/internal/telephony/meizu/MzRadioManager$RadioPowerRunnable;
     const-wide/16 v6, 0xc8
 
@@ -1816,17 +2006,21 @@
 
     goto :goto_1
 
+    .line 269
     .end local v4    # "setRadioPowerRunnable":Lcom/android/internal/telephony/meizu/MzRadioManager$RadioPowerRunnable;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->setSimInsertedStatus(I)V
 
+    .line 271
     move v3, p1
 
+    .line 272
     .local v3, "radioPower":Z
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->readIccIdUsingPhoneId(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 274
     .local v1, "iccId":Ljava/lang/String;
     sget-object v5, Lcom/android/internal/telephony/meizu/MzRadioManager;->mIccidPreference:Landroid/content/SharedPreferences;
 
@@ -1836,6 +2030,7 @@
 
     if-eqz v5, :cond_3
 
+    .line 275
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1866,13 +2061,16 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 276
     const/4 v3, 0x0
 
+    .line 278
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/telephony/meizu/MzRadioManager;->checkForCTACase()Z
 
     move-result v2
 
+    .line 280
     .local v2, "isCTACase":Z
     invoke-direct {p0, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->getSimInsertedStatus(I)I
 
@@ -1880,12 +2078,15 @@
 
     if-nez v5, :cond_5
 
+    .line 281
     if-ne v2, v7, :cond_4
 
+    .line 284
     const-string v5, "No SIM inserted, force to turn on phone 0"
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 285
     invoke-static {v6}, Lcom/android/internal/telephony/PhoneFactory;->getPhone(I)Lcom/android/internal/telephony/Phone;
 
     move-result-object v5
@@ -1894,13 +2095,16 @@
 
     goto :goto_1
 
+    .line 288
     :cond_4
     const-string v5, "No SIM inserted, turn Radio off!"
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 289
     const/4 v3, 0x0
 
+    .line 290
     invoke-static {p2}, Lcom/android/internal/telephony/PhoneFactory;->getPhone(I)Lcom/android/internal/telephony/Phone;
 
     move-result-object v5
@@ -1909,6 +2113,7 @@
 
     goto :goto_1
 
+    .line 293
     :cond_5
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1940,8 +2145,10 @@
 
     invoke-static {v5}, Lcom/android/internal/telephony/meizu/MzRadioManager;->log(Ljava/lang/String;)V
 
+    .line 295
     invoke-direct {p0, v3, p2}, Lcom/android/internal/telephony/meizu/MzRadioManager;->refreshSimSetting(ZI)V
 
+    .line 296
     invoke-static {p2}, Lcom/android/internal/telephony/PhoneFactory;->getPhone(I)Lcom/android/internal/telephony/Phone;
 
     move-result-object v5

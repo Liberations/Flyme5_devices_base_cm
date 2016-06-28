@@ -7,7 +7,7 @@
 # The default value is base.
 # Support values: base, base_cm, base_mt6592 and other devices in the future.
 #-----------------------------------------------------------------------------
-#BASE := base_cm
+BASE := base_cm
 
 
 ##############################################################################
@@ -77,7 +77,7 @@ vendor_saved_apps := Bluetooth  KeyChain HTMLViewer UserDictionaryProvider Backu
 # You need to decode android.policy.jar to the project directory (use apktool d android.policy.jar) first,
 # and then you can make it by:   make android.policy
 #-----------------------------------------------------------------------------
-vendor_modify_jars := android.policy com.qti.dpmframework framework services telephony-common wifi-service core-libart
+vendor_modify_jars := android.policy com.qti.dpmframework framework services telephony-common wifi-service
 
 ##############################################################################
 # The value decides which board system directory you want to save.

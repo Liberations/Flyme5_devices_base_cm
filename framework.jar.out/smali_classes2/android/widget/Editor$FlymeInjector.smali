@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 5002
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,18 +30,22 @@
     .param p0, "editor"    # Landroid/widget/Editor;
 
     .prologue
+    .line 5046
     iget-object v0, p0, Landroid/widget/Editor;->mSelectionActionMode:Landroid/view/ActionMode;
 
     if-nez v0, :cond_0
 
+    .line 5047
     iget-object v0, p0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/Editor$SelectionModifierCursorController;
 
     if-eqz v0, :cond_0
 
+    .line 5048
     iget-object v0, p0, Landroid/widget/Editor;->mSelectionModifierCursorController:Landroid/widget/Editor$SelectionModifierCursorController;
 
     invoke-virtual {v0}, Landroid/widget/Editor$SelectionModifierCursorController;->hide()V
 
+    .line 5051
     :cond_0
     return-void
 .end method
@@ -50,10 +55,12 @@
     .param p0, "editor"    # Landroid/widget/Editor;
 
     .prologue
+    .line 5005
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/Editor;->mEnableDragSelection:Z
 
+    .line 5006
     return-void
 .end method
 
@@ -63,19 +70,24 @@
     .param p1, "layout"    # Landroid/text/Layout;
 
     .prologue
+    .line 5032
     invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
 
     move-result v0
 
+    .line 5033
     .local v0, "layoutHeight":I
     iget v1, p0, Landroid/widget/Editor;->mLastLayoutHeight:I
 
     if-eq v1, v0, :cond_0
 
+    .line 5034
     invoke-virtual {p0}, Landroid/widget/Editor;->invalidateTextDisplayList()V
 
+    .line 5035
     iput v0, p0, Landroid/widget/Editor;->mLastLayoutHeight:I
 
+    .line 5037
     :cond_0
     return-void
 .end method
@@ -85,6 +97,7 @@
     .param p0, "editor"    # Landroid/widget/Editor;
 
     .prologue
+    .line 5022
     invoke-virtual {p0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
 
     move-result-object v0
@@ -101,10 +114,12 @@
     .param p0, "editor"    # Landroid/widget/Editor;
 
     .prologue
+    .line 5040
     iget-object v0, p0, Landroid/widget/Editor;->mSelectonActionModeRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
+    .line 5041
     invoke-virtual {p0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
 
     move-result-object v0
@@ -113,6 +128,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 5043
     :cond_0
     return-void
 .end method
@@ -124,12 +140,15 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 5013
     iget-boolean v0, p0, Landroid/widget/Editor;->mIsInDragSelectionMode:Z
 
     if-eqz v0, :cond_0
 
+    .line 5014
     iput-boolean v1, p0, Landroid/widget/Editor;->mIsInDragSelectionMode:Z
 
+    .line 5015
     invoke-virtual {p0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
 
     move-result-object v0
@@ -140,6 +159,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 5016
     invoke-virtual {p0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
 
     move-result-object v0
@@ -150,6 +170,7 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
+    .line 5019
     :cond_0
     return-void
 .end method
@@ -159,6 +180,7 @@
     .param p0, "editor"    # Landroid/widget/Editor;
 
     .prologue
+    .line 5009
     invoke-virtual {p0}, Landroid/widget/Editor;->flymeGetFieldTextView()Landroid/widget/TextView;
 
     move-result-object v0
@@ -173,5 +195,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->updateBackground(Z)V
 
+    .line 5010
     return-void
 .end method

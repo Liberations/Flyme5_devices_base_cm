@@ -28,6 +28,7 @@
     .locals 0
 
     .prologue
+    .line 296
     iput-object p1, p0, Landroid/text/util/UrlSpanHelper$5$1;->this$0:Landroid/text/util/UrlSpanHelper$5;
 
     iput-object p2, p0, Landroid/text/util/UrlSpanHelper$5$1;->val$name:Ljava/lang/String;
@@ -43,6 +44,7 @@
     .locals 3
 
     .prologue
+    .line 298
     iget-object v0, p0, Landroid/text/util/UrlSpanHelper$5$1;->this$0:Landroid/text/util/UrlSpanHelper$5;
 
     iget-object v0, v0, Landroid/text/util/UrlSpanHelper$5;->val$mDialog:Landroid/app/AlertDialog;
@@ -77,5 +79,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 299
     return-void
 .end method

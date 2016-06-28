@@ -27,14 +27,18 @@
     .param p2, "imm"    # Landroid/view/inputmethod/InputMethodManager;
 
     .prologue
+    .line 2442
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 2439
     const/16 v0, 0x8
 
     iput v0, p0, Landroid/view/inputmethod/InputMethodManager$FlymeInjector$FlymeHandler;->MSG_VIS_CHANGED:I
 
+    .line 2443
     iput-object p2, p0, Landroid/view/inputmethod/InputMethodManager$FlymeInjector$FlymeHandler;->imm:Landroid/view/inputmethod/InputMethodManager;
 
+    .line 2444
     return-void
 .end method
 
@@ -45,13 +49,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
+    .line 2448
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
+    .line 2457
     :goto_0
     return-void
 
+    .line 2450
     :pswitch_0
     iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager$FlymeInjector$FlymeHandler;->imm:Landroid/view/inputmethod/InputMethodManager;
 
@@ -71,6 +78,7 @@
 
     goto :goto_1
 
+    .line 2448
     nop
 
     :pswitch_data_0

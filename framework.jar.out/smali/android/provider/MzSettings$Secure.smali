@@ -112,6 +112,7 @@
     .locals 2
 
     .prologue
+    .line 895
     new-instance v0, Ljava/util/HashSet;
 
     const/16 v1, 0x1e
@@ -120,18 +121,21 @@
 
     sput-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
+    .line 896
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
-    const-string v1, "mz_smartbar_hit_edge_count_inside"
+    const-string/jumbo v1, "mz_smartbar_hit_edge_count_inside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 897
     sget-object v0, Landroid/provider/MzSettings$Secure;->MEIZU_NO_SECURE:Ljava/util/HashSet;
 
-    const-string v1, "mz_smartbar_hit_edge_count_outside"
+    const-string/jumbo v1, "mz_smartbar_hit_edge_count_outside"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 898
     return-void
 .end method
 
@@ -139,6 +143,7 @@
     .locals 0
 
     .prologue
+    .line 742
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

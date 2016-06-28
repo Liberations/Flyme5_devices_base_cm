@@ -29,6 +29,7 @@
     .locals 0
 
     .prologue
+    .line 27
     iput-object p1, p0, Landroid/media/CueHelper$CueTrackTag;->this$0:Landroid/media/CueHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

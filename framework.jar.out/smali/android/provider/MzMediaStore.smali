@@ -25,8 +25,10 @@
     .locals 0
 
     .prologue
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 55
     return-void
 .end method
 
@@ -34,6 +36,7 @@
     .locals 1
 
     .prologue
+    .line 25
     invoke-static {}, Landroid/provider/MzMediaStore;->getLanguageCountry()Ljava/lang/String;
 
     move-result-object v0
@@ -45,15 +48,18 @@
     .locals 4
 
     .prologue
+    .line 164
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v1
 
+    .line 165
     .local v1, "l":Ljava/util/Locale;
     invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 166
     .local v2, "language":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
@@ -63,8 +69,9 @@
 
     move-result-object v0
 
+    .line 167
     .local v0, "country":Ljava/lang/String;
-    const-string v3, "zh"
+    const-string/jumbo v3, "zh"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -72,6 +79,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 168
     const-string v3, "cn"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,14 +88,17 @@
 
     if-eqz v3, :cond_1
 
-    const-string v2, "zh-CN"
+    .line 169
+    const-string/jumbo v2, "zh-CN"
 
+    .line 174
     :cond_0
     :goto_0
     return-object v2
 
+    .line 170
     :cond_1
-    const-string v3, "tw"
+    const-string/jumbo v3, "tw"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -95,7 +106,8 @@
 
     if-eqz v3, :cond_0
 
-    const-string v2, "zh-TW"
+    .line 171
+    const-string/jumbo v2, "zh-TW"
 
     goto :goto_0
 .end method

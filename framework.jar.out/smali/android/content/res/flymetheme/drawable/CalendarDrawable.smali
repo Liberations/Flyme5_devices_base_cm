@@ -96,10 +96,12 @@
     .locals 1
 
     .prologue
+    .line 33
     const-string v0, "CalendarDrawable"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->LOG_TAG:Ljava/lang/String;
 
+    .line 35
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -108,58 +110,72 @@
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->DEBUG:Ljava/lang/Boolean;
 
+    .line 37
     const-string v0, "flyme_icon/com.android.calendar/calendar_bg"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_BG:Ljava/lang/String;
 
+    .line 38
     const-string v0, "flyme_icon/com.android.calendar/calendar_mask"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_MASK:Ljava/lang/String;
 
+    .line 39
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_0"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_0:Ljava/lang/String;
 
+    .line 40
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_1"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_1:Ljava/lang/String;
 
+    .line 41
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_2"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_2:Ljava/lang/String;
 
+    .line 42
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_3"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_3:Ljava/lang/String;
 
+    .line 43
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_4"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_4:Ljava/lang/String;
 
+    .line 44
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_5"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_5:Ljava/lang/String;
 
+    .line 45
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_6"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_6:Ljava/lang/String;
 
+    .line 46
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_7"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_7:Ljava/lang/String;
 
+    .line 47
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_8"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_8:Ljava/lang/String;
 
+    .line 48
     const-string v0, "flyme_icon/com.android.calendar/ic_launcher_calendar_9"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_9:Ljava/lang/String;
 
+    .line 49
     const-string v0, "com.android.calendar"
 
     sput-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_DEF:Ljava/lang/String;
 
+    .line 53
     const/16 v0, 0x3e9
 
     sput v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->UPDATE_MESSAGE:I
@@ -178,12 +194,15 @@
 
     const/16 v3, 0xf0
 
+    .line 108
     invoke-direct {p0}, Landroid/graphics/drawable/BitmapDrawable;-><init>()V
 
+    .line 51
     const/16 v1, 0x3e8
 
     iput v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mUpdateTime:I
 
+    .line 55
     new-instance v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -194,32 +213,44 @@
 
     iput-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mHandler:Landroid/os/Handler;
 
+    .line 80
     iput v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mWidth:I
 
+    .line 81
     iput v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mHeigh:I
 
+    .line 82
     iput v5, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerX:I
 
+    .line 83
     iput v5, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerY:I
 
+    .line 84
     iput v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableWidth:I
 
+    .line 85
     iput v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableHeight:I
 
+    .line 86
     iput v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mTempWidth:I
 
+    .line 87
     iput v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mTempHeigh:I
 
+    .line 89
     iput-boolean v4, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mDrawDefIcon:Z
 
+    .line 93
     new-instance v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable$2;
 
     invoke-direct {v1, p0}, Landroid/content/res/flymetheme/drawable/CalendarDrawable$2;-><init>(Landroid/content/res/flymetheme/drawable/CalendarDrawable;)V
 
     iput-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mTimeReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 109
     iput-object p1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mContext:Landroid/content/Context;
 
+    .line 110
     sget-object v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_MASK:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCustomIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -228,6 +259,7 @@
 
     iput-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarMask:Landroid/graphics/drawable/Drawable;
 
+    .line 111
     sget-object v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_BG:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCustomIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -236,6 +268,7 @@
 
     iput-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarBg:Landroid/graphics/drawable/Drawable;
 
+    .line 112
     sget-object v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_DEF:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCustomIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -244,16 +277,20 @@
 
     iput-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
+    .line 114
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_1
 
+    .line 115
     iput-boolean v4, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mDrawDefIcon:Z
 
+    .line 116
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarBg:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
+    .line 117
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarBg:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -262,6 +299,7 @@
 
     iput v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mWidth:I
 
+    .line 118
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarBg:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -270,31 +308,38 @@
 
     iput v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mHeigh:I
 
+    .line 130
     :cond_0
     :goto_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 131
     .local v0, "mFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.TIME_SET"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 132
     const-string v1, "android.intent.action.DATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 133
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mTimeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 134
     invoke-virtual {p0}, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->update()V
 
+    .line 135
     return-void
 
+    .line 121
     .end local v0    # "mFilter":Landroid/content/IntentFilter;
     :cond_1
     sget-object v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->DEBUG:Ljava/lang/Boolean;
@@ -305,21 +350,25 @@
 
     if-eqz v1, :cond_2
 
+    .line 122
     sget-object v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "flyme icon res is null, draw the def one!!!!!!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 124
     :cond_2
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mDrawDefIcon:Z
 
+    .line 125
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
+    .line 126
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -328,6 +377,7 @@
 
     iput v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mWidth:I
 
+    .line 127
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -343,6 +393,7 @@
     .locals 1
 
     .prologue
+    .line 31
     sget v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->UPDATE_MESSAGE:I
 
     return v0
@@ -352,6 +403,7 @@
     .locals 1
 
     .prologue
+    .line 31
     sget-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->DEBUG:Ljava/lang/Boolean;
 
     return-object v0
@@ -361,6 +413,7 @@
     .locals 1
 
     .prologue
+    .line 31
     sget-object v0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->LOG_TAG:Ljava/lang/String;
 
     return-object v0
@@ -372,14 +425,18 @@
     .param p2, "newBitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
+    .line 324
     const/4 v3, 0x0
 
+    .line 325
     .local v3, "result":Landroid/graphics/Bitmap;
     const/4 v4, 0x0
 
+    .line 326
     .local v4, "temp":Landroid/graphics/Bitmap;
     const/4 v2, 0x0
 
+    .line 328
     .local v2, "resBitmap":Landroid/graphics/Bitmap;
     :try_start_0
     sget-object v5, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_MASK:Ljava/lang/String;
@@ -388,9 +445,11 @@
 
     move-result-object v0
 
+    .line 329
     .local v0, "border":Landroid/graphics/drawable/Drawable;
     if-nez v0, :cond_0
 
+    .line 330
     sget v5, Lcom/flyme/internal/R$drawable;->calendar_mask:I
 
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -400,11 +459,14 @@
 
     move-result-object v0
 
+    .line 332
     :cond_0
     if-nez v0, :cond_3
 
+    .line 333
     move-object v3, p2
 
+    .line 343
     .end local v0    # "border":Landroid/graphics/drawable/Drawable;
     :goto_0
     if-eqz v4, :cond_1
@@ -415,10 +477,13 @@
 
     if-nez v5, :cond_1
 
+    .line 344
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 345
     const/4 v4, 0x0
 
+    .line 347
     :cond_1
     if-eqz v2, :cond_2
 
@@ -428,14 +493,18 @@
 
     if-nez v5, :cond_2
 
+    .line 348
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 349
     const/4 v2, 0x0
 
+    .line 352
     :cond_2
     :goto_1
     return-object v3
 
+    .line 335
     .restart local v0    # "border":Landroid/graphics/drawable/Drawable;
     :cond_3
     :try_start_1
@@ -446,6 +515,7 @@
 
     move-result-object v4
 
+    .line 336
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -458,6 +528,7 @@
 
     move-result-object v2
 
+    .line 338
     const/4 v5, 0x1
 
     invoke-static {p2, v2, v5}, Landroid/content/res/flymetheme/FlymeThemeHelper;->addBackguard(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;
@@ -469,12 +540,15 @@
 
     goto :goto_0
 
+    .line 340
     :catch_0
     move-exception v1
 
+    .line 341
     .local v1, "e":Ljava/lang/Exception;
     move-object v3, p2
 
+    .line 343
     if-eqz v4, :cond_4
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -483,10 +557,13 @@
 
     if-nez v5, :cond_4
 
+    .line 344
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 345
     const/4 v4, 0x0
 
+    .line 347
     :cond_4
     if-eqz v2, :cond_2
 
@@ -496,12 +573,15 @@
 
     if-nez v5, :cond_2
 
+    .line 348
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 349
     const/4 v2, 0x0
 
     goto :goto_1
 
+    .line 343
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -514,10 +594,13 @@
 
     if-nez v6, :cond_5
 
+    .line 344
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 345
     const/4 v4, 0x0
 
+    .line 347
     :cond_5
     if-eqz v2, :cond_6
 
@@ -527,8 +610,10 @@
 
     if-nez v6, :cond_6
 
+    .line 348
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 349
     const/4 v2, 0x0
 
     :cond_6
@@ -540,20 +625,25 @@
     .param p1, "dr"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
+    .line 223
     const/4 v10, 0x0
 
+    .line 224
     .local v10, "oneBitmap":Landroid/graphics/Bitmap;
     const/4 v14, 0x0
 
+    .line 225
     .local v14, "twoBitmap":Landroid/graphics/Bitmap;
     const/4 v13, 0x0
 
+    .line 227
     .local v13, "result":Landroid/graphics/drawable/Drawable;
     :try_start_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v12
 
+    .line 228
     .local v12, "resources":Landroid/content/res/Resources;
     move-object/from16 v0, p1
 
@@ -561,6 +651,7 @@
 
     move-object v2, v0
 
+    .line 229
     .local v2, "bd":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {v2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -574,11 +665,13 @@
 
     move-result-object v9
 
+    .line 230
     .local v9, "newBitmap":Landroid/graphics/Bitmap;
     new-instance v11, Landroid/graphics/Paint;
 
     invoke-direct {v11}, Landroid/graphics/Paint;-><init>()V
 
+    .line 231
     .local v11, "paint":Landroid/graphics/Paint;
     const/16 v17, 0x1
 
@@ -586,15 +679,18 @@
 
     invoke-virtual {v11, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 232
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v9}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 233
     .local v3, "canvas":Landroid/graphics/Canvas;
     invoke-direct/range {p0 .. p0}, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->getDateOfMonth()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 234
     .local v4, "date":Ljava/lang/String;
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -614,16 +710,19 @@
 
     div-float v16, v17, v18
 
+    .line 235
     .local v16, "y":F
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
 
+    .line 236
     .local v7, "nH":I
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v8
 
+    .line 237
     .local v8, "nW":I
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -637,6 +736,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 238
     const/16 v17, 0x0
 
     move/from16 v0, v17
@@ -653,6 +753,7 @@
 
     move-result-object v10
 
+    .line 239
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -669,11 +770,13 @@
 
     div-float v15, v17, v18
 
+    .line 240
     .local v15, "x":F
     move/from16 v0, v16
 
     invoke-virtual {v3, v10, v15, v0, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 248
     :goto_0
     new-instance v13, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -684,6 +787,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 256
     .restart local v13    # "result":Landroid/graphics/drawable/Drawable;
     if-eqz v10, :cond_0
 
@@ -693,10 +797,13 @@
 
     if-nez v17, :cond_0
 
+    .line 257
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 258
     const/4 v10, 0x0
 
+    .line 260
     :cond_0
     if-eqz v14, :cond_1
 
@@ -706,10 +813,13 @@
 
     if-nez v17, :cond_1
 
+    .line 261
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 262
     const/4 v14, 0x0
 
+    .line 265
     .end local v2    # "bd":Landroid/graphics/drawable/BitmapDrawable;
     .end local v3    # "canvas":Landroid/graphics/Canvas;
     .end local v4    # "date":Ljava/lang/String;
@@ -724,6 +834,7 @@
     :goto_1
     return-object v13
 
+    .line 242
     .restart local v2    # "bd":Landroid/graphics/drawable/BitmapDrawable;
     .restart local v3    # "canvas":Landroid/graphics/Canvas;
     .restart local v4    # "date":Ljava/lang/String;
@@ -751,6 +862,7 @@
 
     move-result-object v10
 
+    .line 243
     const/16 v17, 0x1
 
     move/from16 v0, v17
@@ -767,6 +879,7 @@
 
     move-result-object v14
 
+    .line 244
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -789,11 +902,13 @@
 
     div-float v15, v17, v18
 
+    .line 245
     .restart local v15    # "x":F
     move/from16 v0, v16
 
     invoke-virtual {v3, v10, v15, v0, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 246
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v17
@@ -818,6 +933,7 @@
 
     goto :goto_0
 
+    .line 249
     .end local v2    # "bd":Landroid/graphics/drawable/BitmapDrawable;
     .end local v3    # "canvas":Landroid/graphics/Canvas;
     .end local v4    # "date":Ljava/lang/String;
@@ -832,14 +948,17 @@
     :catch_0
     move-exception v6
 
+    .line 250
     .local v6, "er":Ljava/lang/OutOfMemoryError;
     :try_start_2
     invoke-virtual {v6}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 251
     move-object/from16 v13, p1
 
+    .line 256
     .restart local v13    # "result":Landroid/graphics/drawable/Drawable;
     if-eqz v10, :cond_3
 
@@ -849,10 +968,13 @@
 
     if-nez v17, :cond_3
 
+    .line 257
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 258
     const/4 v10, 0x0
 
+    .line 260
     :cond_3
     if-eqz v14, :cond_1
 
@@ -862,25 +984,31 @@
 
     if-nez v17, :cond_1
 
+    .line 261
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 262
     const/4 v14, 0x0
 
     goto :goto_1
 
+    .line 252
     .end local v6    # "er":Ljava/lang/OutOfMemoryError;
     .end local v13    # "result":Landroid/graphics/drawable/Drawable;
     :catch_1
     move-exception v5
 
+    .line 253
     .local v5, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 254
     move-object/from16 v13, p1
 
+    .line 256
     .restart local v13    # "result":Landroid/graphics/drawable/Drawable;
     if-eqz v10, :cond_4
 
@@ -890,10 +1018,13 @@
 
     if-nez v17, :cond_4
 
+    .line 257
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 258
     const/4 v10, 0x0
 
+    .line 260
     :cond_4
     if-eqz v14, :cond_1
 
@@ -903,12 +1034,15 @@
 
     if-nez v17, :cond_1
 
+    .line 261
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 262
     const/4 v14, 0x0
 
     goto/16 :goto_1
 
+    .line 256
     .end local v5    # "e":Ljava/lang/Exception;
     .end local v13    # "result":Landroid/graphics/drawable/Drawable;
     :catchall_0
@@ -922,10 +1056,13 @@
 
     if-nez v18, :cond_5
 
+    .line 257
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 258
     const/4 v10, 0x0
 
+    .line 260
     :cond_5
     if-eqz v14, :cond_6
 
@@ -935,8 +1072,10 @@
 
     if-nez v18, :cond_6
 
+    .line 261
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 262
     const/4 v14, 0x0
 
     :cond_6
@@ -948,17 +1087,21 @@
     .param p1, "dr"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
+    .line 278
     const/16 v20, 0x0
 
+    .line 279
     .local v20, "result":Landroid/graphics/drawable/Drawable;
     const/4 v15, 0x0
 
+    .line 281
     .local v15, "newBitmap":Landroid/graphics/Bitmap;
     :try_start_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v19
 
+    .line 282
     .local v19, "resources":Landroid/content/res/Resources;
     move-object/from16 v0, p1
 
@@ -966,6 +1109,7 @@
 
     move-object v10, v0
 
+    .line 283
     .local v10, "bd":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {v10}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -979,20 +1123,24 @@
 
     move-result-object v15
 
+    .line 284
     new-instance v11, Landroid/graphics/Canvas;
 
     invoke-direct {v11, v15}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 285
     .local v11, "canvas":Landroid/graphics/Canvas;
     new-instance v4, Landroid/text/TextPaint;
 
     invoke-direct {v4}, Landroid/text/TextPaint;-><init>()V
 
+    .line 286
     .local v4, "textPaint":Landroid/text/TextPaint;
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
+    .line 287
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -1005,6 +1153,7 @@
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 288
     sget v5, Lcom/flyme/internal/R$color;->calendar_dayofweek_color:I
 
     move-object/from16 v0, v19
@@ -1017,6 +1166,7 @@
 
     move-result v12
 
+    .line 290
     .local v12, "color":I
     :try_start_1
     sget-object v5, Landroid/content/res/flymetheme/FlymeThemeHelper;->LAUNCHER_CONFIG_CALENDAR_DAY_COLOR:Ljava/lang/String;
@@ -1025,6 +1175,7 @@
 
     move-result-object v18
 
+    .line 292
     .local v18, "resColor":Ljava/lang/String;
     if-nez v18, :cond_0
 
@@ -1034,6 +1185,7 @@
 
     if-nez v5, :cond_1
 
+    .line 293
     :cond_0
     const/4 v5, 0x1
 
@@ -1057,11 +1209,13 @@
 
     move-result-wide v16
 
+    .line 294
     .local v16, "l":J
     move-wide/from16 v0, v16
 
     long-to-int v12, v0
 
+    .line 299
     .end local v16    # "l":J
     .end local v18    # "resColor":Ljava/lang/String;
     :cond_1
@@ -1069,6 +1223,7 @@
     :try_start_2
     invoke-virtual {v4, v12}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 300
     move-object/from16 v0, p0
 
     move-object/from16 v1, v19
@@ -1077,6 +1232,7 @@
 
     move-result-object v3
 
+    .line 301
     .local v3, "date":Ljava/lang/String;
     new-instance v2, Landroid/text/StaticLayout;
 
@@ -1094,6 +1250,7 @@
 
     invoke-direct/range {v2 .. v9}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
 
+    .line 303
     .local v2, "sl":Landroid/text/StaticLayout;
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -1109,6 +1266,7 @@
 
     div-float v22, v5, v6
 
+    .line 304
     .local v22, "tanslateY":F
     const/4 v5, 0x0
 
@@ -1116,8 +1274,10 @@
 
     invoke-virtual {v11, v5, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 305
     invoke-virtual {v2, v11}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
+    .line 306
     new-instance v21, Landroid/graphics/drawable/BitmapDrawable;
 
     move-object/from16 v0, p0
@@ -1138,6 +1298,7 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 314
     .end local v20    # "result":Landroid/graphics/drawable/Drawable;
     .local v21, "result":Landroid/graphics/drawable/Drawable;
     if-eqz v15, :cond_4
@@ -1158,12 +1319,15 @@
 
     if-eq v15, v5, :cond_4
 
+    .line 316
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 317
     const/4 v15, 0x0
 
     move-object/from16 v20, v21
 
+    .line 320
     .end local v2    # "sl":Landroid/text/StaticLayout;
     .end local v3    # "date":Ljava/lang/String;
     .end local v4    # "textPaint":Landroid/text/TextPaint;
@@ -1178,6 +1342,7 @@
     :goto_1
     return-object v20
 
+    .line 296
     .restart local v4    # "textPaint":Landroid/text/TextPaint;
     .restart local v10    # "bd":Landroid/graphics/drawable/BitmapDrawable;
     .restart local v11    # "canvas":Landroid/graphics/Canvas;
@@ -1186,6 +1351,7 @@
     :catch_0
     move-exception v13
 
+    .line 297
     .local v13, "e":Ljava/lang/Exception;
     :try_start_3
     sget v5, Lcom/flyme/internal/R$color;->calendar_dayofweek_color:I
@@ -1202,6 +1368,7 @@
 
     goto :goto_0
 
+    .line 307
     .end local v4    # "textPaint":Landroid/text/TextPaint;
     .end local v10    # "bd":Landroid/graphics/drawable/BitmapDrawable;
     .end local v11    # "canvas":Landroid/graphics/Canvas;
@@ -1211,14 +1378,17 @@
     :catch_1
     move-exception v14
 
+    .line 308
     .local v14, "er":Ljava/lang/OutOfMemoryError;
     :try_start_4
     invoke-virtual {v14}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 309
     move-object/from16 v20, p1
 
+    .line 314
     if-eqz v15, :cond_2
 
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -1237,24 +1407,30 @@
 
     if-eq v15, v5, :cond_2
 
+    .line 316
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 317
     const/4 v15, 0x0
 
     goto :goto_1
 
+    .line 310
     .end local v14    # "er":Ljava/lang/OutOfMemoryError;
     :catch_2
     move-exception v13
 
+    .line 311
     .restart local v13    # "e":Ljava/lang/Exception;
     :try_start_5
     invoke-virtual {v13}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 312
     move-object/from16 v20, p1
 
+    .line 314
     if-eqz v15, :cond_2
 
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -1273,12 +1449,15 @@
 
     if-eq v15, v5, :cond_2
 
+    .line 316
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 317
     const/4 v15, 0x0
 
     goto :goto_1
 
+    .line 314
     .end local v13    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -1300,8 +1479,10 @@
 
     if-eq v15, v6, :cond_3
 
+    .line 316
     invoke-virtual {v15}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 317
     const/4 v15, 0x0
 
     :cond_3
@@ -1334,23 +1515,29 @@
     .prologue
     const/high16 v6, 0x43700000    # 240.0f
 
+    .line 381
     const/4 v0, 0x0
 
+    .line 382
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
     packed-switch p2, :pswitch_data_0
 
+    .line 418
     :goto_0
     :pswitch_0
     if-nez v0, :cond_0
 
+    .line 419
     invoke-direct {p0, p1, p2}, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->getSystemDefDateImage(Landroid/content/res/Resources;C)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
+    .line 423
     .end local v0    # "dr":Landroid/graphics/drawable/Drawable;
     :goto_1
     return-object v1
 
+    .line 384
     .restart local v0    # "dr":Landroid/graphics/drawable/Drawable;
     :pswitch_1
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_0:Ljava/lang/String;
@@ -1359,8 +1546,10 @@
 
     move-result-object v0
 
+    .line 385
     goto :goto_0
 
+    .line 387
     :pswitch_2
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_1:Ljava/lang/String;
 
@@ -1368,8 +1557,10 @@
 
     move-result-object v0
 
+    .line 388
     goto :goto_0
 
+    .line 390
     :pswitch_3
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_2:Ljava/lang/String;
 
@@ -1377,8 +1568,10 @@
 
     move-result-object v0
 
+    .line 391
     goto :goto_0
 
+    .line 393
     :pswitch_4
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_3:Ljava/lang/String;
 
@@ -1386,8 +1579,10 @@
 
     move-result-object v0
 
+    .line 394
     goto :goto_0
 
+    .line 396
     :pswitch_5
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_4:Ljava/lang/String;
 
@@ -1395,8 +1590,10 @@
 
     move-result-object v0
 
+    .line 397
     goto :goto_0
 
+    .line 399
     :pswitch_6
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_5:Ljava/lang/String;
 
@@ -1404,8 +1601,10 @@
 
     move-result-object v0
 
+    .line 400
     goto :goto_0
 
+    .line 402
     :pswitch_7
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_6:Ljava/lang/String;
 
@@ -1413,8 +1612,10 @@
 
     move-result-object v0
 
+    .line 403
     goto :goto_0
 
+    .line 405
     :pswitch_8
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_7:Ljava/lang/String;
 
@@ -1422,8 +1623,10 @@
 
     move-result-object v0
 
+    .line 406
     goto :goto_0
 
+    .line 408
     :pswitch_9
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_8:Ljava/lang/String;
 
@@ -1431,8 +1634,10 @@
 
     move-result-object v0
 
+    .line 409
     goto :goto_0
 
+    .line 411
     :pswitch_a
     sget-object v2, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->CALENDAR_9:Ljava/lang/String;
 
@@ -1440,8 +1645,10 @@
 
     move-result-object v0
 
+    .line 412
     goto :goto_0
 
+    .line 421
     :cond_0
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -1474,9 +1681,11 @@
 
     move-result-object v1
 
+    .line 423
     .local v1, "resBitmap":Landroid/graphics/Bitmap;
     goto :goto_1
 
+    .line 382
     :pswitch_data_0
     .packed-switch 0x30
         :pswitch_1
@@ -1497,24 +1706,29 @@
     .locals 4
 
     .prologue
+    .line 356
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2}, Ljava/util/Date;-><init>()V
 
+    .line 357
     .local v2, "today":Ljava/util/Date;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
+    .line 358
     .local v1, "cal":Ljava/util/Calendar;
     invoke-virtual {v1, v2}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
+    .line 359
     const/4 v3, 0x5
 
     invoke-virtual {v1, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
+    .line 360
     .local v0, "aDate":I
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1528,18 +1742,21 @@
     .param p1, "resources"    # Landroid/content/res/Resources;
 
     .prologue
+    .line 364
     sget v5, Lcom/flyme/internal/R$array;->calendar_week_title:I
 
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v4
 
+    .line 367
     .local v4, "weekDays":[Ljava/lang/String;
     :try_start_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
+    .line 368
     .local v0, "cal":Ljava/util/Calendar;
     new-instance v1, Ljava/util/Date;
 
@@ -1549,9 +1766,11 @@
 
     invoke-direct {v1, v6, v7}, Ljava/util/Date;-><init>(J)V
 
+    .line 369
     .local v1, "curDate":Ljava/util/Date;
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
+    .line 370
     const/4 v5, 0x7
 
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
@@ -1560,30 +1779,37 @@
 
     add-int/lit8 v3, v5, -0x1
 
+    .line 371
     .local v3, "w":I
     if-gez v3, :cond_0
 
+    .line 372
     const/4 v3, 0x0
 
+    .line 373
     :cond_0
     aget-object v5, v4, v3
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 376
     .end local v0    # "cal":Ljava/util/Calendar;
     .end local v1    # "curDate":Ljava/util/Date;
     .end local v3    # "w":I
     :goto_0
     return-object v5
 
+    .line 374
     :catch_0
     move-exception v2
 
+    .line 375
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, " getDayOfWeek: "
 
     invoke-static {v5, v2}, Landroid/content/res/flymetheme/FlymeLogUtil;->exception(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 376
     const/4 v5, 0x0
 
     aget-object v5, v4, v5
@@ -1597,11 +1823,14 @@
     .param p2, "date"    # C
 
     .prologue
+    .line 428
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_0:I
 
+    .line 429
     .local v0, "dr":I
     packed-switch p2, :pswitch_data_0
 
+    .line 465
     :goto_0
     :pswitch_0
     invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
@@ -1610,56 +1839,77 @@
 
     return-object v1
 
+    .line 431
     :pswitch_1
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_0:I
 
+    .line 432
     goto :goto_0
 
+    .line 434
     :pswitch_2
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_1:I
 
+    .line 435
     goto :goto_0
 
+    .line 437
     :pswitch_3
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_2:I
 
+    .line 438
     goto :goto_0
 
+    .line 440
     :pswitch_4
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_3:I
 
+    .line 441
     goto :goto_0
 
+    .line 443
     :pswitch_5
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_4:I
 
+    .line 444
     goto :goto_0
 
+    .line 446
     :pswitch_6
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_5:I
 
+    .line 447
     goto :goto_0
 
+    .line 449
     :pswitch_7
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_6:I
 
+    .line 450
     goto :goto_0
 
+    .line 452
     :pswitch_8
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_7:I
 
+    .line 453
     goto :goto_0
 
+    .line 455
     :pswitch_9
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_8:I
 
+    .line 456
     goto :goto_0
 
+    .line 458
     :pswitch_a
     sget v0, Lcom/flyme/internal/R$drawable;->ic_launcher_calendar_9:I
 
+    .line 459
     goto :goto_0
 
+    .line 429
     :pswitch_data_0
     .packed-switch 0x30
         :pswitch_1
@@ -1683,8 +1933,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
+    .line 160
     const/4 v2, 0x0
 
+    .line 162
     .local v2, "scaled":Z
     iget v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableWidth:I
 
@@ -1698,9 +1950,11 @@
 
     if-ge v3, v4, :cond_1
 
+    .line 163
     :cond_0
     const/4 v2, 0x1
 
+    .line 164
     iget v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableWidth:I
 
     int-to-float v3, v3
@@ -1725,9 +1979,11 @@
 
     move-result v1
 
+    .line 166
     .local v1, "scale":F
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 167
     iget v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerX:I
 
     int-to-float v3, v3
@@ -1738,16 +1994,19 @@
 
     invoke-virtual {p1, v1, v1, v3, v4}, Landroid/graphics/Canvas;->scale(FFFF)V
 
+    .line 170
     .end local v1    # "scale":F
     :cond_1
     iget-boolean v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mDrawDefIcon:Z
 
     if-eqz v3, :cond_4
 
+    .line 171
     iget-object v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_2
 
+    .line 172
     iget-object v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     iget v4, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerX:I
@@ -1784,35 +2043,44 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 174
     iget-object v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarDef:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 187
     :cond_2
     :goto_0
     if-eqz v2, :cond_3
 
+    .line 188
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
+    .line 190
     :cond_3
     return-void
 
+    .line 177
     :cond_4
     iget-object v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarBg:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_2
 
+    .line 178
     iget-object v0, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mCalendarBg:Landroid/graphics/drawable/Drawable;
 
+    .line 179
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
     invoke-direct {p0, v0}, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->addDateToIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 180
     invoke-direct {p0, v0}, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->addDayOfWeekToIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 181
     iget v3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerX:I
 
     iget v4, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mWidth:I
@@ -1847,6 +2115,7 @@
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 183
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -1861,14 +2130,17 @@
     .end annotation
 
     .prologue
+    .line 139
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 140
     iget-object v0, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mTimeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
+    .line 141
     return-void
 .end method
 
@@ -1876,6 +2148,7 @@
     .locals 1
 
     .prologue
+    .line 199
     invoke-super {p0}, Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicHeight()I
 
     move-result v0
@@ -1887,6 +2160,7 @@
     .locals 1
 
     .prologue
+    .line 194
     invoke-super {p0}, Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -1898,6 +2172,7 @@
     .locals 1
 
     .prologue
+    .line 212
     const/4 v0, -0x3
 
     return v0
@@ -1908,6 +2183,7 @@
     .param p1, "alpha"    # I
 
     .prologue
+    .line 204
     return-void
 .end method
 
@@ -1919,24 +2195,30 @@
     .param p4, "bottom"    # I
 
     .prologue
+    .line 151
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
+    .line 152
     iput p3, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableWidth:I
 
+    .line 153
     iput p4, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableHeight:I
 
+    .line 154
     iget v0, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableWidth:I
 
     div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerX:I
 
+    .line 155
     iget v0, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->availableHeight:I
 
     div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->centerY:I
 
+    .line 156
     return-void
 .end method
 
@@ -1945,6 +2227,7 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
+    .line 208
     return-void
 .end method
 
@@ -1952,18 +2235,22 @@
     .locals 2
 
     .prologue
+    .line 144
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
+    .line 145
     .local v0, "msg":Landroid/os/Message;
     sget v1, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->UPDATE_MESSAGE:I
 
     iput v1, v0, Landroid/os/Message;->what:I
 
+    .line 146
     iget-object v1, p0, Landroid/content/res/flymetheme/drawable/CalendarDrawable;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 147
     return-void
 .end method

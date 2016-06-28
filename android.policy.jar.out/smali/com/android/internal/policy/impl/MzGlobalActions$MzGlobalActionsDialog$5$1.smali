@@ -24,6 +24,7 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
+    .line 357
     iput-object p1, p0, Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$5$1;->this$2:Lcom/android/internal/policy/impl/MzGlobalActions$MzGlobalActionsDialog$5;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -37,6 +38,7 @@
     .locals 3
 
     .prologue
+    .line 361
     :try_start_0
     # getter for: Lcom/android/internal/policy/impl/MzGlobalActions;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/internal/policy/impl/MzGlobalActions;->access$600()Landroid/content/Context;
@@ -47,12 +49,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 367
     :goto_0
     return-void
 
+    .line 362
     :catch_0
     move-exception v0
 
+    .line 363
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "MzGlobalActions"
 

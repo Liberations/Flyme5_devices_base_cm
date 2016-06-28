@@ -24,10 +24,13 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
+    .line 520
     iput-object p1, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
 
+    .line 521
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 522
     return-void
 .end method
 
@@ -38,14 +41,17 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
+    .line 526
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
+    .line 570
     :cond_0
     :goto_0
     return-void
 
+    .line 529
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
 
@@ -58,6 +64,7 @@
     # setter for: Lcom/android/server/SambaClientService;->mScanThread:Lcom/android/server/SambaClientService$ScanThread;
     invoke-static {v2, v3}, Lcom/android/server/SambaClientService;->access$402(Lcom/android/server/SambaClientService;Lcom/android/server/SambaClientService$ScanThread;)Lcom/android/server/SambaClientService$ScanThread;
 
+    .line 530
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
 
     # getter for: Lcom/android/server/SambaClientService;->mScanThread:Lcom/android/server/SambaClientService$ScanThread;
@@ -69,6 +76,7 @@
 
     goto :goto_0
 
+    .line 534
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
 
@@ -79,6 +87,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 535
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
 
     # getter for: Lcom/android/server/SambaClientService;->mScanThread:Lcom/android/server/SambaClientService$ScanThread;
@@ -88,6 +97,7 @@
 
     invoke-virtual {v2}, Lcom/android/server/SambaClientService$ScanThread;->cancel()V
 
+    .line 536
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
 
     const/4 v3, 0x0
@@ -97,11 +107,13 @@
 
     goto :goto_0
 
+    .line 541
     :pswitch_2
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lmeizu/samba/client/RemoteSharedFolder;
 
+    .line 543
     .local v1, "folder":Lmeizu/samba/client/RemoteSharedFolder;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
@@ -153,9 +165,11 @@
 
     goto :goto_0
 
+    .line 546
     :catch_0
     move-exception v0
 
+    .line 547
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "SambaClientService"
 
@@ -165,6 +179,7 @@
 
     goto :goto_0
 
+    .line 552
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "folder":Lmeizu/samba/client/RemoteSharedFolder;
     :pswitch_3
@@ -172,6 +187,7 @@
 
     check-cast v1, Lmeizu/samba/client/RemoteSharedFolder;
 
+    .line 555
     .restart local v1    # "folder":Lmeizu/samba/client/RemoteSharedFolder;
     :try_start_1
     iget-object v2, p0, Lcom/android/server/SambaClientService$SambaHandler;->this$0:Lcom/android/server/SambaClientService;
@@ -205,9 +221,11 @@
 
     goto :goto_0
 
+    .line 556
     :catch_1
     move-exception v0
 
+    .line 557
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "SambaClientService"
 
@@ -217,6 +235,7 @@
 
     goto/16 :goto_0
 
+    .line 563
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "folder":Lmeizu/samba/client/RemoteSharedFolder;
     :pswitch_4
@@ -252,9 +271,11 @@
 
     goto/16 :goto_0
 
+    .line 564
     :catch_2
     move-exception v0
 
+    .line 565
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "SambaClientService"
 
@@ -264,6 +285,7 @@
 
     goto/16 :goto_0
 
+    .line 526
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

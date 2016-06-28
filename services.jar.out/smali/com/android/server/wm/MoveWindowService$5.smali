@@ -38,16 +38,19 @@
     .prologue
     const/4 v0, 0x1
 
+    .line 165
     iput-object p1, p0, Lcom/android/server/wm/MoveWindowService$5;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 166
     new-instance v1, Landroid/animation/IntEvaluator;
 
     invoke-direct {v1}, Landroid/animation/IntEvaluator;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/MoveWindowService$5;->intEvaluator:Landroid/animation/IntEvaluator;
 
+    .line 167
     iget-object v1, p0, Lcom/android/server/wm/MoveWindowService$5;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     iget-object v1, v1, Lcom/android/server/wm/MoveWindowService;->mRealWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -58,6 +61,7 @@
 
     iput-object v1, p0, Lcom/android/server/wm/MoveWindowService$5;->displayContent:Lcom/android/server/wm/DisplayContent;
 
+    .line 168
     iget-object v1, p0, Lcom/android/server/wm/MoveWindowService$5;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     iget-object v1, v1, Lcom/android/server/wm/MoveWindowService;->mRealWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -80,6 +84,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/wm/MoveWindowService$5;->rotated:Z
 
+    .line 170
     iget-boolean v0, p0, Lcom/android/server/wm/MoveWindowService$5;->rotated:Z
 
     if-eqz v0, :cond_2
@@ -91,6 +96,7 @@
     :goto_1
     iput v0, p0, Lcom/android/server/wm/MoveWindowService$5;->realdh:I
 
+    .line 172
     iget-object v0, p0, Lcom/android/server/wm/MoveWindowService$5;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     # getter for: Lcom/android/server/wm/MoveWindowService;->movedFocusWin:Lcom/android/server/wm/WindowState;
@@ -118,11 +124,13 @@
 
     return-void
 
+    .line 168
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 170
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/MoveWindowService$5;->displayContent:Lcom/android/server/wm/DisplayContent;
 
@@ -130,6 +138,7 @@
 
     goto :goto_1
 
+    .line 172
     :cond_3
     iget v0, p0, Lcom/android/server/wm/MoveWindowService$5;->realdh:I
 
@@ -147,6 +156,7 @@
     .prologue
     const/4 v5, 0x0
 
+    .line 176
     iget-object v2, p0, Lcom/android/server/wm/MoveWindowService$5;->this$0:Lcom/android/server/wm/MoveWindowService;
 
     # getter for: Lcom/android/server/wm/MoveWindowService;->movedFocusWin:Lcom/android/server/wm/WindowState;
@@ -169,6 +179,7 @@
 
     if-nez v2, :cond_1
 
+    .line 177
     :cond_0
     const-string v2, "Move_Win"
 
@@ -176,11 +187,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 178
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
+    .line 184
     :goto_0
     return-void
 
+    .line 181
     :cond_1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -192,6 +206,7 @@
 
     move-result v0
 
+    .line 182
     .local v0, "f":F
     iget-object v2, p0, Lcom/android/server/wm/MoveWindowService$5;->intEvaluator:Landroid/animation/IntEvaluator;
 
@@ -213,6 +228,7 @@
 
     move-result v1
 
+    .line 183
     .local v1, "jY":I
     iget-object v2, p0, Lcom/android/server/wm/MoveWindowService$5;->this$0:Lcom/android/server/wm/MoveWindowService;
 

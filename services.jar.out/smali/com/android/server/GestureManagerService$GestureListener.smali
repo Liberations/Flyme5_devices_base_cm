@@ -29,13 +29,17 @@
     .param p3, "tag"    # Ljava/lang/String;
 
     .prologue
+    .line 108
     iput-object p1, p0, Lcom/android/server/GestureManagerService$GestureListener;->this$0:Lcom/android/server/GestureManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 109
     iput-object p3, p0, Lcom/android/server/GestureManagerService$GestureListener;->mTag:Ljava/lang/String;
 
+    .line 110
     iput-object p2, p0, Lcom/android/server/GestureManagerService$GestureListener;->mCallback:Landroid/view/IGestureCallback;
 
+    .line 111
     return-void
 .end method

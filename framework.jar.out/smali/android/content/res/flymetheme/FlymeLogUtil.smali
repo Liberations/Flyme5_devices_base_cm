@@ -14,6 +14,7 @@
     .locals 0
 
     .prologue
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,6 +25,7 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
+    .line 15
     return-void
 .end method
 
@@ -33,12 +35,15 @@
     .param p1, "force"    # Z
 
     .prologue
+    .line 42
     if-eqz p1, :cond_0
 
+    .line 43
     const-string v0, "FlymeTheme-Liyd"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 45
     :cond_0
     return-void
 .end method
@@ -48,6 +53,7 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
+    .line 21
     return-void
 .end method
 
@@ -57,12 +63,15 @@
     .param p1, "force"    # Z
 
     .prologue
+    .line 48
     if-eqz p1, :cond_0
 
+    .line 49
     const-string v0, "FlymeTheme-Liyd"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 51
     :cond_0
     return-void
 .end method
@@ -73,12 +82,15 @@
     .param p1, "tr"    # Ljava/lang/Throwable;
 
     .prologue
+    .line 72
     const-string v0, "FlymeTheme-Liyd"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 73
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
+    .line 74
     return-void
 .end method
 
@@ -87,6 +99,7 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
+    .line 27
     return-void
 .end method
 
@@ -96,12 +109,15 @@
     .param p1, "force"    # Z
 
     .prologue
+    .line 54
     if-eqz p1, :cond_0
 
+    .line 55
     const-string v0, "FlymeTheme-Liyd"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 57
     :cond_0
     return-void
 .end method
@@ -111,6 +127,7 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
+    .line 33
     return-void
 .end method
 
@@ -120,12 +137,15 @@
     .param p1, "force"    # Z
 
     .prologue
+    .line 60
     if-eqz p1, :cond_0
 
+    .line 61
     const-string v0, "FlymeTheme-Liyd"
 
     invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 63
     :cond_0
     return-void
 .end method
@@ -135,6 +155,7 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
+    .line 39
     return-void
 .end method
 
@@ -144,12 +165,15 @@
     .param p1, "force"    # Z
 
     .prologue
+    .line 66
     if-eqz p1, :cond_0
 
+    .line 67
     const-string v0, "FlymeTheme-Liyd"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 69
     :cond_0
     return-void
 .end method

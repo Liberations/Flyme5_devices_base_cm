@@ -52,12 +52,16 @@
     .param p2, "service"    # Landroid/view/IGestureManager;
 
     .prologue
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     iput-object p2, p0, Landroid/view/GestureManager;->mService:Landroid/view/IGestureManager;
 
+    .line 39
     iput-object p1, p0, Landroid/view/GestureManager;->mContext:Landroid/content/Context;
 
+    .line 40
     return-void
 .end method
 
@@ -67,6 +71,7 @@
     .locals 2
 
     .prologue
+    .line 68
     :try_start_0
     iget-object v1, p0, Landroid/view/GestureManager;->mService:Landroid/view/IGestureManager;
 
@@ -74,12 +79,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 72
     :goto_0
     return-void
 
+    .line 69
     :catch_0
     move-exception v0
 
+    .line 70
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -92,6 +100,7 @@
     .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
+    .line 52
     :try_start_0
     iget-object v1, p0, Landroid/view/GestureManager;->mService:Landroid/view/IGestureManager;
 
@@ -99,12 +108,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 56
     :goto_0
     return-void
 
+    .line 53
     :catch_0
     move-exception v0
 
+    .line 54
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -116,6 +128,7 @@
     .param p1, "callback"    # Landroid/view/IGestureCallback;
 
     .prologue
+    .line 60
     :try_start_0
     iget-object v1, p0, Landroid/view/GestureManager;->mService:Landroid/view/IGestureManager;
 
@@ -123,12 +136,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 64
     :goto_0
     return-void
 
+    .line 61
     :catch_0
     move-exception v0
 
+    .line 62
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -139,6 +155,7 @@
     .locals 2
 
     .prologue
+    .line 76
     :try_start_0
     iget-object v1, p0, Landroid/view/GestureManager;->mService:Landroid/view/IGestureManager;
 
@@ -146,12 +163,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 80
     :goto_0
     return-void
 
+    .line 77
     :catch_0
     move-exception v0
 
+    .line 78
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -162,6 +182,7 @@
     .locals 2
 
     .prologue
+    .line 44
     :try_start_0
     iget-object v1, p0, Landroid/view/GestureManager;->mService:Landroid/view/IGestureManager;
 
@@ -169,12 +190,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 48
     :goto_0
     return-void
 
+    .line 45
     :catch_0
     move-exception v0
 
+    .line 46
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 401
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +31,12 @@
     .param p1, "source"    # Landroid/net/wifi/ScanResult;
 
     .prologue
+    .line 408
     iget-object v0, p1, Landroid/net/wifi/ScanResult;->HexSSID:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->HexSSID:Ljava/lang/String;
 
+    .line 409
     return-void
 .end method
 
@@ -43,6 +46,7 @@
     .param p1, "wifiSsid"    # Landroid/net/wifi/WifiSsid;
 
     .prologue
+    .line 404
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/net/wifi/WifiSsid;->getHexString()Ljava/lang/String;
@@ -52,8 +56,10 @@
     :goto_0
     iput-object v0, p0, Landroid/net/wifi/ScanResult;->HexSSID:Ljava/lang/String;
 
+    .line 405
     return-void
 
+    .line 404
     :cond_0
     const-string v0, "<unknown ssid>"
 

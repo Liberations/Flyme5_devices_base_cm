@@ -19,6 +19,7 @@
     .locals 0
 
     .prologue
+    .line 1829
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
     .locals 3
 
     .prologue
+    .line 1889
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -58,6 +60,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 1855
     if-eqz p2, :cond_0
 
     :try_start_0
@@ -67,12 +70,15 @@
 
     move-object v0, v2
 
+    .line 1875
     :goto_0
     return-object v0
 
+    .line 1858
     :cond_0
     const/4 v0, 0x0
 
+    .line 1860
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
     if-nez v0, :cond_1
 
@@ -88,12 +94,14 @@
 
     if-eqz v3, :cond_1
 
+    .line 1861
     invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCalendarIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 1863
     :cond_1
     invoke-static {p0}, Landroid/content/res/flymetheme/FlymeThemeHelper;->getCustomIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     :try_end_0
@@ -104,10 +112,12 @@
 
     goto :goto_0
 
+    .line 1866
     .end local v0    # "dr":Landroid/graphics/drawable/Drawable;
     :catch_0
     move-exception v1
 
+    .line 1867
     .local v1, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v3, "PackageManager"
 
@@ -151,11 +161,14 @@
     :goto_1
     move-object v0, v2
 
+    .line 1875
     goto :goto_0
 
+    .line 1869
     :catch_1
     move-exception v1
 
+    .line 1872
     .local v1, "e":Ljava/lang/RuntimeException;
     const-string v3, "PackageManager"
 
@@ -204,21 +217,26 @@
     .param p3, "r"    # Landroid/content/res/Resources;
 
     .prologue
+    .line 1836
     invoke-static {p0, p1, p2}, Landroid/app/ApplicationPackageManager$FlymeInjector;->getFlymeThemeDrawable(Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 1837
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
     if-nez v0, :cond_0
 
+    .line 1838
     invoke-virtual {p3, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 1839
     invoke-static {p3, v0, p2}, Landroid/app/ApplicationPackageManager$FlymeInjector;->makeThemeIcon(Landroid/content/res/Resources;Landroid/graphics/drawable/Drawable;Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 1841
     :cond_0
     return-object v0
 .end method
@@ -228,6 +246,7 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
+    .line 1832
     const-string v0, "com.android.calendar"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -244,10 +263,12 @@
     .param p2, "appInfo"    # Landroid/content/pm/ApplicationInfo;
 
     .prologue
+    .line 1879
     invoke-static {p0, p1, p2}, Landroid/content/res/flymetheme/FlymeThemeHelper;->makeThemeIcon(Landroid/content/res/Resources;Landroid/graphics/drawable/Drawable;Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 1880
     .local v0, "dr":Landroid/graphics/drawable/Drawable;
     const-string v1, "com.android.calendar"
 
@@ -263,14 +284,17 @@
 
     if-eqz v1, :cond_0
 
+    .line 1882
     invoke-static {v0}, Landroid/content/res/flymetheme/FlymeThemeHelper;->addDateToIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 1883
     invoke-static {v0}, Landroid/content/res/flymetheme/FlymeThemeHelper;->addDayOfWeekToIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 1885
     :cond_0
     return-object v0
 .end method

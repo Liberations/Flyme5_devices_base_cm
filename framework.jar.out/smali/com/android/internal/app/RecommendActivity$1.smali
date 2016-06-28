@@ -26,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 191
     iput-object p1, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,6 +52,7 @@
     .end annotation
 
     .prologue
+    .line 196
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
@@ -78,9 +80,11 @@
 
     move-result-object v2
 
+    .line 200
     .local v2, "resolveInfo":Landroid/content/pm/ResolveInfo;
     if-eqz v2, :cond_0
 
+    .line 201
     iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     iget-object v4, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
@@ -97,11 +101,13 @@
     # invokes: Lcom/android/internal/app/RecommendActivity;->clearAndSetDefalutApp(Landroid/content/Intent;Landroid/content/pm/ResolveInfo;Z)V
     invoke-static {v3, v1, v2, v4}, Lcom/android/internal/app/RecommendActivity;->access$300(Lcom/android/internal/app/RecommendActivity;Landroid/content/Intent;Landroid/content/pm/ResolveInfo;Z)V
 
+    .line 207
     :cond_0
     const/high16 v3, 0x10000000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
+    .line 210
     iget-object v3, p0, Lcom/android/internal/app/RecommendActivity$1;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     invoke-virtual {v3}, Lcom/android/internal/app/RecommendActivity;->getIntent()Landroid/content/Intent;

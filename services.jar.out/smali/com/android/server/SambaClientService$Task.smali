@@ -47,20 +47,26 @@
     .param p4, "port"    # I
 
     .prologue
+    .line 580
     iput-object p1, p0, Lcom/android/server/SambaClientService$Task;->this$0:Lcom/android/server/SambaClientService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 578
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/SambaClientService$Task;->mCanceled:Z
 
+    .line 581
     iput-object p2, p0, Lcom/android/server/SambaClientService$Task;->ipHead:Ljava/lang/String;
 
+    .line 582
     iput p3, p0, Lcom/android/server/SambaClientService$Task;->ipTail:I
 
+    .line 583
     iput p4, p0, Lcom/android/server/SambaClientService$Task;->port:I
 
+    .line 585
     return-void
 .end method
 
@@ -70,16 +76,20 @@
     .locals 10
 
     .prologue
+    .line 596
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
+    .line 597
     .local v4, "start":J
     const/4 v2, 0x0
 
+    .line 598
     .local v2, "exist":Z
     const/4 v3, 0x0
 
+    .line 609
     .local v3, "name":Ljava/lang/String;
     :try_start_0
     iget-object v6, p0, Lcom/android/server/SambaClientService$Task;->this$0:Lcom/android/server/SambaClientService;
@@ -110,9 +120,11 @@
 
     move-result-object v3
 
+    .line 613
     :goto_0
     if-eqz v3, :cond_0
 
+    .line 614
     iget-object v6, p0, Lcom/android/server/SambaClientService$Task;->this$0:Lcom/android/server/SambaClientService;
 
     const-string v7, "SCAN_NEW_SERVER"
@@ -150,11 +162,13 @@
     # invokes: Lcom/android/server/SambaClientService;->onScanNotify(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v6, v7, v8}, Lcom/android/server/SambaClientService;->access$300(Lcom/android/server/SambaClientService;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 617
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 618
     .local v0, "end":J
     sub-long v6, v0, v4
 
@@ -164,6 +178,7 @@
 
     return-object v6
 
+    .line 610
     .end local v0    # "end":J
     :catch_0
     move-exception v6
@@ -180,6 +195,7 @@
     .end annotation
 
     .prologue
+    .line 573
     invoke-virtual {p0}, Lcom/android/server/SambaClientService$Task;->call()Ljava/lang/Long;
 
     move-result-object v0
@@ -191,6 +207,7 @@
     .locals 1
 
     .prologue
+    .line 588
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -200,10 +217,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 589
     monitor-exit p0
 
     return-void
 
+    .line 588
     :catchall_0
     move-exception v0
 
@@ -216,6 +235,7 @@
     .locals 1
 
     .prologue
+    .line 592
     monitor-enter p0
 
     :try_start_0

@@ -23,6 +23,7 @@
     .locals 0
 
     .prologue
+    .line 153
     iput-object p1, p0, Lcom/android/server/GestureManagerService$2;->this$0:Lcom/android/server/GestureManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,10 +39,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
+    .line 156
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 157
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -51,12 +54,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 158
     const-string v1, "GestureManager"
 
     const-string v2, "onReceive(), ACTION_SCREEN_ON"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 159
     iget-object v1, p0, Lcom/android/server/GestureManagerService$2;->this$0:Lcom/android/server/GestureManagerService;
 
     # getter for: Lcom/android/server/GestureManagerService;->mSensorManager:Landroid/hardware/SensorManager;
@@ -73,10 +78,12 @@
 
     invoke-virtual {v1, v2}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
+    .line 167
     :cond_0
     :goto_0
     return-void
 
+    .line 160
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -106,12 +113,14 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 163
     const-string v1, "GestureManager"
 
     const-string v2, "onReceive(), ACTION_SCREEN_OFF"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 164
     iget-object v1, p0, Lcom/android/server/GestureManagerService$2;->this$0:Lcom/android/server/GestureManagerService;
 
     # getter for: Lcom/android/server/GestureManagerService;->mSensorManager:Landroid/hardware/SensorManager;

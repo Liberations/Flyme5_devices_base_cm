@@ -27,11 +27,15 @@
     .param p2, "childPos"    # I
 
     .prologue
+    .line 1751
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1752
     iput p1, p0, Landroid/widget/ExpandableListViewMz$PackedPosition;->groupPosition:I
 
+    .line 1753
     iput p2, p0, Landroid/widget/ExpandableListViewMz$PackedPosition;->childPosition:I
 
+    .line 1754
     return-void
 .end method

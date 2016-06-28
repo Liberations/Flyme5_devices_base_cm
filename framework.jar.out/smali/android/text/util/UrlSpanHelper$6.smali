@@ -30,6 +30,7 @@
     .locals 0
 
     .prologue
+    .line 338
     iput-object p1, p0, Landroid/text/util/UrlSpanHelper$6;->val$widget:Landroid/view/View;
 
     iput-object p2, p0, Landroid/text/util/UrlSpanHelper$6;->val$url:Ljava/lang/String;
@@ -49,18 +50,22 @@
     .param p2, "which"    # I
 
     .prologue
+    .line 340
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$6;->val$widget:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
+    .line 342
     .local v0, "context":Landroid/content/Context;
     packed-switch p2, :pswitch_data_0
 
+    .line 368
     :goto_0
     return-void
 
+    .line 344
     :pswitch_0
     sget-object v2, Landroid/os/BuildExt;->CUSTOMIZE_CHINAMOBILE:Ljava/lang/Boolean;
 
@@ -70,6 +75,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 345
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$6;->val$widget:Landroid/view/View;
 
     iget-object v3, p0, Landroid/text/util/UrlSpanHelper$6;->val$url:Ljava/lang/String;
@@ -79,6 +85,7 @@
 
     goto :goto_0
 
+    .line 347
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -88,12 +95,14 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 348
     .local v1, "intent":Landroid/content/Intent;
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 352
     .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_1
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$6;->val$url:Ljava/lang/String;
@@ -106,6 +115,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 353
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$6;->val$url:Ljava/lang/String;
 
     iget-object v3, p0, Landroid/text/util/UrlSpanHelper$6;->val$url:Ljava/lang/String;
@@ -135,6 +145,7 @@
 
     goto :goto_0
 
+    .line 356
     :cond_1
     iget-object v2, p0, Landroid/text/util/UrlSpanHelper$6;->val$url:Ljava/lang/String;
 
@@ -145,6 +156,7 @@
 
     goto :goto_0
 
+    .line 361
     :pswitch_2
     new-instance v1, Landroid/content/Intent;
 
@@ -152,11 +164,13 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 362
     .restart local v1    # "intent":Landroid/content/Intent;
-    const-string v2, "vnd.android.cursor.dir/bookmark"
+    const-string/jumbo v2, "vnd.android.cursor.dir/bookmark"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 363
     const-string v2, "extra_url"
 
     iget-object v3, p0, Landroid/text/util/UrlSpanHelper$6;->val$openUri:Landroid/net/Uri;
@@ -167,11 +181,13 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 364
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 342
     nop
 
     :pswitch_data_0

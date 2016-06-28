@@ -24,10 +24,13 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
+    .line 356
     iput-object p1, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
+    .line 357
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
+    .line 358
     return-void
 .end method
 
@@ -38,18 +41,22 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
+    .line 364
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
+    .line 459
     :goto_0
     return-void
 
+    .line 366
     :pswitch_0
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lmeizu/samba/server/LocalSharedFolder;
 
+    .line 371
     .local v2, "folders":Lmeizu/samba/server/LocalSharedFolder;
     :try_start_0
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
@@ -61,10 +68,12 @@
 
     if-nez v8, :cond_0
 
+    .line 372
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     invoke-virtual {v8}, Lcom/android/server/SambaServerService;->startServerInternal()Z
 
+    .line 373
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     const/4 v9, 0x1
@@ -72,6 +81,7 @@
     # setter for: Lcom/android/server/SambaServerService;->mServerRunning:Z
     invoke-static {v8, v9}, Lcom/android/server/SambaServerService;->access$002(Lcom/android/server/SambaServerService;Z)Z
 
+    .line 376
     :cond_0
     iget-object v8, v2, Lmeizu/samba/server/LocalSharedFolder;->mode:Lmeizu/samba/server/LocalSharedFolder$SharedMode;
 
@@ -91,6 +101,7 @@
 
     if-nez v8, :cond_1
 
+    .line 378
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     # getter for: Lcom/android/server/SambaServerService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -124,9 +135,11 @@
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
+    .line 381
     :cond_1
     const/4 v4, 0x0
 
+    .line 382
     .local v4, "i":I
     const/4 v4, 0x0
 
@@ -137,15 +150,18 @@
 
     if-ge v4, v8, :cond_5
 
+    .line 383
     iget-object v8, v2, Lmeizu/samba/server/LocalSharedFolder;->paths:[Ljava/lang/String;
 
     aget-object v7, v8, v4
 
+    .line 384
     .local v7, "path":Ljava/lang/String;
     iget-object v8, v2, Lmeizu/samba/server/LocalSharedFolder;->descriptions:[Ljava/lang/String;
 
     aget-object v0, v8, v4
 
+    .line 385
     .local v0, "des":Ljava/lang/String;
     iget-object v8, v2, Lmeizu/samba/server/LocalSharedFolder;->mode:Lmeizu/samba/server/LocalSharedFolder$SharedMode;
 
@@ -153,6 +169,7 @@
 
     if-ne v8, v9, :cond_3
 
+    .line 386
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     # getter for: Lcom/android/server/SambaServerService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -193,6 +210,7 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
+    .line 393
     :goto_3
     new-instance v6, Lcom/android/server/SambaServerService$SharedItem;
 
@@ -200,6 +218,7 @@
 
     invoke-direct {v6, v8, v7, v0}, Lcom/android/server/SambaServerService$SharedItem;-><init>(Lcom/android/server/SambaServerService;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 394
     .local v6, "item":Lcom/android/server/SambaServerService$SharedItem;
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
@@ -210,16 +229,19 @@
 
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 382
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
+    .line 386
     .end local v6    # "item":Lcom/android/server/SambaServerService$SharedItem;
     :cond_2
     const-string v8, "false"
 
     goto :goto_2
 
+    .line 389
     :cond_3
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
@@ -271,12 +293,14 @@
 
     goto :goto_3
 
+    .line 399
     .end local v0    # "des":Ljava/lang/String;
     .end local v4    # "i":I
     .end local v7    # "path":Ljava/lang/String;
     :catch_0
     move-exception v1
 
+    .line 400
     .local v1, "e":Ljava/lang/Exception;
     const-string v8, "SambaServerService"
 
@@ -302,6 +326,7 @@
 
     goto/16 :goto_0
 
+    .line 389
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "des":Ljava/lang/String;
     .restart local v4    # "i":I
@@ -312,6 +337,7 @@
 
     goto :goto_4
 
+    .line 397
     .end local v0    # "des":Ljava/lang/String;
     .end local v7    # "path":Ljava/lang/String;
     :cond_5
@@ -336,6 +362,7 @@
 
     invoke-virtual {v8, v9, v10}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
+    .line 398
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     const/4 v9, 0x1
@@ -347,6 +374,7 @@
 
     goto/16 :goto_0
 
+    .line 404
     .end local v2    # "folders":Lmeizu/samba/server/LocalSharedFolder;
     .end local v4    # "i":I
     :pswitch_1
@@ -354,9 +382,11 @@
 
     check-cast v2, Lmeizu/samba/server/LocalSharedFolder;
 
+    .line 405
     .restart local v2    # "folders":Lmeizu/samba/server/LocalSharedFolder;
     const/4 v4, 0x0
 
+    .line 406
     .restart local v4    # "i":I
     const/4 v4, 0x0
 
@@ -367,15 +397,18 @@
 
     if-ge v4, v8, :cond_9
 
+    .line 407
     iget-object v8, v2, Lmeizu/samba/server/LocalSharedFolder;->paths:[Ljava/lang/String;
 
     aget-object v7, v8, v4
 
+    .line 408
     .restart local v7    # "path":Ljava/lang/String;
     iget-object v8, v2, Lmeizu/samba/server/LocalSharedFolder;->descriptions:[Ljava/lang/String;
 
     aget-object v0, v8, v4
 
+    .line 411
     .restart local v0    # "des":Ljava/lang/String;
     :try_start_2
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
@@ -409,9 +442,11 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
+    .line 416
     :goto_6
     const/4 v3, 0x0
 
+    .line 417
     .local v3, "found":Z
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
@@ -438,6 +473,7 @@
 
     check-cast v6, Lcom/android/server/SambaServerService$SharedItem;
 
+    .line 418
     .restart local v6    # "item":Lcom/android/server/SambaServerService$SharedItem;
     iget-object v8, v6, Lcom/android/server/SambaServerService$SharedItem;->path:Ljava/lang/String;
 
@@ -455,6 +491,7 @@
 
     if-eqz v8, :cond_6
 
+    .line 419
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     # getter for: Lcom/android/server/SambaServerService;->mSharedItemList:Ljava/util/ArrayList;
@@ -464,12 +501,15 @@
 
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 420
     const/4 v3, 0x1
 
+    .line 425
     .end local v6    # "item":Lcom/android/server/SambaServerService$SharedItem;
     :cond_7
     if-nez v3, :cond_8
 
+    .line 426
     const-string v8, "SambaServerService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -510,16 +550,19 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 406
     :cond_8
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_5
 
+    .line 412
     .end local v3    # "found":Z
     .end local v5    # "i$":Ljava/util/Iterator;
     :catch_1
     move-exception v1
 
+    .line 413
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v8, "SambaServerService"
 
@@ -529,6 +572,7 @@
 
     goto :goto_6
 
+    .line 432
     .end local v0    # "des":Ljava/lang/String;
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v7    # "path":Ljava/lang/String;
@@ -546,10 +590,12 @@
 
     if-nez v8, :cond_a
 
+    .line 433
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     invoke-virtual {v8}, Lcom/android/server/SambaServerService;->stopServerInternal()Z
 
+    .line 434
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     const/4 v9, 0x0
@@ -557,6 +603,7 @@
     # invokes: Lcom/android/server/SambaServerService;->updateNotification(Z)V
     invoke-static {v8, v9}, Lcom/android/server/SambaServerService;->access$400(Lcom/android/server/SambaServerService;Z)V
 
+    .line 435
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     const/4 v9, 0x0
@@ -566,6 +613,7 @@
 
     goto/16 :goto_0
 
+    .line 438
     :cond_a
     :try_start_3
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
@@ -591,6 +639,7 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
+    .line 442
     :goto_7
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
@@ -601,9 +650,11 @@
 
     goto/16 :goto_0
 
+    .line 439
     :catch_2
     move-exception v1
 
+    .line 440
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v8, "SambaServerService"
 
@@ -613,6 +664,7 @@
 
     goto :goto_7
 
+    .line 446
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "folders":Lmeizu/samba/server/LocalSharedFolder;
     .end local v4    # "i":I
@@ -642,6 +694,7 @@
 
     check-cast v6, Lcom/android/server/SambaServerService$SharedItem;
 
+    .line 448
     .restart local v6    # "item":Lcom/android/server/SambaServerService$SharedItem;
     :try_start_4
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
@@ -681,9 +734,11 @@
 
     goto :goto_8
 
+    .line 449
     :catch_3
     move-exception v1
 
+    .line 450
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v8, "SambaServerService"
 
@@ -693,6 +748,7 @@
 
     goto :goto_8
 
+    .line 453
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v6    # "item":Lcom/android/server/SambaServerService$SharedItem;
     :cond_b
@@ -705,10 +761,12 @@
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->clear()V
 
+    .line 454
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     invoke-virtual {v8}, Lcom/android/server/SambaServerService;->stopServerInternal()Z
 
+    .line 455
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     const/4 v9, 0x0
@@ -716,6 +774,7 @@
     # invokes: Lcom/android/server/SambaServerService;->updateNotification(Z)V
     invoke-static {v8, v9}, Lcom/android/server/SambaServerService;->access$400(Lcom/android/server/SambaServerService;Z)V
 
+    .line 456
     iget-object v8, p0, Lcom/android/server/SambaServerService$SambaHandler;->this$0:Lcom/android/server/SambaServerService;
 
     const/4 v9, 0x0
@@ -725,6 +784,7 @@
 
     goto/16 :goto_0
 
+    .line 364
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

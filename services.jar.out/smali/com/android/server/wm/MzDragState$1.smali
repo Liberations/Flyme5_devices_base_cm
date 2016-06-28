@@ -26,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 179
     iput-object p1, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +40,19 @@
     .locals 4
 
     .prologue
+    .line 182
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget-object v0, v0, Lcom/android/server/wm/MzDragState;->mSurfaceControl:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_1
 
+    .line 200
     :cond_0
     :goto_0
     return-void
 
+    .line 186
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
@@ -59,6 +63,7 @@
 
     iput v1, v0, Lcom/android/server/wm/MzDragState;->mUpdateCount:I
 
+    .line 187
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget v1, v0, Lcom/android/server/wm/MzDragState;->mThumbOffsetY:F
@@ -69,6 +74,7 @@
 
     iput v1, v0, Lcom/android/server/wm/MzDragState;->mThumbOffsetY:F
 
+    .line 188
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget-object v0, v0, Lcom/android/server/wm/MzDragState;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -97,8 +103,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 193
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
+    .line 198
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget v0, v0, Lcom/android/server/wm/MzDragState;->mUpdateCount:I
@@ -107,6 +115,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 199
     iget-object v0, p0, Lcom/android/server/wm/MzDragState$1;->this$0:Lcom/android/server/wm/MzDragState;
 
     iget-object v0, v0, Lcom/android/server/wm/MzDragState;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -119,6 +128,7 @@
 
     goto :goto_0
 
+    .line 193
     :catchall_0
     move-exception v0
 

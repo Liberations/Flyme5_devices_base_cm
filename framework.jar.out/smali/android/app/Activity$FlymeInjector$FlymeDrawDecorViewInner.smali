@@ -33,14 +33,19 @@
     .param p3, "delayDraw"    # Z
 
     .prologue
+    .line 6880
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 6881
     iput-object p1, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
 
+    .line 6882
     iput-object p2, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mWindow:Landroid/view/Window;
 
+    .line 6883
     iput-boolean p3, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mDelayDraw:Z
 
+    .line 6884
     return-void
 .end method
 
@@ -50,6 +55,7 @@
     .locals 3
 
     .prologue
+    .line 6888
     iget-object v0, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mActivity:Landroid/app/Activity;
 
     iget-object v1, p0, Landroid/app/Activity$FlymeInjector$FlymeDrawDecorViewInner;->mWindow:Landroid/view/Window;
@@ -62,5 +68,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/Activity$FlymeInjector;->onDrawDecorViewInner(Landroid/app/Activity;Landroid/view/View;Z)V
 
+    .line 6889
     return-void
 .end method

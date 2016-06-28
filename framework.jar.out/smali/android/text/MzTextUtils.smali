@@ -46,6 +46,7 @@
 
     const/4 v3, 0x0
 
+    .line 297
     const/16 v0, 0x18
 
     new-array v0, v0, [Ljava/lang/CharSequence;
@@ -66,13 +67,13 @@
 
     aput-object v1, v0, v6
 
-    const-string v1, "{"
+    const-string/jumbo v1, "{"
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string v2, "}"
+    const-string/jumbo v2, "}"
 
     aput-object v2, v0, v1
 
@@ -90,102 +91,103 @@
 
     const/16 v1, 0x8
 
-    const-string v2, "\u300c"
+    const-string/jumbo v2, "\u300c"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    const-string v2, "\u300d"
+    const-string/jumbo v2, "\u300d"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    const-string v2, "\u201c"
+    const-string/jumbo v2, "\u201c"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
 
-    const-string v2, "\u201d"
+    const-string/jumbo v2, "\u201d"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
-    const-string v2, "\u2018"
+    const-string/jumbo v2, "\u2018"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
-    const-string v2, "\u2019"
+    const-string/jumbo v2, "\u2019"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xe
 
-    const-string v2, "\uff08"
+    const-string/jumbo v2, "\uff08"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xf
 
-    const-string v2, "\uff09"
+    const-string/jumbo v2, "\uff09"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x10
 
-    const-string v2, "\u3010"
+    const-string/jumbo v2, "\u3010"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x11
 
-    const-string v2, "\u3011"
+    const-string/jumbo v2, "\u3011"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x12
 
-    const-string v2, "\u300e"
+    const-string/jumbo v2, "\u300e"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x13
 
-    const-string v2, "\u300f"
+    const-string/jumbo v2, "\u300f"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x14
 
-    const-string v2, "\u300a"
+    const-string/jumbo v2, "\u300a"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x15
 
-    const-string v2, "\u300b"
+    const-string/jumbo v2, "\u300b"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x16
 
-    const-string v2, "\u3008"
+    const-string/jumbo v2, "\u3008"
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x17
 
-    const-string v2, "\u3009"
+    const-string/jumbo v2, "\u3009"
 
     aput-object v2, v0, v1
 
     sput-object v0, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
+    .line 313
     new-array v0, v7, [I
 
     sget v1, Lcom/flyme/internal/R$drawable;->mz_voice_loading_00:I
@@ -213,6 +215,7 @@
     .locals 0
 
     .prologue
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -222,6 +225,7 @@
     .locals 1
 
     .prologue
+    .line 330
     sget v0, Lcom/flyme/internal/R$drawable;->mz_voice_loading_03:I
 
     return v0
@@ -231,6 +235,7 @@
     .locals 1
 
     .prologue
+    .line 326
     sget-object v0, Landroid/text/MzTextUtils;->VOICE_LOADING_IMG_ARRAY:[I
 
     return-object v0
@@ -246,6 +251,7 @@
 
     const/4 v0, 0x1
 
+    .line 124
     const/16 v2, 0x2e80
 
     if-lt p0, v2, :cond_1
@@ -254,15 +260,18 @@
 
     if-gt p0, v2, :cond_1
 
+    .line 201
     :cond_0
     :goto_0
     return v0
 
+    .line 127
     :cond_1
     const/16 v2, 0x3000
 
     if-eq p0, v2, :cond_0
 
+    .line 130
     const/16 v2, 0x3040
 
     if-lt p0, v2, :cond_2
@@ -271,8 +280,10 @@
 
     if-gt p0, v2, :cond_2
 
+    .line 131
     if-nez p1, :cond_0
 
+    .line 132
     sparse-switch p0, :sswitch_data_0
 
     goto :goto_0
@@ -280,8 +291,10 @@
     :sswitch_0
     move v0, v1
 
+    .line 149
     goto :goto_0
 
+    .line 154
     :cond_2
     const/16 v2, 0x30a0
 
@@ -291,8 +304,10 @@
 
     if-gt p0, v2, :cond_3
 
+    .line 155
     if-nez p1, :cond_0
 
+    .line 156
     sparse-switch p0, :sswitch_data_1
 
     goto :goto_0
@@ -300,8 +315,10 @@
     :sswitch_1
     move v0, v1
 
+    .line 174
     goto :goto_0
 
+    .line 179
     :cond_3
     const/16 v2, 0x3400
 
@@ -311,6 +328,7 @@
 
     if-le p0, v2, :cond_0
 
+    .line 182
     :cond_4
     const/16 v2, 0x4e00
 
@@ -320,6 +338,7 @@
 
     if-le p0, v2, :cond_0
 
+    .line 185
     :cond_5
     const v2, 0xf900
 
@@ -329,6 +348,7 @@
 
     if-le p0, v2, :cond_0
 
+    .line 188
     :cond_6
     const v2, 0xa000
 
@@ -338,6 +358,7 @@
 
     if-le p0, v2, :cond_0
 
+    .line 191
     :cond_7
     const v2, 0xa490
 
@@ -347,6 +368,7 @@
 
     if-le p0, v2, :cond_0
 
+    .line 194
     :cond_8
     const v2, 0xfe62
 
@@ -356,6 +378,7 @@
 
     if-le p0, v2, :cond_0
 
+    .line 197
     :cond_9
     const v2, 0xff10
 
@@ -368,8 +391,10 @@
     :cond_a
     move v0, v1
 
+    .line 201
     goto :goto_0
 
+    .line 132
     :sswitch_data_0
     .sparse-switch
         0x3041 -> :sswitch_0
@@ -390,6 +415,7 @@
         0x309e -> :sswitch_0
     .end sparse-switch
 
+    .line 156
     :sswitch_data_1
     .sparse-switch
         0x30a0 -> :sswitch_1
@@ -427,17 +453,22 @@
 
     const/4 v3, 0x0
 
+    .line 76
     if-gez p2, :cond_0
 
+    .line 77
     const/4 p2, 0x0
 
+    .line 79
     :cond_0
     array-length v4, p0
 
     if-le p3, v4, :cond_1
 
+    .line 80
     array-length p3, p0
 
+    .line 82
     :cond_1
     if-lt p1, p2, :cond_2
 
@@ -446,13 +477,16 @@
     :cond_2
     move v2, v3
 
+    .line 111
     :cond_3
     :goto_0
     return v2
 
+    .line 86
     :cond_4
     aget-char v0, p0, p1
 
+    .line 87
     .local v0, "c":C
     const/16 v4, 0x20
 
@@ -462,6 +496,7 @@
 
     if-eq v0, v4, :cond_3
 
+    .line 91
     add-int/lit8 v4, p1, 0x1
 
     if-ge v4, p3, :cond_a
@@ -470,6 +505,7 @@
 
     aget-char v1, p0, v4
 
+    .line 93
     .local v1, "c2":C
     :goto_1
     const/16 v4, 0x2f
@@ -487,6 +523,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 97
     :cond_6
     if-nez p4, :cond_8
 
@@ -507,6 +544,7 @@
 
     if-eqz v4, :cond_b
 
+    .line 99
     :cond_8
     const-string v4, "([{\u00ab"
 
@@ -543,14 +581,17 @@
     :cond_9
     move v2, v3
 
+    .line 101
     goto :goto_0
 
     .end local v1    # "c2":C
     :cond_a
     move v1, v3
 
+    .line 91
     goto :goto_1
 
+    .line 107
     .restart local v1    # "c2":C
     :cond_b
     const-string v4, "!%),.:;?]}\u00a8\u00b7\u02c7\u02c9\u2013\u2014\u2016\u2019\u201d\u2025\u2026\u2027\u2030\u2032\u2103\u2236\u2574\u25cf\u3000\u3001\u3002\u3003\u3005\u3009\u300b\u300d\u300f\u3011\u3015\u3017\u301e\ufe30\ufe31\ufe33\ufe34\ufe36\ufe38\ufe3a\ufe3c\ufe3e\ufe40\ufe42\ufe44\ufe4f\ufe50\ufe51\ufe52\ufe54\ufe55\ufe56\ufe57\ufe5a\ufe5c\uff01\uff02\uff05\uff07\uff09\uff0c\uff0e\uff1a\uff1b\uff1f\uff2f\uff3d\uff40\uff5c\uff5d\uff5e\uffe0"
@@ -571,6 +612,7 @@
 
     move v2, v3
 
+    .line 111
     goto :goto_0
 .end method
 
@@ -579,10 +621,12 @@
     .param p0, "sym"    # Ljava/lang/CharSequence;
 
     .prologue
+    .line 272
     sget-object v2, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     array-length v0, v2
 
+    .line 273
     .local v0, "N":I
     const/4 v1, 0x1
 
@@ -590,6 +634,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 274
     sget-object v2, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     aget-object v2, v2, v1
@@ -600,16 +645,20 @@
 
     if-eqz v2, :cond_0
 
+    .line 275
     const/4 v2, 0x1
 
+    .line 278
     :goto_1
     return v2
 
+    .line 273
     :cond_0
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
+    .line 278
     :cond_1
     const/4 v2, 0x0
 
@@ -621,10 +670,12 @@
     .param p0, "sym"    # Ljava/lang/CharSequence;
 
     .prologue
+    .line 257
     sget-object v2, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     array-length v0, v2
 
+    .line 258
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -632,6 +683,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 259
     sget-object v2, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     aget-object v2, v2, v1
@@ -642,16 +694,20 @@
 
     if-eqz v2, :cond_0
 
+    .line 260
     const/4 v2, 0x1
 
+    .line 263
     :goto_1
     return v2
 
+    .line 258
     :cond_0
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
+    .line 263
     :cond_1
     const/4 v2, 0x0
 
@@ -664,10 +720,12 @@
     .param p1, "end"    # Ljava/lang/CharSequence;
 
     .prologue
+    .line 287
     sget-object v2, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     array-length v0, v2
 
+    .line 288
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -675,6 +733,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 289
     sget-object v2, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     aget-object v2, v2, v1
@@ -697,16 +756,20 @@
 
     if-eqz v2, :cond_0
 
+    .line 291
     const/4 v2, 0x1
 
+    .line 294
     :goto_1
     return v2
 
+    .line 288
     :cond_0
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
+    .line 294
     :cond_1
     const/4 v2, 0x0
 
@@ -718,14 +781,18 @@
     .param p0, "text"    # Ljava/lang/CharSequence;
 
     .prologue
+    .line 24
     if-nez p0, :cond_1
 
+    .line 25
     const/4 p0, 0x0
 
+    .line 34
     :cond_0
     :goto_0
     return-object p0
 
+    .line 27
     :cond_1
     instance-of v2, p0, Landroid/text/Spannable;
 
@@ -733,6 +800,7 @@
 
     move-object v2, p0
 
+    .line 28
     check-cast v2, Landroid/text/Spannable;
 
     invoke-static {v2}, Landroid/view/inputmethod/BaseInputConnection;->getComposingSpanStart(Landroid/text/Spannable;)I
@@ -742,12 +810,14 @@
     .local v1, "start":I
     move-object v2, p0
 
+    .line 29
     check-cast v2, Landroid/text/Spannable;
 
     invoke-static {v2}, Landroid/view/inputmethod/BaseInputConnection;->getComposingSpanEnd(Landroid/text/Spannable;)I
 
     move-result v0
 
+    .line 30
     .local v0, "end":I
     if-ltz v1, :cond_0
 
@@ -761,6 +831,7 @@
 
     if-gt v0, v2, :cond_0
 
+    .line 31
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -807,10 +878,12 @@
     .param p0, "sym"    # Ljava/lang/CharSequence;
 
     .prologue
+    .line 211
     sget-object v12, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     array-length v0, v12
 
+    .line 212
     .local v0, "N":I
     const/4 v10, 0x0
 
@@ -818,6 +891,7 @@
     :goto_0
     if-ge v10, v0, :cond_8
 
+    .line 213
     sget-object v12, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     aget-object v12, v12, v10
@@ -828,29 +902,35 @@
 
     if-eqz v12, :cond_7
 
+    .line 215
     and-int/lit8 v12, v10, 0x1
 
     if-nez v12, :cond_4
 
+    .line 216
     sget-object v12, Landroid/text/MzTextUtils;->PAIR_SYMBOLS:[Ljava/lang/CharSequence;
 
     add-int/lit8 v13, v10, 0x1
 
     aget-object v11, v12, v13
 
+    .line 220
     .local v11, "text":Ljava/lang/CharSequence;
     :goto_1
     instance-of v12, p0, Landroid/text/Spanned;
 
     if-eqz v12, :cond_6
 
+    .line 221
     invoke-static {v11}, Landroid/text/SpannableString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannableString;
 
     move-result-object v5
 
+    .line 223
     .local v5, "result":Landroid/text/Spannable;
     const/4 v9, 0x0
 
+    .line 224
     .local v9, "start":I
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -859,8 +939,10 @@
     .local v2, "end":I
     move-object v6, p0
 
+    .line 225
     check-cast v6, Landroid/text/Spanned;
 
+    .line 226
     .local v6, "sp":Landroid/text/Spanned;
     const/4 v12, 0x0
 
@@ -870,6 +952,7 @@
 
     move-result-object v7
 
+    .line 228
     .local v7, "spans":[Ljava/lang/Object;
     const/4 v4, 0x0
 
@@ -879,6 +962,7 @@
 
     if-ge v4, v12, :cond_5
 
+    .line 229
     aget-object v12, v7, v4
 
     invoke-interface {v6, v12}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
@@ -887,6 +971,7 @@
 
     add-int/lit8 v8, v12, 0x0
 
+    .line 230
     .local v8, "st":I
     aget-object v12, v7, v4
 
@@ -896,6 +981,7 @@
 
     add-int/lit8 v1, v12, 0x0
 
+    .line 231
     .local v1, "en":I
     aget-object v12, v7, v4
 
@@ -903,39 +989,48 @@
 
     move-result v3
 
+    .line 233
     .local v3, "fl":I
     if-gez v8, :cond_0
 
     const/4 v8, 0x0
 
+    .line 234
     :cond_0
     add-int/lit8 v12, v2, 0x0
 
     if-le v8, v12, :cond_1
 
+    .line 235
     add-int/lit8 v8, v2, 0x0
 
+    .line 237
     :cond_1
     if-gez v1, :cond_2
 
     const/4 v1, 0x0
 
+    .line 238
     :cond_2
     add-int/lit8 v12, v2, 0x0
 
     if-le v1, v12, :cond_3
 
+    .line 239
     add-int/lit8 v1, v2, 0x0
 
+    .line 241
     :cond_3
     aget-object v12, v7, v4
 
     invoke-interface {v5, v12, v8, v1, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
+    .line 228
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
+    .line 218
     .end local v1    # "en":I
     .end local v2    # "end":I
     .end local v3    # "fl":I
@@ -956,6 +1051,7 @@
     .restart local v11    # "text":Ljava/lang/CharSequence;
     goto :goto_1
 
+    .line 243
     .restart local v2    # "end":I
     .restart local v4    # "i":I
     .restart local v5    # "result":Landroid/text/Spannable;
@@ -965,6 +1061,7 @@
     :cond_5
     move-object v11, v5
 
+    .line 248
     .end local v2    # "end":I
     .end local v4    # "i":I
     .end local v5    # "result":Landroid/text/Spannable;
@@ -976,11 +1073,13 @@
     :goto_3
     return-object v11
 
+    .line 212
     :cond_7
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
+    .line 248
     :cond_8
     const/4 v11, 0x0
 

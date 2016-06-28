@@ -23,6 +23,7 @@
     .locals 0
 
     .prologue
+    .line 306
     iput-object p1, p0, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver$Stub;-><init>()V
@@ -36,6 +37,7 @@
     .param p2, "x1"    # Lcom/android/server/pm/UpdateAppsReceiver$1;
 
     .prologue
+    .line 306
     invoke-direct {p0, p1}, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;-><init>(Lcom/android/server/pm/UpdateAppsReceiver;)V
 
     return-void
@@ -51,8 +53,10 @@
     .prologue
     const/4 v3, 0x1
 
+    .line 308
     if-ne p2, v3, :cond_1
 
+    .line 309
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mHandler:Landroid/os/Handler;
@@ -75,10 +79,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 311
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     invoke-virtual {v0, p1, v3}, Lcom/android/server/pm/UpdateAppsReceiver;->setPackageState(Ljava/lang/String;Z)V
 
+    .line 313
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mLenght:I
     invoke-static {}, Lcom/android/server/pm/UpdateAppsReceiver;->access$800()I
 
@@ -105,6 +111,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 314
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 
     # getter for: Lcom/android/server/pm/UpdateAppsReceiver;->mFpm:Landroid/content/pm/FlymePackageManager;
@@ -114,10 +121,12 @@
 
     invoke-virtual {v0}, Landroid/content/pm/FlymePackageManager;->syncPackageState()V
 
+    .line 320
     :cond_0
     :goto_0
     return-void
 
+    .line 317
     :cond_1
     iget-object v0, p0, Lcom/android/server/pm/UpdateAppsReceiver$PackageInstallObserver;->this$0:Lcom/android/server/pm/UpdateAppsReceiver;
 

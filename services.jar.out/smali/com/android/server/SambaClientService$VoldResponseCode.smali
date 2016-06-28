@@ -27,6 +27,7 @@
     .locals 0
 
     .prologue
+    .line 124
     iput-object p1, p0, Lcom/android/server/SambaClientService$VoldResponseCode;->this$0:Lcom/android/server/SambaClientService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -36,14 +36,18 @@
     .prologue
     const/4 v1, 0x0
 
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 53
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/app/NotificationExt;->simSlot:I
 
+    .line 54
     iput-object v1, p0, Landroid/app/NotificationExt;->subTitle:Ljava/lang/CharSequence;
 
+    .line 55
     iput-object v1, p0, Landroid/app/NotificationExt;->iconIntent:Landroid/app/PendingIntent;
 
     return-void

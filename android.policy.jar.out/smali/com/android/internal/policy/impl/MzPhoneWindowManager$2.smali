@@ -24,6 +24,7 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
+    .line 307
     iput-object p1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$2;->this$0:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -38,6 +39,7 @@
     .param p1, "selfChange"    # Z
 
     .prologue
+    .line 310
     iget-object v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$2;->this$0:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$2;->this$0:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
@@ -49,5 +51,6 @@
     # setter for: Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mPowerSaveMode:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->access$602(Lcom/android/internal/policy/impl/MzPhoneWindowManager;Z)Z
 
+    .line 311
     return-void
 .end method

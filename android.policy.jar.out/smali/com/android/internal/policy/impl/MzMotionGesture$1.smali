@@ -28,6 +28,7 @@
     .locals 0
 
     .prologue
+    .line 338
     iput-object p1, p0, Lcom/android/internal/policy/impl/MzMotionGesture$1;->this$0:Lcom/android/internal/policy/impl/MzMotionGesture;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/MzMotionGesture$1;->val$show:Z
@@ -43,13 +44,16 @@
     .locals 3
 
     .prologue
+    .line 340
     const/4 v0, 0x0
 
+    .line 341
     .local v0, "i":Landroid/content/Intent;
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/MzMotionGesture$1;->val$show:Z
 
     if-nez v1, :cond_0
 
+    .line 342
     new-instance v0, Landroid/content/Intent;
 
     .end local v0    # "i":Landroid/content/Intent;
@@ -57,6 +61,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 347
     .restart local v0    # "i":Landroid/content/Intent;
     :goto_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/MzMotionGesture$1;->this$0:Lcom/android/internal/policy/impl/MzMotionGesture;
@@ -69,8 +74,10 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
+    .line 348
     return-void
 
+    .line 344
     :cond_0
     new-instance v0, Landroid/content/Intent;
 

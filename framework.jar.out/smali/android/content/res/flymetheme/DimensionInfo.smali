@@ -16,11 +16,15 @@
     .param p2, "pkgTag"    # Ljava/lang/String;
 
     .prologue
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     iput p1, p0, Landroid/content/res/flymetheme/DimensionInfo;->mDimension:I
 
+    .line 14
     iput-object p2, p0, Landroid/content/res/flymetheme/DimensionInfo;->mPackageTag:Ljava/lang/String;
 
+    .line 15
     return-void
 .end method

@@ -29,13 +29,17 @@
     .param p3, "d"    # Ljava/lang/String;
 
     .prologue
+    .line 65
     iput-object p1, p0, Lcom/android/server/SambaServerService$SharedItem;->this$0:Lcom/android/server/SambaServerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 66
     iput-object p2, p0, Lcom/android/server/SambaServerService$SharedItem;->path:Ljava/lang/String;
 
+    .line 67
     iput-object p3, p0, Lcom/android/server/SambaServerService$SharedItem;->desc:Ljava/lang/String;
 
+    .line 68
     return-void
 .end method

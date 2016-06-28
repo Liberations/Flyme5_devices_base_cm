@@ -31,12 +31,15 @@
     .prologue
     const-wide/16 v0, 0x0
 
+    .line 20
     iput-object p1, p0, Landroid/media/CueHelper$CueTrackInfo;->this$0:Landroid/media/CueHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     iput-wide v0, p0, Landroid/media/CueHelper$CueTrackInfo;->startTime:J
 
+    .line 23
     iput-wide v0, p0, Landroid/media/CueHelper$CueTrackInfo;->endTime:J
 
     return-void

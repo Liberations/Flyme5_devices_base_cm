@@ -36,17 +36,24 @@
     .param p5, "_activate"    # Z
 
     .prologue
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 49
     iput p1, p0, Lcom/android/server/pm/PackageDefaultOpService$Op;->uid:I
 
+    .line 50
     iput-object p2, p0, Lcom/android/server/pm/PackageDefaultOpService$Op;->packageName:Ljava/lang/String;
 
+    .line 51
     iput p3, p0, Lcom/android/server/pm/PackageDefaultOpService$Op;->oldVersion:I
 
+    .line 52
     iput p4, p0, Lcom/android/server/pm/PackageDefaultOpService$Op;->newVersion:I
 
+    .line 53
     iput-boolean p5, p0, Lcom/android/server/pm/PackageDefaultOpService$Op;->activate:Z
 
+    .line 54
     return-void
 .end method

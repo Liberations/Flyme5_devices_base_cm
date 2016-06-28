@@ -26,6 +26,7 @@
     .locals 0
 
     .prologue
+    .line 554
     iput-object p1, p0, Lcom/android/internal/app/RecommendActivity$4;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +41,7 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
+    .line 557
     iget-object v0, p0, Lcom/android/internal/app/RecommendActivity$4;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     # getter for: Lcom/android/internal/app/RecommendActivity;->isInternational:Z
@@ -58,6 +60,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 559
     iget-object v0, p0, Lcom/android/internal/app/RecommendActivity$4;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/RecommendActivity$4;->this$0:Lcom/android/internal/app/RecommendActivity;
@@ -77,9 +80,11 @@
     # invokes: Lcom/android/internal/app/RecommendActivity;->launchGooglePlaySearch(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/internal/app/RecommendActivity;->access$900(Lcom/android/internal/app/RecommendActivity;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 564
     :goto_0
     return-void
 
+    .line 562
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/RecommendActivity$4;->this$0:Lcom/android/internal/app/RecommendActivity;
 

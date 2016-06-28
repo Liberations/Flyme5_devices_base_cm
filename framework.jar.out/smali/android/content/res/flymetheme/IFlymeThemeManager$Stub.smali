@@ -46,12 +46,15 @@
     .locals 1
 
     .prologue
+    .line 20
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
+    .line 21
     const-string v0, "android.content.res.flymetheme.IFlymeThemeManager"
 
     invoke-virtual {p0, p0, v0}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
+    .line 22
     return-void
 .end method
 
@@ -60,13 +63,17 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
+    .line 29
     if-nez p0, :cond_0
 
+    .line 30
     const/4 v0, 0x0
 
+    .line 36
     :goto_0
     return-object v0
 
+    .line 32
     :cond_0
     const-string v1, "android.content.res.flymetheme.IFlymeThemeManager"
 
@@ -74,6 +81,7 @@
 
     move-result-object v0
 
+    .line 33
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -81,10 +89,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 34
     check-cast v0, Landroid/content/res/flymetheme/IFlymeThemeManager;
 
     goto :goto_0
 
+    .line 36
     :cond_1
     new-instance v0, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub$Proxy;
 
@@ -100,6 +110,7 @@
     .locals 0
 
     .prologue
+    .line 40
     return-object p0
 .end method
 
@@ -118,8 +129,10 @@
     .prologue
     const/4 v7, 0x1
 
+    .line 44
     sparse-switch p1, :sswitch_data_0
 
+    .line 124
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -127,6 +140,7 @@
     :goto_0
     return v7
 
+    .line 48
     :sswitch_0
     const-string v1, "android.content.res.flymetheme.IFlymeThemeManager"
 
@@ -134,25 +148,30 @@
 
     goto :goto_0
 
+    .line 53
     :sswitch_1
     const-string v1, "android.content.res.flymetheme.IFlymeThemeManager"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 55
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
+    .line 57
     .local v2, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 59
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
+    .line 61
     .local v5, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -161,12 +180,15 @@
     .local v6, "_arg3":I
     move-object v1, p0
 
+    .line 62
     invoke-virtual/range {v1 .. v6}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->startWakeUpTrialService(JLjava/lang/String;II)V
 
+    .line 63
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 68
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -176,38 +198,47 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 69
     invoke-virtual {p0}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->cancelWakeUpTrialService()V
 
+    .line 70
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 75
     :sswitch_3
     const-string v1, "android.content.res.flymetheme.IFlymeThemeManager"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 77
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 79
     .local v2, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 81
     .restart local v4    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v8
 
+    .line 82
     .local v8, "_arg2":J
     invoke-virtual {p0, v2, v4, v8, v9}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->createChangeWallpaper(Ljava/lang/String;Ljava/lang/String;J)V
 
+    .line 83
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 88
     .end local v2    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v8    # "_arg2":J
@@ -216,31 +247,38 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 89
     invoke-virtual {p0}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->cancelChangeWallpaper()V
 
+    .line 90
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 95
     :sswitch_5
     const-string v1, "android.content.res.flymetheme.IFlymeThemeManager"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 97
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
+    .line 99
     .local v2, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 101
     .restart local v4    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
+    .line 103
     .restart local v5    # "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -249,12 +287,15 @@
     .restart local v6    # "_arg3":I
     move-object v1, p0
 
+    .line 104
     invoke-virtual/range {v1 .. v6}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->startFontWakeUpTrialService(JLjava/lang/String;II)V
 
+    .line 105
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 110
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -264,24 +305,30 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 111
     invoke-virtual {p0}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->cancelFontWakeUpTrialService()V
 
+    .line 112
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 117
     :sswitch_7
     const-string v1, "android.content.res.flymetheme.IFlymeThemeManager"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 118
     invoke-virtual {p0}, Landroid/content/res/flymetheme/IFlymeThemeManager$Stub;->isTrialFontAvailable()Z
 
     move-result v0
 
+    .line 119
     .local v0, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 120
     if-eqz v0, :cond_0
 
     move v1, v7
@@ -296,6 +343,7 @@
 
     goto :goto_1
 
+    .line 44
     nop
 
     :sswitch_data_0

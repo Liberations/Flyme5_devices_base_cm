@@ -37,22 +37,31 @@
 
     const/4 v0, 0x0
 
+    .line 25
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
+    .line 16
     iput-object v0, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mPreTag:Ljava/lang/String;
 
+    .line 17
     iput-object v0, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mAttrPkg:Ljava/lang/String;
 
+    .line 18
     iput-object v0, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mAttrName:Ljava/lang/String;
 
+    .line 19
     iput-boolean v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mCurrentFlag:Z
 
+    .line 20
     iput-object v0, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
+    .line 26
     iput-boolean v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mCurrentFlag:Z
 
+    .line 27
     iput-object p1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
+    .line 28
     return-void
 .end method
 
@@ -70,19 +79,23 @@
     .end annotation
 
     .prologue
+    .line 65
     iget-object v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mPreTag:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
+    .line 83
     :cond_0
     :goto_0
     return-void
 
+    .line 67
     :cond_1
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1, p2, p3}, Ljava/lang/String;-><init>([CII)V
 
+    .line 68
     .local v0, "con":Ljava/lang/String;
     iget-object v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mPreTag:Ljava/lang/String;
 
@@ -94,6 +107,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 69
     new-instance v0, Ljava/lang/String;
 
     .end local v0    # "con":Ljava/lang/String;
@@ -103,6 +117,7 @@
 
     invoke-direct {v0, p1, v1, v4}, Ljava/lang/String;-><init>([CII)V
 
+    .line 70
     .restart local v0    # "con":Ljava/lang/String;
     const/16 v1, 0x10
 
@@ -110,11 +125,13 @@
 
     move-result-wide v2
 
+    .line 71
     .local v2, "data":J
     iget-object v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
     if-eqz v1, :cond_2
 
+    .line 72
     iget-object v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
 
     iget-object v4, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mAttrName:Ljava/lang/String;
@@ -123,6 +140,7 @@
 
     invoke-virtual {v1, v4, v2, v3, v5}, Landroid/content/res/flymetheme/FlymeThemeResource;->addColorValue(Ljava/lang/String;JLjava/lang/String;)V
 
+    .line 74
     :cond_2
     const/4 v1, 0x0
 
@@ -130,6 +148,7 @@
 
     goto :goto_0
 
+    .line 75
     .end local v2    # "data":J
     :cond_3
     iget-object v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mPreTag:Ljava/lang/String;
@@ -157,6 +176,7 @@
     .end annotation
 
     .prologue
+    .line 54
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -165,13 +185,15 @@
 
     move-object v0, p2
 
+    .line 55
     .local v0, "tagName":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "meizu_theme_values"
+    .line 57
+    const-string/jumbo v1, "meizu_theme_values"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -179,19 +201,23 @@
 
     if-eqz v1, :cond_0
 
+    .line 58
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mCurrentFlag:Z
 
+    .line 60
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/DefaultHandler;->endElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 61
     return-void
 
     .end local v0    # "tagName":Ljava/lang/String;
     :cond_1
     move-object v0, p3
 
+    .line 54
     goto :goto_0
 .end method
 
@@ -208,6 +234,7 @@
     .end annotation
 
     .prologue
+    .line 33
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -216,13 +243,15 @@
 
     move-object v1, p2
 
+    .line 34
     .local v1, "tagName":Ljava/lang/String;
     :goto_0
     invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "meizu_theme_values"
+    .line 36
+    const-string/jumbo v2, "meizu_theme_values"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -230,15 +259,18 @@
 
     if-eqz v2, :cond_0
 
+    .line 37
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mCurrentFlag:Z
 
+    .line 39
     :cond_0
     iget-boolean v2, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mCurrentFlag:Z
 
     if-eqz v2, :cond_1
 
+    .line 40
     const-string v2, "color"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -247,7 +279,8 @@
 
     if-eqz v2, :cond_3
 
-    const-string v2, "name"
+    .line 41
+    const-string/jumbo v2, "name"
 
     invoke-interface {p4, v2}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
@@ -255,7 +288,8 @@
 
     iput-object v2, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mAttrName:Ljava/lang/String;
 
-    const-string v2, "package"
+    .line 42
+    const-string/jumbo v2, "package"
 
     invoke-interface {p4, v2}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
@@ -263,18 +297,22 @@
 
     iput-object v2, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mAttrPkg:Ljava/lang/String;
 
+    .line 49
     :cond_1
     :goto_1
     iput-object p2, p0, Landroid/content/res/flymetheme/PackageValueHelper;->mPreTag:Ljava/lang/String;
 
+    .line 50
     return-void
 
     .end local v1    # "tagName":Ljava/lang/String;
     :cond_2
     move-object v1, p3
 
+    .line 33
     goto :goto_0
 
+    .line 43
     .restart local v1    # "tagName":Ljava/lang/String;
     :cond_3
     const-string v2, "dimen"
@@ -285,14 +323,16 @@
 
     if-eqz v2, :cond_1
 
-    const-string v2, "name"
+    .line 44
+    const-string/jumbo v2, "name"
 
     invoke-interface {p4, v2}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 45
     .local v0, "key":Ljava/lang/String;
-    const-string v2, "package"
+    const-string/jumbo v2, "package"
 
     invoke-interface {p4, v2}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 

@@ -19,12 +19,15 @@
     .locals 1
 
     .prologue
+    .line 28
     invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
+    .line 26
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
+    .line 29
     return-void
 .end method
 
@@ -33,14 +36,18 @@
     .param p1, "alpha"    # I
 
     .prologue
+    .line 31
     invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
+    .line 26
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
+    .line 32
     iput p1, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
+    .line 33
     return-void
 .end method
 
@@ -50,6 +57,7 @@
     .locals 1
 
     .prologue
+    .line 42
     iget v0, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
     return v0
@@ -60,12 +68,15 @@
     .param p1, "alpha"    # I
 
     .prologue
+    .line 36
     iget v0, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
     if-eq v0, p1, :cond_0
 
+    .line 37
     iput p1, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
+    .line 39
     :cond_0
     return-void
 .end method
@@ -75,16 +86,19 @@
     .param p1, "tp"    # Landroid/text/TextPaint;
 
     .prologue
+    .line 47
     const/4 v0, -0x1
 
     iget v1, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
     if-eq v0, v1, :cond_0
 
+    .line 48
     iget v0, p0, Landroid/text/style/EmojiStyleSpan;->mAlpha:I
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setAlpha(I)V
 
+    .line 50
     :cond_0
     return-void
 .end method

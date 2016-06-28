@@ -80,6 +80,7 @@
     .locals 1
 
     .prologue
+    .line 743
     const-string v0, "US-ASCII"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -100,44 +101,54 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
+    .line 128
     invoke-direct {p0}, Lmeizu/samba/client/ISambaClientManager$Stub;-><init>()V
 
+    .line 97
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mScanIp:Ljava/lang/String;
 
+    .line 99
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/SambaClientService;->mIsScanStart:Z
 
+    .line 101
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/SambaClientService;->mListerningIp:Z
 
+    .line 102
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mIp:Ljava/lang/String;
 
+    .line 104
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
+    .line 147
     new-instance v0, Lcom/android/server/SambaClientService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/SambaClientService$1;-><init>(Lcom/android/server/SambaClientService;)V
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 727
     new-instance v0, Lcom/android/server/SambaClientService$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/SambaClientService$2;-><init>(Lcom/android/server/SambaClientService;)V
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
 
+    .line 129
     iput-object p1, p0, Lcom/android/server/SambaClientService;->mContext:Landroid/content/Context;
 
+    .line 130
     new-instance v0, Lcom/android/server/NativeDaemonConnector;
 
     const-string v2, "flymed"
@@ -156,6 +167,7 @@
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
+    .line 132
     new-instance v9, Ljava/lang/Thread;
 
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -164,18 +176,22 @@
 
     invoke-direct {v9, v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
+    .line 133
     .local v9, "thread":Ljava/lang/Thread;
     invoke-virtual {v9}, Ljava/lang/Thread;->start()V
 
+    .line 134
     new-instance v8, Landroid/os/HandlerThread;
 
     const-string v0, "SambaClientService"
 
     invoke-direct {v8, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
+    .line 135
     .local v8, "sambaThread":Landroid/os/HandlerThread;
     invoke-virtual {v8}, Landroid/os/HandlerThread;->start()V
 
+    .line 136
     new-instance v0, Lcom/android/server/SambaClientService$SambaHandler;
 
     invoke-virtual {v8}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -186,27 +202,32 @@
 
     iput-object v0, p0, Lcom/android/server/SambaClientService;->mSambaHandler:Lcom/android/server/SambaClientService$SambaHandler;
 
+    .line 137
     const-string v0, "SambaClientService"
 
     const-string v1, "SambaClientService started!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 139
     new-instance v7, Landroid/content/IntentFilter;
 
     invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
 
+    .line 140
     .local v7, "filter":Landroid/content/IntentFilter;
     const-string v0, "meizu.intent.action.ACTION_MEIZU_DEVICE_NAME_CHANGE"
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 141
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/SambaClientService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 143
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/SambaClientService;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
@@ -219,6 +240,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
+    .line 145
     return-void
 .end method
 
@@ -227,6 +249,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -238,6 +261,7 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
+    .line 76
     invoke-direct {p0, p1}, Lcom/android/server/SambaClientService;->setNetbiosName(Ljava/lang/String;)V
 
     return-void
@@ -248,6 +272,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mScanIp:Ljava/lang/String;
 
     return-object v0
@@ -260,6 +285,7 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
+    .line 76
     invoke-direct {p0, p1, p2}, Lcom/android/server/SambaClientService;->onScanNotify(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -270,6 +296,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mScanThread:Lcom/android/server/SambaClientService$ScanThread;
 
     return-object v0
@@ -281,6 +308,7 @@
     .param p1, "x1"    # Lcom/android/server/SambaClientService$ScanThread;
 
     .prologue
+    .line 76
     iput-object p1, p0, Lcom/android/server/SambaClientService;->mScanThread:Lcom/android/server/SambaClientService$ScanThread;
 
     return-object p1
@@ -291,6 +319,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     return-object v0
@@ -301,6 +330,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     iget-boolean v0, p0, Lcom/android/server/SambaClientService;->mListerningIp:Z
 
     return v0
@@ -312,6 +342,7 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
+    .line 76
     iput-object p1, p0, Lcom/android/server/SambaClientService;->mIp:Ljava/lang/String;
 
     return-object p1
@@ -322,6 +353,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     invoke-direct {p0}, Lcom/android/server/SambaClientService;->getConnectedWifiIp()Ljava/lang/String;
 
     move-result-object v0
@@ -334,6 +366,7 @@
     .param p0, "x0"    # Lcom/android/server/SambaClientService;
 
     .prologue
+    .line 76
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -343,6 +376,7 @@
     .locals 4
 
     .prologue
+    .line 751
     iget-object v2, p0, Lcom/android/server/SambaClientService;->mContext:Landroid/content/Context;
 
     const-string v3, "wifi"
@@ -353,6 +387,7 @@
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
+    .line 752
     .local v1, "wifimanage":Landroid/net/wifi/WifiManager;
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
@@ -360,16 +395,20 @@
 
     if-nez v2, :cond_0
 
+    .line 754
     const-string v2, ""
 
+    .line 757
     :goto_0
     return-object v2
 
+    .line 756
     :cond_0
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v0
 
+    .line 757
     .local v0, "wifiinfo":Landroid/net/wifi/WifiInfo;
     invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getIpAddress()I
 
@@ -387,6 +426,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
+    .line 761
     sget-object v2, Lcom/android/server/SambaClientService;->asciiEncoder:Ljava/nio/charset/CharsetEncoder;
 
     invoke-virtual {v2, p1}, Ljava/nio/charset/CharsetEncoder;->canEncode(Ljava/lang/CharSequence;)Z
@@ -395,10 +435,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 762
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/SambaClientService;->mListerningIp:Z
 
+    .line 763
     const-string v2, "SambaClientService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -421,27 +463,33 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 773
     .end local p1    # "name":Ljava/lang/String;
     :goto_0
     return-object p1
 
+    .line 766
     .restart local p1    # "name":Ljava/lang/String;
     :cond_0
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/SambaClientService;->mListerningIp:Z
 
+    .line 767
     iget-object v0, p0, Lcom/android/server/SambaClientService;->mIp:Ljava/lang/String;
 
+    .line 768
     .local v0, "ip":Ljava/lang/String;
     const-string v2, ""
 
     if-ne v0, v2, :cond_1
 
+    .line 769
     new-instance v1, Ljava/util/Random;
 
     invoke-direct {v1}, Ljava/util/Random;-><init>()V
 
+    .line 770
     .local v1, "random":Ljava/util/Random;
     const v2, 0xf4240
 
@@ -453,6 +501,7 @@
 
     move-result-object v0
 
+    .line 772
     .end local v1    # "random":Ljava/util/Random;
     :cond_1
     const-string v2, "SambaClientService"
@@ -477,6 +526,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 773
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -507,8 +557,10 @@
     .param p5, "bPrintLog"    # Z
 
     .prologue
+    .line 645
     if-nez p1, :cond_0
 
+    .line 646
     new-instance v14, Ljava/lang/IllegalArgumentException;
 
     const-string v15, "ip cannot be null"
@@ -517,6 +569,7 @@
 
     throw v14
 
+    .line 649
     :cond_0
     new-instance v14, Landroid/os/StrictMode$ThreadPolicy$Builder;
 
@@ -530,16 +583,20 @@
 
     move-result-object v11
 
+    .line 650
     .local v11, "policy":Landroid/os/StrictMode$ThreadPolicy;
     invoke-static {v11}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 653
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
 
+    .line 657
     .local v7, "folderList":Ljava/lang/StringBuffer;
     if-eqz p5, :cond_1
 
+    .line 658
     const-string v14, "SambaClientService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -588,6 +645,7 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 661
     :cond_1
     :try_start_0
     new-instance v4, Lmeizu2_jcifs/smb/NtlmPasswordAuthentication;
@@ -602,6 +660,7 @@
 
     invoke-direct {v4, v0, v1, v2, v14}, Lmeizu2_jcifs/smb/NtlmPasswordAuthentication;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
+    .line 663
     .local v4, "auth":Lmeizu2_jcifs/smb/NtlmPasswordAuthentication;
     new-instance v6, Lmeizu2_jcifs/smb/SmbFile;
 
@@ -633,6 +692,7 @@
 
     invoke-direct {v6, v14, v4}, Lmeizu2_jcifs/smb/SmbFile;-><init>(Ljava/lang/String;Lmeizu2_jcifs/smb/NtlmPasswordAuthentication;)V
 
+    .line 664
     .local v6, "file":Lmeizu2_jcifs/smb/SmbFile;
     invoke-virtual {v6}, Lmeizu2_jcifs/smb/SmbFile;->isDirectory()Z
 
@@ -640,10 +700,12 @@
 
     if-eqz v14, :cond_3
 
+    .line 665
     invoke-virtual {v6}, Lmeizu2_jcifs/smb/SmbFile;->list()[Ljava/lang/String;
 
     move-result-object v12
 
+    .line 666
     .local v12, "strFileLiStrings":[Ljava/lang/String;
     move-object v3, v12
 
@@ -659,17 +721,21 @@
 
     aget-object v13, v3, v9
 
+    .line 667
     .local v13, "string":Ljava/lang/String;
     invoke-virtual {v7, v13}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 668
     const-string v14, "/"
 
     invoke-virtual {v7, v14}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 666
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
+    .line 670
     .end local v13    # "string":Ljava/lang/String;
     :cond_2
     invoke-virtual {v7}, Ljava/lang/StringBuffer;->length()I
@@ -678,6 +744,7 @@
 
     if-lez v14, :cond_3
 
+    .line 671
     invoke-virtual {v7}, Ljava/lang/StringBuffer;->length()I
 
     move-result v14
@@ -686,6 +753,7 @@
 
     invoke-virtual {v7, v14}, Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
 
+    .line 677
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v10    # "len$":I
@@ -695,9 +763,11 @@
 
     move-result-object v8
 
+    .line 678
     .local v8, "folders":Ljava/lang/String;
     if-eqz p5, :cond_4
 
+    .line 679
     const-string v14, "SambaClientService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -725,6 +795,7 @@
     .catch Lmeizu2_jcifs/smb/SmbException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
+    .line 697
     :cond_4
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -750,12 +821,15 @@
     :goto_1
     return-object v14
 
+    .line 680
     :catch_0
     move-exception v5
 
+    .line 681
     .local v5, "e":Lmeizu2_jcifs/smb/SmbAuthException;
     if-eqz p5, :cond_5
 
+    .line 682
     const-string v14, "SambaClientService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -778,18 +852,22 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 683
     :cond_5
     const-string v14, "SmbAuthException"
 
     goto :goto_1
 
+    .line 684
     .end local v5    # "e":Lmeizu2_jcifs/smb/SmbAuthException;
     :catch_1
     move-exception v5
 
+    .line 685
     .local v5, "e":Ljava/net/MalformedURLException;
     if-eqz p5, :cond_6
 
+    .line 686
     const-string v14, "SambaClientService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -812,18 +890,22 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 687
     :cond_6
     const-string v14, "MalformedURLException"
 
     goto :goto_1
 
+    .line 688
     .end local v5    # "e":Ljava/net/MalformedURLException;
     :catch_2
     move-exception v5
 
+    .line 689
     .local v5, "e":Lmeizu2_jcifs/smb/SmbException;
     if-eqz p5, :cond_7
 
+    .line 690
     const-string v14, "SambaClientService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -846,18 +928,22 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 691
     :cond_7
     const-string v14, "SmbException"
 
     goto :goto_1
 
+    .line 692
     .end local v5    # "e":Lmeizu2_jcifs/smb/SmbException;
     :catch_3
     move-exception v5
 
+    .line 693
     .local v5, "e":Ljava/lang/Exception;
     if-eqz p5, :cond_8
 
+    .line 694
     const-string v14, "SambaClientService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -880,6 +966,7 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 695
     :cond_8
     const-string v14, "Exception"
 
@@ -891,6 +978,7 @@
     .param p1, "i"    # I
 
     .prologue
+    .line 746
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -942,6 +1030,7 @@
     .locals 1
 
     .prologue
+    .line 209
     monitor-enter p0
 
     :try_start_0
@@ -967,6 +1056,7 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
+    .line 370
     monitor-enter p0
 
     :try_start_0
@@ -984,6 +1074,7 @@
 
     if-nez v4, :cond_0
 
+    .line 371
     const-string v4, "SambaClientService"
 
     const-string v5, "scan is stoped,do not call listener"
@@ -992,11 +1083,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 389
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 374
     :cond_0
     :try_start_1
     const-string v4, "SambaClientService"
@@ -1031,12 +1124,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 375
     iget-object v5, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 376
     :try_start_2
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
@@ -1050,6 +1145,7 @@
     :goto_1
     if-ltz v2, :cond_1
 
+    .line 377
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1060,6 +1156,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 379
     .local v0, "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     :try_start_3
     iget-object v4, v0, Lcom/android/server/SambaClientService$SambaStatusBinderListener;->mListener:Lmeizu/samba/client/ISambaStatusListener;
@@ -1070,14 +1167,17 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 376
     :goto_2
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
+    .line 380
     :catch_0
     move-exception v3
 
+    .line 381
     .local v3, "rex":Landroid/os/RemoteException;
     :try_start_4
     const-string v4, "SambaClientService"
@@ -1086,12 +1186,14 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 382
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_2
 
+    .line 387
     .end local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .end local v2    # "i":I
     .end local v3    # "rex":Landroid/os/RemoteException;
@@ -1107,6 +1209,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 370
     :catchall_1
     move-exception v4
 
@@ -1114,11 +1217,13 @@
 
     throw v4
 
+    .line 383
     .restart local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .restart local v2    # "i":I
     :catch_1
     move-exception v1
 
+    .line 384
     .local v1, "ex":Ljava/lang/Exception;
     :try_start_6
     const-string v4, "SambaClientService"
@@ -1129,6 +1234,7 @@
 
     goto :goto_2
 
+    .line 387
     .end local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .end local v1    # "ex":Ljava/lang/Exception;
     :cond_1
@@ -1150,6 +1256,7 @@
 
     const/4 v2, 0x0
 
+    .line 392
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mSambaHandler:Lcom/android/server/SambaClientService$SambaHandler;
 
     if-eqz p1, :cond_0
@@ -1164,9 +1271,11 @@
 
     move-result-object v0
 
+    .line 395
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 396
     const-string v1, "SambaClientService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1189,12 +1298,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 397
     return-void
 
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     move v3, v1
 
+    .line 392
     goto :goto_0
 
     :cond_1
@@ -1208,6 +1319,7 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
+    .line 778
     const-string v2, "SambaClientService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1230,16 +1342,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 779
     if-nez p1, :cond_0
 
+    .line 787
     :goto_0
     return-void
 
+    .line 782
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/SambaClientService;->getLegalDeviceName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 783
     .local v1, "netbiosName":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/SambaClientService;->mSambaHandler:Lcom/android/server/SambaClientService$SambaHandler;
 
@@ -1249,9 +1365,11 @@
 
     move-result-object v0
 
+    .line 785
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 786
     const-string v2, "SambaClientService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1283,6 +1401,7 @@
     .param p2, "status"    # Ljava/lang/String;
 
     .prologue
+    .line 351
     monitor-enter p0
 
     :try_start_0
@@ -1292,6 +1411,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 352
     :try_start_1
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
@@ -1305,6 +1425,7 @@
     :goto_0
     if-ltz v2, :cond_0
 
+    .line 353
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1315,6 +1436,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 355
     .local v0, "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     :try_start_2
     iget-object v4, v0, Lcom/android/server/SambaClientService$SambaStatusBinderListener;->mListener:Lmeizu/samba/client/ISambaStatusListener;
@@ -1325,14 +1447,17 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 352
     :goto_1
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
+    .line 356
     :catch_0
     move-exception v3
 
+    .line 357
     .local v3, "rex":Landroid/os/RemoteException;
     :try_start_3
     const-string v4, "SambaClientService"
@@ -1341,12 +1466,14 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 358
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_1
 
+    .line 363
     .end local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .end local v2    # "i":I
     .end local v3    # "rex":Landroid/os/RemoteException;
@@ -1362,6 +1489,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 351
     :catchall_1
     move-exception v4
 
@@ -1369,11 +1497,13 @@
 
     throw v4
 
+    .line 359
     .restart local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .restart local v2    # "i":I
     :catch_1
     move-exception v1
 
+    .line 360
     .local v1, "ex":Ljava/lang/Exception;
     :try_start_5
     const-string v4, "SambaClientService"
@@ -1384,6 +1514,7 @@
 
     goto :goto_1
 
+    .line 363
     .end local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .end local v1    # "ex":Ljava/lang/Exception;
     :cond_0
@@ -1391,6 +1522,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 365
     monitor-exit p0
 
     return-void
@@ -1408,8 +1540,10 @@
 
     const/4 v6, 0x0
 
+    .line 308
     if-nez p1, :cond_0
 
+    .line 309
     new-instance v4, Ljava/lang/NullPointerException;
 
     const-string v5, "listener is null in addSambaStatusListener"
@@ -1418,6 +1552,7 @@
 
     throw v4
 
+    .line 311
     :cond_0
     const-string v4, "SambaClientService"
 
@@ -1441,10 +1576,12 @@
 
     invoke-static {v4, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 312
     iget-object v7, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v7
 
+    .line 313
     :try_start_0
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
@@ -1452,6 +1589,7 @@
 
     move-result v3
 
+    .line 314
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -1459,6 +1597,7 @@
     :goto_0
     if-ge v1, v3, :cond_2
 
+    .line 315
     const-string v4, "SambaClientService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1487,6 +1626,7 @@
 
     invoke-static {v4, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 316
     invoke-interface {p1}, Lmeizu/samba/client/ISambaStatusListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v8
@@ -1511,24 +1651,29 @@
 
     if-eqz v4, :cond_1
 
+    .line 317
     const-string v4, "SambaClientService"
 
     const-string v6, "this listener is already added!"
 
     invoke-static {v4, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 318
     monitor-exit v7
 
     move v4, v5
 
+    .line 331
     :goto_1
     return v4
 
+    .line 314
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 321
     :cond_2
     new-instance v0, Lcom/android/server/SambaClientService$SambaStatusBinderListener;
 
@@ -1536,6 +1681,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 323
     .local v0, "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     :try_start_1
     invoke-interface {p1}, Lmeizu/samba/client/ISambaStatusListener;->asBinder()Landroid/os/IBinder;
@@ -1546,10 +1692,12 @@
 
     invoke-interface {v4, v0, v8}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
+    .line 324
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 325
     const-string v4, "SambaClientService"
 
     const-string v8, "addSambaStatusListener success"
@@ -1559,16 +1707,20 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 330
     :try_start_2
     monitor-exit v7
 
     move v4, v5
 
+    .line 331
     goto :goto_1
 
+    .line 326
     :catch_0
     move-exception v2
 
+    .line 327
     .local v2, "rex":Landroid/os/RemoteException;
     const-string v4, "SambaClientService"
 
@@ -1576,12 +1728,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 328
     monitor-exit v7
 
     move v4, v6
 
     goto :goto_1
 
+    .line 330
     .end local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     .end local v1    # "i":I
     .end local v2    # "rex":Landroid/os/RemoteException;
@@ -1601,8 +1755,10 @@
     .param p1, "ip"    # Ljava/lang/String;
 
     .prologue
+    .line 701
     if-nez p1, :cond_0
 
+    .line 702
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "ip cannot be null"
@@ -1611,24 +1767,30 @@
 
     throw v6
 
+    .line 704
     :cond_0
     const/4 v5, 0x0
 
+    .line 706
     .local v5, "name":Ljava/lang/String;
     :try_start_0
     invoke-static {p1}, Lmeizu2_jcifs/netbios/NbtAddress;->getAllByAddress(Ljava/lang/String;)[Lmeizu2_jcifs/netbios/NbtAddress;
 
     move-result-object v1
 
+    .line 707
     .local v1, "addresses":[Lmeizu2_jcifs/netbios/NbtAddress;
     if-nez v1, :cond_1
 
+    .line 708
     const/4 v6, 0x0
 
+    .line 724
     .end local v1    # "addresses":[Lmeizu2_jcifs/netbios/NbtAddress;
     :goto_0
     return-object v6
 
+    .line 709
     .restart local v1    # "addresses":[Lmeizu2_jcifs/netbios/NbtAddress;
     :cond_1
     move-object v2, v1
@@ -1645,6 +1807,7 @@
 
     aget-object v0, v2, v3
 
+    .line 710
     .local v0, "addr":Lmeizu2_jcifs/netbios/NbtAddress;
     const-string v6, "SambaClientService"
 
@@ -1668,12 +1831,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 711
     invoke-virtual {v0}, Lmeizu2_jcifs/netbios/NbtAddress;->isGroupAddress()Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
+    .line 712
     invoke-virtual {v0}, Lmeizu2_jcifs/netbios/NbtAddress;->getHostName()Ljava/lang/String;
     :try_end_0
     .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1689,8 +1854,10 @@
     :goto_2
     move-object v6, v5
 
+    .line 724
     goto :goto_0
 
+    .line 709
     .restart local v0    # "addr":Lmeizu2_jcifs/netbios/NbtAddress;
     .restart local v1    # "addresses":[Lmeizu2_jcifs/netbios/NbtAddress;
     .restart local v2    # "arr$":[Lmeizu2_jcifs/netbios/NbtAddress;
@@ -1701,6 +1868,7 @@
 
     goto :goto_1
 
+    .line 716
     .end local v0    # "addr":Lmeizu2_jcifs/netbios/NbtAddress;
     .end local v1    # "addresses":[Lmeizu2_jcifs/netbios/NbtAddress;
     .end local v2    # "arr$":[Lmeizu2_jcifs/netbios/NbtAddress;
@@ -1720,6 +1888,7 @@
     .param p4, "password"    # Ljava/lang/String;
 
     .prologue
+    .line 640
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -1748,6 +1917,7 @@
 
     const/4 v3, 0x0
 
+    .line 290
     monitor-enter p0
 
     :try_start_0
@@ -1759,6 +1929,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 293
     :try_start_1
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -1787,6 +1958,7 @@
 
     move-result-object v1
 
+    .line 298
     .local v1, "event":Lcom/android/server/NativeDaemonEvent;
     :try_start_2
     const-string v4, "SambaClientService"
@@ -1811,6 +1983,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 299
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getCode()I
 
     move-result v4
@@ -1833,15 +2006,18 @@
 
     if-eqz v4, :cond_0
 
+    .line 303
     .end local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :goto_0
     monitor-exit p0
 
     return v2
 
+    .line 294
     :catch_0
     move-exception v0
 
+    .line 295
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "SambaClientService"
@@ -1854,6 +2030,7 @@
 
     move v2, v3
 
+    .line 296
     goto :goto_0
 
     .end local v0    # "e":Ljava/lang/Exception;
@@ -1861,8 +2038,10 @@
     :cond_0
     move v2, v3
 
+    .line 303
     goto :goto_0
 
+    .line 290
     .end local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :catchall_0
     move-exception v2
@@ -1881,6 +2060,7 @@
 
     const/4 v3, 0x0
 
+    .line 213
     monitor-enter p0
 
     :try_start_0
@@ -1890,6 +2070,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 220
     const-string v4, "SambaClientService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1914,6 +2095,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 223
     :try_start_1
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -1960,6 +2142,7 @@
 
     move-result-object v1
 
+    .line 233
     .local v1, "event":Lcom/android/server/NativeDaemonEvent;
     :try_start_2
     const-string v4, "SambaClientService"
@@ -1984,6 +2167,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 234
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getCode()I
 
     move-result v4
@@ -2004,6 +2188,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 236
     const-string v3, "SambaClientService"
 
     const-string v4, "add share ok!"
@@ -2012,15 +2197,18 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 261
     .end local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :goto_0
     monitor-exit p0
 
     return v2
 
+    .line 229
     :catch_0
     move-exception v0
 
+    .line 230
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "SambaClientService"
@@ -2031,8 +2219,10 @@
 
     move v2, v3
 
+    .line 231
     goto :goto_0
 
+    .line 239
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :cond_0
@@ -2042,6 +2232,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 240
     iget-object v4, p1, Lmeizu/samba/client/RemoteSharedFolder;->domain:Ljava/lang/String;
 
     const-string v5, ""
@@ -2052,6 +2243,7 @@
 
     if-nez v4, :cond_2
 
+    .line 241
     const-string v4, "SambaClientService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2078,6 +2270,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 243
     :try_start_4
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2124,6 +2317,7 @@
 
     move-result-object v1
 
+    .line 253
     :try_start_5
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getCode()I
 
@@ -2145,6 +2339,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 255
     const-string v3, "SambaClientService"
 
     const-string v4, "add share ok!"
@@ -2155,6 +2350,7 @@
 
     goto :goto_0
 
+    .line 213
     .end local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :catchall_0
     move-exception v2
@@ -2163,10 +2359,12 @@
 
     throw v2
 
+    .line 249
     .restart local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :catch_1
     move-exception v0
 
+    .line 250
     .restart local v0    # "e":Ljava/lang/Exception;
     :try_start_6
     const-string v2, "SambaClientService"
@@ -2179,17 +2377,20 @@
 
     move v2, v3
 
+    .line 251
     goto/16 :goto_0
 
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     move v2, v3
 
+    .line 258
     goto/16 :goto_0
 
     :cond_2
     move v2, v3
 
+    .line 261
     goto/16 :goto_0
 .end method
 
@@ -2201,8 +2402,10 @@
     .prologue
     const/4 v8, 0x0
 
+    .line 623
     if-nez p1, :cond_0
 
+    .line 624
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "ip cannot be null"
@@ -2211,9 +2414,11 @@
 
     throw v0
 
+    .line 625
     :cond_0
     if-nez p2, :cond_1
 
+    .line 626
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "folder cannot be null"
@@ -2222,9 +2427,11 @@
 
     throw v0
 
+    .line 628
     :cond_1
     const/4 v7, 0x0
 
+    .line 630
     .local v7, "list":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -2248,12 +2455,15 @@
     :cond_2
     move v0, v8
 
+    .line 636
     :goto_0
     return v0
 
+    .line 631
     :catch_0
     move-exception v6
 
+    .line 632
     .local v6, "e":Lmeizu/samba/client/SambaGetSharedFoldersException;
     invoke-virtual {v6}, Lmeizu/samba/client/SambaGetSharedFoldersException;->getDetailStatus()I
 
@@ -2263,6 +2473,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 633
     const/4 v0, 0x1
 
     goto :goto_0
@@ -2273,6 +2484,7 @@
     .param p1, "code"    # I
 
     .prologue
+    .line 403
     const/4 v0, 0x0
 
     return v0
@@ -2282,12 +2494,14 @@
     .locals 3
 
     .prologue
+    .line 410
     const-string v1, "SambaClientService"
 
     const-string v2, "Samba vold connected!"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 413
     iget-object v1, p0, Lcom/android/server/SambaClientService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2300,9 +2514,11 @@
 
     move-result-object v0
 
+    .line 415
     .local v0, "name":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/android/server/SambaClientService;->setNetbiosName(Ljava/lang/String;)V
 
+    .line 416
     return-void
 .end method
 
@@ -2313,6 +2529,7 @@
     .param p3, "cooked"    # [Ljava/lang/String;
 
     .prologue
+    .line 435
     const/4 v0, 0x1
 
     return v0
@@ -2324,8 +2541,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
+    .line 335
     if-nez p1, :cond_0
 
+    .line 336
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "listener is null in removeSambaStatusListener"
@@ -2334,6 +2553,7 @@
 
     throw v2
 
+    .line 338
     :cond_0
     const-string v2, "SambaClientService"
 
@@ -2341,10 +2561,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 339
     iget-object v3, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v3
 
+    .line 340
     :try_start_0
     iget-object v2, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
@@ -2366,6 +2588,7 @@
 
     check-cast v0, Lcom/android/server/SambaClientService$SambaStatusBinderListener;
 
+    .line 341
     .local v0, "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     invoke-interface {p1}, Lmeizu/samba/client/ISambaStatusListener;->asBinder()Landroid/os/IBinder;
 
@@ -2383,6 +2606,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 342
     iget-object v2, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
 
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mListeners:Ljava/util/ArrayList;
@@ -2393,18 +2617,22 @@
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
+    .line 343
     const-string v2, "SambaClientService"
 
     const-string v4, "removeSambaStatusListener success"
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 344
     monitor-exit v3
 
+    .line 348
     .end local v0    # "bl":Lcom/android/server/SambaClientService$SambaStatusBinderListener;
     :goto_0
     return-void
 
+    .line 347
     :cond_2
     monitor-exit v3
 
@@ -2430,6 +2658,7 @@
 
     const/4 v2, 0x0
 
+    .line 164
     monitor-enter p0
 
     :try_start_0
@@ -2439,10 +2668,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 165
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/SambaClientService;->mIsScanStart:Z
 
+    .line 167
     if-eqz p1, :cond_0
 
     const-string v4, ""
@@ -2455,20 +2686,24 @@
 
     if-eqz v4, :cond_1
 
+    .line 186
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v2
 
+    .line 170
     :cond_1
     :try_start_1
     iput-object p1, p0, Lcom/android/server/SambaClientService;->mScanIp:Ljava/lang/String;
 
+    .line 172
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mSambaHandler:Lcom/android/server/SambaClientService$SambaHandler;
 
     if-nez v4, :cond_2
 
+    .line 173
     const-string v3, "SambaClientService"
 
     const-string v4, "startScan,handler ==null"
@@ -2479,6 +2714,7 @@
 
     goto :goto_0
 
+    .line 164
     :catchall_0
     move-exception v2
 
@@ -2486,6 +2722,7 @@
 
     throw v2
 
+    .line 177
     :cond_2
     :try_start_2
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mSambaHandler:Lcom/android/server/SambaClientService$SambaHandler;
@@ -2494,20 +2731,24 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 180
     :try_start_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 181
     .local v0, "ident":J
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 182
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
     iput v2, p0, Lcom/android/server/SambaClientService;->mLastEnableUid:I
 
+    .line 183
     const/4 v2, 0x1
 
     const/4 v5, 0x0
@@ -2518,12 +2759,15 @@
 
     invoke-direct {p0, v2, v5, v6}, Lcom/android/server/SambaClientService;->sendScanMessage(ZZI)V
 
+    .line 184
     monitor-exit v4
 
     move v2, v3
 
+    .line 186
     goto :goto_0
 
+    .line 184
     .end local v0    # "ident":J
     :catchall_1
     move-exception v2
@@ -2544,6 +2788,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 192
     monitor-enter p0
 
     :try_start_0
@@ -2553,11 +2798,13 @@
 
     if-nez v3, :cond_0
 
+    .line 205
     :goto_0
     monitor-exit p0
 
     return v2
 
+    .line 194
     :cond_0
     :try_start_1
     const-string v2, "SambaClientService"
@@ -2566,30 +2813,36 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 195
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/SambaClientService;->mIsScanStart:Z
 
+    .line 196
     iget-object v3, p0, Lcom/android/server/SambaClientService;->mSambaHandler:Lcom/android/server/SambaClientService$SambaHandler;
 
     monitor-enter v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 199
     :try_start_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 200
     .local v0, "ident":J
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 201
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
     iput v2, p0, Lcom/android/server/SambaClientService;->mLastEnableUid:I
 
+    .line 202
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -2600,12 +2853,15 @@
 
     invoke-direct {p0, v2, v4, v5}, Lcom/android/server/SambaClientService;->sendScanMessage(ZZI)V
 
+    .line 203
     monitor-exit v3
 
+    .line 205
     const/4 v2, 0x1
 
     goto :goto_0
 
+    .line 203
     .end local v0    # "ident":J
     :catchall_0
     move-exception v2
@@ -2619,6 +2875,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 192
     :catchall_1
     move-exception v2
 
@@ -2636,6 +2893,7 @@
 
     const/4 v3, 0x0
 
+    .line 266
     monitor-enter p0
 
     :try_start_0
@@ -2647,6 +2905,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 275
     :try_start_1
     iget-object v4, p0, Lcom/android/server/SambaClientService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2675,6 +2934,7 @@
 
     move-result-object v1
 
+    .line 280
     .local v1, "event":Lcom/android/server/NativeDaemonEvent;
     :try_start_2
     const-string v4, "SambaClientService"
@@ -2699,6 +2959,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 281
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getCode()I
 
     move-result v4
@@ -2721,15 +2982,18 @@
 
     if-eqz v4, :cond_0
 
+    .line 285
     .end local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :goto_0
     monitor-exit p0
 
     return v2
 
+    .line 276
     :catch_0
     move-exception v0
 
+    .line 277
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "SambaClientService"
@@ -2742,6 +3006,7 @@
 
     move v2, v3
 
+    .line 278
     goto :goto_0
 
     .end local v0    # "e":Ljava/lang/Exception;
@@ -2749,8 +3014,10 @@
     :cond_0
     move v2, v3
 
+    .line 285
     goto :goto_0
 
+    .line 266
     .end local v1    # "event":Lcom/android/server/NativeDaemonEvent;
     :catchall_0
     move-exception v2

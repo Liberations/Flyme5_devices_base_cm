@@ -16,11 +16,15 @@
     .param p3, "pkgTag"    # Ljava/lang/String;
 
     .prologue
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
     iput-wide p1, p0, Landroid/content/res/flymetheme/ColorInfo;->mColor:J
 
+    .line 14
     iput-object p3, p0, Landroid/content/res/flymetheme/ColorInfo;->mPackageTag:Ljava/lang/String;
 
+    .line 15
     return-void
 .end method

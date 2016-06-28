@@ -27,6 +27,7 @@
     .locals 0
 
     .prologue
+    .line 1256
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .locals 1
 
     .prologue
+    .line 1272
     sget v0, Landroid/app/LoadedApk$FlymeInjector;->flymePackageId:I
 
     return v0
@@ -49,8 +51,10 @@
     .param p3, "id"    # I
 
     .prologue
+    .line 1264
     invoke-virtual {p0, p1, p2, p3}, Landroid/app/LoadedApk;->flymeInvokeMethodRewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
 
+    .line 1265
     const-string v0, "flyme"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -59,12 +63,15 @@
 
     if-eqz v0, :cond_0
 
+    .line 1266
     sput p3, Landroid/app/LoadedApk$FlymeInjector;->flymePackageId:I
 
+    .line 1267
     const-string v0, "com.flyme.internal"
 
     invoke-virtual {p0, p1, v0, p3}, Landroid/app/LoadedApk;->flymeInvokeMethodRewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
 
+    .line 1269
     :cond_0
     return-void
 .end method

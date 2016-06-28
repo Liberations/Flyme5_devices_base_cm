@@ -21,20 +21,28 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 36
     invoke-direct {p0}, Landroid/content/pm/IFlymePackageManager$Stub;-><init>()V
 
+    .line 32
     iput-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mContext:Landroid/content/Context;
 
+    .line 33
     iput-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
+    .line 34
     iput-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
+    .line 37
     iput-object p1, p0, Lcom/android/server/pm/FlymePackageManagerService;->mContext:Landroid/content/Context;
 
+    .line 38
     iput-object p2, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
+    .line 39
     iput-object p3, p0, Lcom/android/server/pm/FlymePackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
+    .line 40
     return-void
 .end method
 
@@ -48,6 +56,7 @@
     .prologue
     const/4 v2, 0x0
 
+    .line 43
     iget-object v3, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -58,18 +67,22 @@
 
     move-result-object v1
 
+    .line 44
     .local v1, "pkgName":Ljava/lang/String;
     if-nez v1, :cond_0
 
+    .line 45
     const-string v3, "FPMS"
 
     const-string v4, "Calling package is null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 53
     :goto_0
     return v2
 
+    .line 48
     :cond_0
     iget-object v3, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
@@ -77,6 +90,7 @@
 
     move-result-object v0
 
+    .line 49
     .local v0, "info":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_1
 
@@ -92,6 +106,7 @@
 
     if-ltz v3, :cond_1
 
+    .line 50
     iget-object v2, p0, Lcom/android/server/pm/FlymePackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-virtual {v2, p1, p2}, Lcom/android/server/pm/Installer;->copyDataFiles(Ljava/lang/String;Ljava/lang/String;)Z
@@ -100,6 +115,7 @@
 
     goto :goto_0
 
+    .line 52
     :cond_1
     const-string v3, "FPMS"
 
@@ -123,6 +139,7 @@
     .end annotation
 
     .prologue
+    .line 69
     iget-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerService;->getInternalAppList()Ljava/util/List;
@@ -137,6 +154,7 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
+    .line 73
     iget-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/PackageManagerService;->getPackageActivateState(Ljava/lang/String;)Z
@@ -152,6 +170,7 @@
     .param p2, "flags"    # I
 
     .prologue
+    .line 65
     iget-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/pm/PackageManagerService;->getPackageInfoForVersion(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
@@ -166,10 +185,12 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
+    .line 61
     iget-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/PackageManagerService;->resetVersion(Ljava/lang/String;)V
 
+    .line 62
     return-void
 .end method
 
@@ -177,10 +198,12 @@
     .locals 1
 
     .prologue
+    .line 78
     iget-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->initFlymeDefaultOpService(Lcom/android/server/pm/PackageManagerService;)V
 
+    .line 79
     return-void
 .end method
 
@@ -189,9 +212,11 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/server/pm/FlymePackageManagerService;->mPms:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/PackageManagerService;->updatePermissions(Ljava/lang/String;)V
 
+    .line 58
     return-void
 .end method

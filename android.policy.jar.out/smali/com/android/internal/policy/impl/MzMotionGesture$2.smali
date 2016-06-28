@@ -24,6 +24,7 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
+    .line 454
     iput-object p1, p0, Lcom/android/internal/policy/impl/MzMotionGesture$2;->this$0:Lcom/android/internal/policy/impl/MzMotionGesture;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -38,10 +39,12 @@
     .param p1, "selfChange"    # Z
 
     .prologue
+    .line 458
     iget-object v0, p0, Lcom/android/internal/policy/impl/MzMotionGesture$2;->this$0:Lcom/android/internal/policy/impl/MzMotionGesture;
 
     # invokes: Lcom/android/internal/policy/impl/MzMotionGesture;->onEnableFullScreenDragSettingChanged()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/MzMotionGesture;->access$000(Lcom/android/internal/policy/impl/MzMotionGesture;)V
 
+    .line 459
     return-void
 .end method
