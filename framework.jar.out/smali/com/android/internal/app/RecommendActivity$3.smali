@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 522
     iput-object p1, p0, Lcom/android/internal/app/RecommendActivity$3;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 526
     iget-object v0, p0, Lcom/android/internal/app/RecommendActivity$3;->this$0:Lcom/android/internal/app/RecommendActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/RecommendActivity$3;->this$0:Lcom/android/internal/app/RecommendActivity;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/RecommendActivity;->openAppDetail(Ljava/lang/String;)V
 
-    .line 527
     return-void
 .end method

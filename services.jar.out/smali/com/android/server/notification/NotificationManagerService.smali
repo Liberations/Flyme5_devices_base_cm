@@ -128,15 +128,15 @@
 
 
 # instance fields
+.field private mActiveMedia:Z
+
+.field private mAdjustableNotificationLedBrightness:Z
+
 .field mFlymePowerManager:Landroid/os/PowerManager;
 
 .field mFlymeWakeLock:Landroid/os/PowerManager$WakeLock;
 
 .field mFlymeWakeUpScreenRunnable:Ljava/lang/Runnable;
-
-.field private mActiveMedia:Z
-
-.field private mAdjustableNotificationLedBrightness:Z
 
 .field private mAm:Landroid/app/IActivityManager;
 

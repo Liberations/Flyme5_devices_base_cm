@@ -1867,18 +1867,6 @@
     return-void
 .end method
 
-.method public phoneAccountSelected(Landroid/telecom/PhoneAccountHandle;)V
-    .locals 1
-    .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
-
-    .prologue
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Landroid/telecom/Call;->phoneAccountSelected(Landroid/telecom/PhoneAccountHandle;Z)V
-
-    return-void
-.end method
-
 .method constructor <init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;)V
     .locals 1
     .param p1, "phone"    # Landroid/telecom/Phone;
@@ -1889,6 +1877,18 @@
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/telecom/Call;-><init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;Z)V
+
+    return-void
+.end method
+
+.method public phoneAccountSelected(Landroid/telecom/PhoneAccountHandle;)V
+    .locals 1
+    .param p1, "accountHandle"    # Landroid/telecom/PhoneAccountHandle;
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Landroid/telecom/Call;->phoneAccountSelected(Landroid/telecom/PhoneAccountHandle;Z)V
 
     return-void
 .end method

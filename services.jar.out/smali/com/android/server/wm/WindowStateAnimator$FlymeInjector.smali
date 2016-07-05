@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1988
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "wsa"    # Lcom/android/server/wm/WindowStateAnimator;
 
     .prologue
-    .line 1999
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isInMovedMode()Z
@@ -55,7 +53,6 @@
     .param p0, "wsa"    # Lcom/android/server/wm/WindowStateAnimator;
 
     .prologue
-    .line 1992
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->isInMovedMode()Z
@@ -64,14 +61,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1993
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mWindowStateExt:Lcom/android/server/wm/WindowStateExt;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowStateExt;->moveShownFrame()V
 
-    .line 1995
     :cond_0
     return-void
 .end method
@@ -81,7 +76,6 @@
     .param p0, "wsa"    # Lcom/android/server/wm/WindowStateAnimator;
 
     .prologue
-    .line 2003
     iget-object v1, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
@@ -110,7 +104,6 @@
 
     if-gtz v1, :cond_1
 
-    .line 2004
     :cond_0
     iget-object v1, p0, Lcom/android/server/wm/WindowStateAnimator;->mContext:Landroid/content/Context;
 
@@ -124,7 +117,6 @@
 
     move-result v0
 
-    .line 2005
     .local v0, "status_bar_height":I
     iget-object v1, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
@@ -136,7 +128,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 2007
     .end local v0    # "status_bar_height":I
     :cond_1
     return-void
@@ -149,7 +140,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2010
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
@@ -160,7 +150,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2013
     iget-object v0, p0, Lcom/android/server/wm/WindowStateAnimator;->mWin:Lcom/android/server/wm/WindowState;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mSystemDecorRect:Landroid/graphics/Rect;
@@ -175,7 +164,6 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2015
     :cond_0
     return-void
 .end method

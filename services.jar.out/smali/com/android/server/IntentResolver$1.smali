@@ -37,19 +37,21 @@
 
     .prologue
     .line 767
-    check-cast p1, Landroid/content/IntentFilter;
+    move-object v2, p1
 
-    .end local p1    # "o1":Ljava/lang/Object;
-    invoke-virtual {p1}, Landroid/content/IntentFilter;->getPriority()I
+    check-cast v2, Landroid/content/IntentFilter;
+
+    invoke-virtual {v2}, Landroid/content/IntentFilter;->getPriority()I
 
     move-result v0
 
-    .line 768
     .local v0, "q1":I
-    check-cast p2, Landroid/content/IntentFilter;
+    move-object v2, p2
 
-    .end local p2    # "o2":Ljava/lang/Object;
-    invoke-virtual {p2}, Landroid/content/IntentFilter;->getPriority()I
+    .line 768
+    check-cast v2, Landroid/content/IntentFilter;
+
+    invoke-virtual {v2}, Landroid/content/IntentFilter;->getPriority()I
 
     move-result v1
 
@@ -59,9 +61,13 @@
 
     const/4 v2, -0x1
 
+    .end local p1    # "o1":Ljava/lang/Object;
+    .end local p2    # "o2":Ljava/lang/Object;
     :goto_0
     return v2
 
+    .restart local p1    # "o1":Ljava/lang/Object;
+    .restart local p2    # "o2":Ljava/lang/Object;
     :cond_0
     if-ge v0, v1, :cond_1
 
@@ -70,7 +76,15 @@
     goto :goto_0
 
     :cond_1
-    const/4 v2, 0x0
+    check-cast p1, Landroid/content/IntentFilter;
+
+    .end local p1    # "o1":Ljava/lang/Object;
+    check-cast p2, Landroid/content/IntentFilter;
+
+    .end local p2    # "o2":Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->onCompareTie(Landroid/content/IntentFilter;)I
+
+    move-result v2
 
     goto :goto_0
 .end method

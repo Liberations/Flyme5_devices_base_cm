@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 572
     iput-object p1, p0, Landroid/text/util/UrlSpanHelper$7;->val$openUri:Landroid/net/Uri;
 
     iput-object p2, p0, Landroid/text/util/UrlSpanHelper$7;->val$widget:Landroid/view/View;
@@ -46,7 +45,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 575
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -55,7 +53,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 576
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Landroid/text/util/UrlSpanHelper$7;->val$widget:Landroid/view/View;
 
@@ -66,6 +63,5 @@
     # invokes: Landroid/text/util/UrlSpanHelper;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v1, v0}, Landroid/text/util/UrlSpanHelper;->access$700(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 577
     return-void
 .end method

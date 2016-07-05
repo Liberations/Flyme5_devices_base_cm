@@ -24,13 +24,10 @@
     .param p1, "batteryService"    # Lcom/android/server/BatteryService;
 
     .prologue
-    .line 883
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 884
     iput-object p1, p0, Lcom/android/server/BatteryService$FlymeInjector$FlymeBootCompletedReceiver;->mBatteryService:Lcom/android/server/BatteryService;
 
-    .line 885
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 889
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/BatteryService$FlymeInjector;->mEnableScreen:Z
 
-    .line 890
     iget-object v0, p0, Lcom/android/server/BatteryService$FlymeInjector$FlymeBootCompletedReceiver;->mBatteryService:Lcom/android/server/BatteryService;
 
     iget-object v1, p0, Lcom/android/server/BatteryService$FlymeInjector$FlymeBootCompletedReceiver;->mBatteryService:Lcom/android/server/BatteryService;
@@ -58,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/BatteryService;->flymeInvokeMethodUpdate(Landroid/os/BatteryProperties;)V
 
-    .line 891
     return-void
 .end method

@@ -51,14 +51,12 @@
     .locals 4
 
     .prologue
-    .line 92
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
-    .line 94
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -71,7 +69,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 96
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -84,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 97
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -97,7 +93,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 98
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -110,7 +105,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 99
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -123,7 +117,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -136,7 +129,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 101
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -149,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 102
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -162,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 103
     sget-object v0, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
@@ -175,7 +165,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
     return-void
 .end method
 
@@ -183,10 +172,8 @@
     .locals 0
 
     .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     return-void
 .end method
 
@@ -196,40 +183,32 @@
     .param p1, "s2"    # [Landroid/content/pm/Signature;
 
     .prologue
-    .line 115
     if-nez p0, :cond_1
 
-    .line 116
     if-nez p1, :cond_0
 
     const/4 v6, 0x1
 
-    .line 135
     :goto_0
     return v6
 
-    .line 116
     :cond_0
     const/4 v6, -0x1
 
     goto :goto_0
 
-    .line 120
     :cond_1
     if-nez p1, :cond_2
 
-    .line 121
     const/4 v6, -0x2
 
     goto :goto_0
 
-    .line 123
     :cond_2
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 124
     .local v3, "set1":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     move-object v0, p0
 
@@ -245,23 +224,19 @@
 
     aget-object v5, v0, v1
 
-    .line 125
     .local v5, "sig":Landroid/content/pm/Signature;
     invoke-virtual {v3, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 124
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 127
     .end local v5    # "sig":Landroid/content/pm/Signature;
     :cond_3
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 128
     .local v4, "set2":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/content/pm/Signature;>;"
     move-object v0, p1
 
@@ -274,16 +249,13 @@
 
     aget-object v5, v0, v1
 
-    .line 129
     .restart local v5    # "sig":Landroid/content/pm/Signature;
     invoke-virtual {v4, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 128
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 132
     .end local v5    # "sig":Landroid/content/pm/Signature;
     :cond_4
     invoke-virtual {v3, v4}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
@@ -292,12 +264,10 @@
 
     if-eqz v6, :cond_5
 
-    .line 133
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 135
     :cond_5
     const/4 v6, -0x3
 
@@ -311,7 +281,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 107
     sget-object v3, Lcom/android/server/pm/ExternalSystemPackageManager;->sExtSysApkWhiteList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -332,7 +301,6 @@
 
     check-cast v0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
 
-    .line 108
     .local v0, "espi":Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
     iget-object v3, v0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;->mPackageName:Ljava/lang/String;
 
@@ -344,7 +312,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 109
     iget-object v3, v0, Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;->mSignatures:[Landroid/content/pm/Signature;
 
     iget-object v4, p0, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
@@ -357,7 +324,6 @@
 
     const/4 v2, 0x1
 
-    .line 112
     .end local v0    # "espi":Lcom/android/server/pm/ExternalSystemPackageManager$ExternalSystemPackageInfo;
     :cond_1
     return v2

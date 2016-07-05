@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field mFlymeLockWallpaperFile:Ljava/io/File;
-
 .field final mKeyguardWallpaper:Lcom/android/server/wallpaper/WallpaperManagerService$KeyguardWallpaperData;
 
 .field final mKeyguardWallpaperFile:Ljava/io/File;
 
 .field final mKeyguardWallpaperInfoFile:Ljava/io/File;
+
+.field mFlymeLockWallpaperFile:Ljava/io/File;
 
 .field final mWallpaper:Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
 
@@ -362,6 +362,7 @@
 
     goto :goto_1
 .end method
+
 
 .method private flymeNotifyLockWallpaperChanged(Ljava/io/File;)V
     .locals 2

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1757
     iput-object p1, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -57,7 +56,6 @@
 
     const/4 v0, 0x0
 
-    .line 1762
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
 
     # getter for: Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAlwaysUseOption:Z
@@ -67,7 +65,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1763
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
 
     # getter for: Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
@@ -79,7 +76,6 @@
 
     move-result-object v1
 
-    .line 1764
     .local v1, "intent":Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
 
@@ -105,7 +101,6 @@
 
     move v0, v2
 
-    .line 1773
     .local v0, "alwaysCheck":Z
     :cond_0
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
@@ -117,13 +112,11 @@
 
     invoke-virtual {v3, p3, v0, v2}, Lcom/android/internal/app/MzResolverActivity;->startSelected(IZZ)V
 
-    .line 1777
     .end local v0    # "alwaysCheck":Z
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 1775
     :cond_1
     iget-object v3, p0, Lcom/android/internal/app/MzResolverActivity$NormalGridFrag$1;->this$0:Lcom/android/internal/app/MzResolverActivity$NormalGridFrag;
 

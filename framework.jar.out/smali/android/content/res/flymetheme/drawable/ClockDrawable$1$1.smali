@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 43
     iput-object p1, p0, Landroid/content/res/flymetheme/drawable/ClockDrawable$1$1;->this$1:Landroid/content/res/flymetheme/drawable/ClockDrawable$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Landroid/content/res/flymetheme/drawable/ClockDrawable$1$1;->this$1:Landroid/content/res/flymetheme/drawable/ClockDrawable$1;
 
     iget-object v0, v0, Landroid/content/res/flymetheme/drawable/ClockDrawable$1;->this$0:Landroid/content/res/flymetheme/drawable/ClockDrawable;
 
     invoke-virtual {v0}, Landroid/content/res/flymetheme/drawable/ClockDrawable;->invalidateSelf()V
 
-    .line 47
     return-void
 .end method

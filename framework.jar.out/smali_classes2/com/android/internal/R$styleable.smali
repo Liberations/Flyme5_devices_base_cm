@@ -15,6 +15,7 @@
 
 
 # static fields
+
 .field public static final AbsListView:[I
 
 .field public static final AbsListView_cacheColorHint:I = 0x6

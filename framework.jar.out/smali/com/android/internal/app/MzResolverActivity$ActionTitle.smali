@@ -64,7 +64,6 @@
 
     const/4 v9, 0x2
 
-    .line 152
     new-instance v0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v1, "VIEW"
@@ -87,7 +86,6 @@
 
     sput-object v0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->VIEW:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 155
     new-instance v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v4, "EDIT"
@@ -112,7 +110,6 @@
 
     sput-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->EDIT:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 158
     new-instance v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v4, "SEND"
@@ -137,7 +134,6 @@
 
     sput-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->SEND:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 161
     new-instance v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v4, "SENDTO"
@@ -162,7 +158,6 @@
 
     sput-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->SENDTO:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 164
     new-instance v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v4, "SEND_MULTIPLE"
@@ -187,7 +182,6 @@
 
     sput-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->SEND_MULTIPLE:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 167
     new-instance v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v4, "DEFAULT"
@@ -212,7 +206,6 @@
 
     sput-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->DEFAULT:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 170
     new-instance v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     const-string v4, "HOME"
@@ -237,7 +230,6 @@
 
     sput-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->HOME:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
-    .line 151
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/internal/app/MzResolverActivity$ActionTitle;
@@ -293,19 +285,14 @@
     .end annotation
 
     .prologue
-    .line 178
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 179
     iput-object p3, p0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->action:Ljava/lang/String;
 
-    .line 180
     iput p4, p0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->titleRes:I
 
-    .line 181
     iput p5, p0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->namedTitleRes:I
 
-    .line 182
     return-void
 .end method
 
@@ -314,7 +301,6 @@
     .param p0, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 185
     invoke-static {}, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->values()[Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     move-result-object v0
@@ -331,7 +317,6 @@
 
     aget-object v3, v0, v1
 
-    .line 186
     .local v3, "title":Lcom/android/internal/app/MzResolverActivity$ActionTitle;
     sget-object v4, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->HOME:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
@@ -347,19 +332,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 190
     .end local v3    # "title":Lcom/android/internal/app/MzResolverActivity$ActionTitle;
     :goto_1
     return-object v3
 
-    .line 185
     .restart local v3    # "title":Lcom/android/internal/app/MzResolverActivity$ActionTitle;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 190
     .end local v3    # "title":Lcom/android/internal/app/MzResolverActivity$ActionTitle;
     :cond_1
     sget-object v3, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->DEFAULT:Lcom/android/internal/app/MzResolverActivity$ActionTitle;
@@ -372,7 +354,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     const-class v0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -388,7 +369,6 @@
     .locals 1
 
     .prologue
-    .line 151
     sget-object v0, Lcom/android/internal/app/MzResolverActivity$ActionTitle;->$VALUES:[Lcom/android/internal/app/MzResolverActivity$ActionTitle;
 
     invoke-virtual {v0}, [Lcom/android/internal/app/MzResolverActivity$ActionTitle;->clone()Ljava/lang/Object;

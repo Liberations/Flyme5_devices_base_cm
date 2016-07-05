@@ -449,11 +449,12 @@
     .param p1, "type"    # I
 
     .prologue
-    invoke-static/range {p0 .. p1}, Landroid/media/MzRingtoneManager;->getActualDefaultRingtoneUri(Landroid/content/Context;I)Landroid/net/Uri;
 
-    move-result-object v0
+   invoke-static/range {p0 .. p1}, Landroid/media/MzRingtoneManager;->getActualDefaultRingtoneUri(Landroid/content/Context;I)Landroid/net/Uri;
 
-    return-object v0
+    move-result-object v9
+
+    return-object v9
 
     const/4 v0, 0x0
 

@@ -32,8 +32,7 @@
     .locals 2
 
     .prologue
-    .line 37
-    const-string/jumbo v0, "mz/music-online"
+    const-string v0, "mz/music-online"
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
@@ -43,8 +42,7 @@
 
     sput-object v0, Landroid/nfc/NdefRecordExt;->MZ_RTD_MUSIC_ONLINE:[B
 
-    .line 39
-    const-string/jumbo v0, "mz/music-local"
+    const-string v0, "mz/music-local"
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
@@ -54,8 +52,7 @@
 
     sput-object v0, Landroid/nfc/NdefRecordExt;->MZ_RTD_MUSIC_LOCAL:[B
 
-    .line 41
-    const-string/jumbo v0, "mz/video-online"
+    const-string v0, "mz/video-online"
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
@@ -65,8 +62,7 @@
 
     sput-object v0, Landroid/nfc/NdefRecordExt;->MZ_RTD_VIDEO_ONLINE:[B
 
-    .line 43
-    const-string/jumbo v0, "mz/video-local"
+    const-string v0, "mz/video-local"
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
@@ -76,8 +72,7 @@
 
     sput-object v0, Landroid/nfc/NdefRecordExt;->MZ_RTD_VIDEO_LOCAL:[B
 
-    .line 48
-    const-string/jumbo v0, "mz/version.profile"
+    const-string v0, "mz/version.profile"
 
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
@@ -94,7 +89,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,14 +102,11 @@
 
     const/16 v8, 0x8
 
-    .line 55
     const-wide/16 v0, 0x0
 
-    .line 56
     .local v0, "deviceClass":J
     new-array v3, v8, [B
 
-    .line 57
     .local v3, "payload":[B
     sget-object v4, Landroid/os/BuildExt;->IS_MX3:Ljava/lang/Boolean;
 
@@ -125,10 +116,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 58
     const-wide/16 v0, 0x8
 
-    .line 67
     :cond_0
     :goto_0
     const/4 v4, 0x7
@@ -141,14 +130,12 @@
 
     aput-byte v5, v3, v4
 
-    .line 68
     const/4 v2, 0x1
 
     .local v2, "i":I
     :goto_1
     if-ge v2, v8, :cond_3
 
-    .line 69
     rsub-int/lit8 v4, v2, 0x7
 
     mul-int/lit8 v5, v2, 0x8
@@ -163,12 +150,10 @@
 
     aput-byte v5, v3, v4
 
-    .line 68
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 59
     .end local v2    # "i":I
     :cond_1
     sget-object v4, Landroid/os/BuildExt;->IS_MX2:Ljava/lang/Boolean;
@@ -179,12 +164,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 60
     const-wide/16 v0, 0x4
 
     goto :goto_0
 
-    .line 61
     :cond_2
     invoke-static {}, Landroid/os/BuildExt;->hasNFC()Z
 
@@ -192,12 +175,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 63
     const-wide/16 v0, 0x18
 
     goto :goto_0
 
-    .line 72
     .restart local v2    # "i":I
     :cond_3
     new-instance v4, Landroid/nfc/NdefRecord;

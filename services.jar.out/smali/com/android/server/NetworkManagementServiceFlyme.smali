@@ -22,13 +22,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/os/INetworkManagementServiceFlyme$Stub;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mContext:Landroid/content/Context;
 
-    .line 40
     new-instance v0, Lcom/android/server/NativeDaemonConnector;
 
     const-string v2, "flymed"
@@ -47,7 +44,6 @@
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
 
-    .line 42
     new-instance v7, Ljava/lang/Thread;
 
     iget-object v0, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
@@ -56,11 +52,9 @@
 
     invoke-direct {v7, v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 43
     .local v7, "thread":Ljava/lang/Thread;
     invoke-virtual {v7}, Ljava/lang/Thread;->start()V
 
-    .line 45
     return-void
 .end method
 
@@ -69,12 +63,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     new-instance v0, Lcom/android/server/NetworkManagementServiceFlyme;
 
     invoke-direct {v0, p0}, Lcom/android/server/NetworkManagementServiceFlyme;-><init>(Landroid/content/Context;)V
 
-    .line 49
     .local v0, "service":Lcom/android/server/NetworkManagementServiceFlyme;
     return-object v0
 .end method
@@ -86,7 +78,6 @@
     .param p1, "chain"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -110,14 +101,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 81
     return-void
 
-    .line 78
     :catch_0
     move-exception v0
 
-    .line 79
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -133,7 +121,6 @@
     .param p3, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -142,7 +129,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -186,14 +172,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
     return-void
 
-    .line 98
     :catch_0
     move-exception v0
 
-    .line 99
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -209,7 +192,6 @@
     .param p3, "prifex"    # I
 
     .prologue
-    .line 113
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -218,7 +200,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 115
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -266,14 +247,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 119
     return-void
 
-    .line 116
     :catch_0
     move-exception v0
 
-    .line 117
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -287,7 +265,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     const/4 v0, 0x0
 
     return v0
@@ -297,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 127
     const/4 v0, 0x0
 
     return-object v0
@@ -309,7 +285,6 @@
     .param p2, "passwordIncluded"    # Z
 
     .prologue
-    .line 142
     const/4 v0, 0x0
 
     return-object v0
@@ -319,7 +294,6 @@
     .locals 1
 
     .prologue
-    .line 174
     const/4 v0, 0x0
 
     return-object v0
@@ -330,7 +304,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 158
     const/4 v0, 0x0
 
     return v0
@@ -341,7 +314,6 @@
     .param p1, "code"    # I
 
     .prologue
-    .line 189
     const/4 v0, 0x0
 
     return v0
@@ -351,7 +323,6 @@
     .locals 0
 
     .prologue
-    .line 196
     return-void
 .end method
 
@@ -362,7 +333,6 @@
     .param p3, "cooked"    # [Ljava/lang/String;
 
     .prologue
-    .line 202
     const/4 v0, 0x1
 
     return v0
@@ -374,7 +344,6 @@
     .param p2, "value"    # [B
 
     .prologue
-    .line 135
     return-void
 .end method
 
@@ -387,27 +356,22 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 58
     const-string v0, "mobile"
 
-    .line 59
     .local v0, "MOBILE":Ljava/lang/String;
     const-string v1, "wifi"
 
-    .line 61
     .local v1, "WIFI":Ljava/lang/String;
     if-eqz p3, :cond_0
 
     const-string v4, "allow"
 
-    .line 62
     .local v4, "rule":Ljava/lang/String;
     :goto_0
     if-ne p2, v5, :cond_1
 
     const-string v2, "wifi"
 
-    .line 65
     .local v2, "chain":Ljava/lang/String;
     :goto_1
     :try_start_0
@@ -445,10 +409,8 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
     return-void
 
-    .line 61
     .end local v2    # "chain":Ljava/lang/String;
     .end local v4    # "rule":Ljava/lang/String;
     :cond_0
@@ -456,19 +418,16 @@
 
     goto :goto_0
 
-    .line 62
     .restart local v4    # "rule":Ljava/lang/String;
     :cond_1
     const-string v2, "mobile"
 
     goto :goto_1
 
-    .line 66
     .restart local v2    # "chain":Ljava/lang/String;
     :catch_0
     move-exception v3
 
-    .line 67
     .local v3, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v3}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -484,7 +443,6 @@
     .param p3, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -493,7 +451,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 88
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -537,14 +494,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 92
     return-void
 
-    .line 89
     :catch_0
     move-exception v0
 
-    .line 90
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -560,7 +514,6 @@
     .param p3, "prifex"    # I
 
     .prologue
-    .line 104
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -569,7 +522,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementServiceFlyme;->mFlymeDaemonConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -617,14 +569,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
     return-void
 
-    .line 107
     :catch_0
     move-exception v0
 
-    .line 108
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -638,7 +587,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 182
     return-void
 .end method
 
@@ -648,7 +596,6 @@
     .param p2, "version"    # I
 
     .prologue
-    .line 166
     const/4 v0, 0x0
 
     return v0

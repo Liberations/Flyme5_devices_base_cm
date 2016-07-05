@@ -254,3 +254,6 @@ fi
 
 # Start RIDL/LogKit II client
 su -c /system/vendor/bin/startRIDL.sh &
+
+#dt2w
+echo 1 > /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/wake_gesture 

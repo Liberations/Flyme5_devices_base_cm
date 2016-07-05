@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 539
     iput-object p1, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 542
     iget-object v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
 
     # getter for: Lcom/android/internal/policy/impl/MzPhoneWindowManager;->pw:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v0}, Landroid/telecom/TelecomManager;->acceptRingingCall()V
 
-    .line 543
     iget-object v0, p0, Lcom/android/internal/policy/impl/MzPhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/MzPhoneWindowManager;
 
     const/4 v1, 0x1
@@ -62,6 +59,5 @@
     # setter for: Lcom/android/internal/policy/impl/MzPhoneWindowManager;->mVloumeKeyConsumed:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/MzPhoneWindowManager;->access$802(Lcom/android/internal/policy/impl/MzPhoneWindowManager;Z)Z
 
-    .line 544
     return-void
 .end method

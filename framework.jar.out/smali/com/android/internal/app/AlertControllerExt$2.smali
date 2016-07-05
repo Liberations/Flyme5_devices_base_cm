@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcom/android/internal/app/AlertControllerExt$2;->this$0:Lcom/android/internal/app/AlertControllerExt;
 
     iput p2, p0, Lcom/android/internal/app/AlertControllerExt$2;->val$mCurrentOrientation:I
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 446
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt$2;->this$0:Lcom/android/internal/app/AlertControllerExt;
 
     # getter for: Lcom/android/internal/app/AlertControllerExt;->mDialog:Landroid/app/Dialog;
@@ -71,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 448
     iget v0, p0, Lcom/android/internal/app/AlertControllerExt$2;->val$mCurrentOrientation:I
 
     iget-object v1, p0, Lcom/android/internal/app/AlertControllerExt$2;->this$0:Lcom/android/internal/app/AlertControllerExt;
@@ -93,7 +90,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 449
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt$2;->this$0:Lcom/android/internal/app/AlertControllerExt;
 
     # getter for: Lcom/android/internal/app/AlertControllerExt;->mDialog:Landroid/app/Dialog;
@@ -103,12 +99,10 @@
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 450
     iget-object v0, p0, Lcom/android/internal/app/AlertControllerExt$2;->val$vto:Landroid/view/ViewTreeObserver;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 453
     :cond_0
     return-void
 .end method

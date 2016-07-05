@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 1654
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/MzResolverActivity$DetailListFrag;
 
     .prologue
-    .line 1654
     iget v0, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListDividerPaddingRight:I
 
     return v0
@@ -55,7 +53,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/MzResolverActivity$DetailListFrag;
 
     .prologue
-    .line 1654
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     return-object v0
@@ -66,7 +63,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/MzResolverActivity$DetailListFrag;
 
     .prologue
-    .line 1654
     iget-object v0, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
 
     return-object v0
@@ -77,7 +73,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/MzResolverActivity$DetailListFrag;
 
     .prologue
-    .line 1654
     iget v0, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListDividerPaddingLeft:I
 
     return v0
@@ -90,10 +85,8 @@
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1665
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 1666
     return-void
 .end method
 
@@ -106,7 +99,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1671
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -121,15 +113,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1672
     :cond_0
     const/4 v0, 0x0
 
-    .line 1721
     :goto_0
     return-object v0
 
-    .line 1674
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->getActivity()Landroid/app/Activity;
 
@@ -139,12 +128,10 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
-    .line 1675
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     invoke-virtual {v1, v4}, Lcom/android/internal/app/MzResolverActivity;->setStatusBarDarkIcon(Z)V
 
-    .line 1676
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -157,7 +144,6 @@
 
     iput v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListDividerPaddingLeft:I
 
-    .line 1677
     invoke-virtual {p0}, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -170,7 +156,6 @@
 
     iput v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListDividerPaddingRight:I
 
-    .line 1678
     sget v1, Lcom/flyme/internal/R$layout;->mz_resolver_fragment2:I
 
     const/4 v2, 0x0
@@ -179,7 +164,6 @@
 
     move-result-object v0
 
-    .line 1679
     .local v0, "v":Landroid/view/View;
     sget v1, Lcom/flyme/internal/R$id;->mz_resolver_list:I
 
@@ -191,7 +175,6 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListView:Lcom/meizu/widget/DragSortListView;
 
-    .line 1680
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListView:Lcom/meizu/widget/DragSortListView;
 
     new-instance v2, Lcom/android/internal/app/MzResolverActivity$DetailListFrag$1;
@@ -200,7 +183,6 @@
 
     invoke-virtual {v1, v2}, Lcom/meizu/widget/DragSortListView;->setDividerPadding(Landroid/widget/ListView$DividerPadding;)V
 
-    .line 1690
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListView:Lcom/meizu/widget/DragSortListView;
 
     iget v2, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListDividerPaddingLeft:I
@@ -209,7 +191,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/meizu/widget/DragSortListView;->setDividerPadding(II)V
 
-    .line 1691
     sget v1, Lcom/flyme/internal/R$id;->mz_resolver_back:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -220,7 +201,6 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mBtnBack:Landroid/widget/Button;
 
-    .line 1692
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mBtnBack:Landroid/widget/Button;
 
     new-instance v2, Lcom/android/internal/app/MzResolverActivity$DetailListFrag$2;
@@ -229,7 +209,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 1700
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mActivity:Lcom/android/internal/app/MzResolverActivity;
 
     # getter for: Lcom/android/internal/app/MzResolverActivity;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
@@ -239,26 +218,22 @@
 
     iput-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
 
-    .line 1701
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
 
     sget v2, Lcom/flyme/internal/R$layout;->mz_resolve_list_item:I
 
     invoke-virtual {v1, v2}, Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;->setItemLayoutId(I)V
 
-    .line 1702
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
 
     invoke-virtual {v1, v4}, Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;->setIsDetail(Z)V
 
-    .line 1703
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListView:Lcom/meizu/widget/DragSortListView;
 
     iget-object v2, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mAdapter:Lcom/android/internal/app/MzResolverActivity$ResolveGridAdapter;
 
     invoke-virtual {v1, v2}, Lcom/meizu/widget/DragSortListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 1704
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListView:Lcom/meizu/widget/DragSortListView;
 
     new-instance v2, Lcom/android/internal/app/MzResolverActivity$DetailListFrag$3;
@@ -267,7 +242,6 @@
 
     invoke-virtual {v1, v2}, Lcom/meizu/widget/DragSortListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 1712
     iget-object v1, p0, Lcom/android/internal/app/MzResolverActivity$DetailListFrag;->mListView:Lcom/meizu/widget/DragSortListView;
 
     new-instance v2, Lcom/android/internal/app/MzResolverActivity$DetailListFrag$4;
