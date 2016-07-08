@@ -1734,13 +1734,7 @@
     if-nez p4, :cond_e
 
     .line 864
-    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string v4, "Comparison method violates its general contract!"
-
-    invoke-direct {v2, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v2
 
     .line 869
     :cond_e
@@ -2337,13 +2331,7 @@
     if-nez p2, :cond_e
 
     .line 743
-    new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string v6, "Comparison method violates its general contract!"
-
-    invoke-direct {v3, v6}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v3
 
     .line 748
     :cond_e
