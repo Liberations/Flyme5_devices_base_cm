@@ -1,0 +1,3 @@
+    1 conflicts in: services.jar.out/smali/com/android/server/am/ActivityManagerService.smali
+    1 conflicts in: boot.img.out/RAMDISK/default.prop
+    1 conflicts in: boot.img.out/RAMDISK/init.environ.rc
